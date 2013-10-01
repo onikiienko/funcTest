@@ -41,10 +41,9 @@ class testSuite1(unittest.TestCase):
             driver.get(url)
             wait_for_page_load(driver)
         
-        #url = "http://maps.api.2gis.ru/2.0/"
-        url = "http://maps2.bogdan.test/TestSuite1Public.html"
+        url = "http://functest.maps2.test/demo_ts1_test.html"
         file1 = self.takeScreenshot(callback, driver)
-        #url = "http://maps2.bogdan.test/2.0/"
+        url = "http://functest.maps2.test/demo_ts1_pub.html"
         file2 = self.takeScreenshot(callback, driver1)
         self.compare(file1, file2, "test_1")
     
