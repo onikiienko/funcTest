@@ -3,7 +3,7 @@ from selenium import webdriver
 import sys
 import mypkg
 sys.path.insert(0, 'assets')
-from core
+import core
 
 global dali
 global driver
