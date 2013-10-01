@@ -34,7 +34,7 @@ class suite(unittest.TestCase):
         )
 
     def compare(self, file1, file2, screenName):
-        diff = dali.compare_images(file1, file2, "./screens/" + screenName + ".png")
+        diff = dali.compare_images(file1, file2, "../screens/" + screenName + ".png")
         self.assertEquals(diff, 0.0, "The difference is %f" % diff)
 
     def test_1(self):
