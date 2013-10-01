@@ -1,4 +1,4 @@
-import time, re, cgi, HTMLTestRunner
+import time, re, cgi
 import os, sys, inspect
 from unittest import TestLoader, TextTestRunner, TestSuite
 # Import test cases

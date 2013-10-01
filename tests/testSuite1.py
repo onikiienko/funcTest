@@ -1,7 +1,7 @@
 import unittest
 from selenium import webdriver
 from core import *
-import __init__.py
+import mypkg
 
 global dali
 global driver
