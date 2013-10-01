@@ -1,7 +1,9 @@
 import unittest
 from selenium import webdriver
-from core import *
+import sys
 import mypkg
+sys.path.insert(0, 'assets')
+from core
 
 global dali
 global driver
@@ -29,7 +31,7 @@ class suite(unittest.TestCase):
             resolution="1024x768",
             scenario=callback,
             scenario_args=driver,
-            path_to_save="./screens"
+            path_to_save="../screens"
         )
 
     def compare(self, file1, file2, screenName):
