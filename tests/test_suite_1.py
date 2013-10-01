@@ -2,8 +2,7 @@ import unittest
 from selenium import webdriver
 import sys
 import mypkg
-sys.path.insert(0, 'assets')
-import core
+from core import *
 
 global dali
 global driver
