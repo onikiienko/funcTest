@@ -12,27 +12,13 @@ https://github.com/ebrelsford/Leaflet.loading
 + раскрыть список организаций
 + закрыть балун нажатием на крестик (ОР: балун схлопнулся, на карте только тайлы)
 
-1. (demo: a simple map)
-+ Open map leveled on 13 (RR: the expected terrain tiles)
-+ Click on the region (OR: light district, balun with the name of locality)
-+ Prizumitsya 17 shifted to the Left (RR: lights in place, zoom level 17)
-+ Click on the street (OR: street lights, balun)
-+ Click on the building (RR: Balun with information about the building in which was a click)
-+ Show a list of organizations in the building (RR: a list of organizations in the building)
-+ Proskrolit list of organizations (RR: proskrolen list)
-+ Klinut on the next building (RR: previous balun imploded, opened a new one)
-+ Expand the list of organizations
-+ Close balun clicking on the X (RR: balun imploded on the map tiles only)
-
-
-2. (демка: карта с тремя статическими дом-маркерами у которых есть хинты, добавленные разными способами: L.DG.label, bindLabel, label)
+2. (демка: карта с двумя статическими дом-маркерами у которых есть хинты, добавленные разными способами: L.DG.label, bindLabel, label)
 - открыть карту со статическим маркером и хинтом (ОР: на карте есть маркер)
 - перейти в режим фуллскрина (ОР: режим фулскрина, иконка контрола поменялась)
 - навести мышкой на первый маркер ( ОР: смена иконки маркера, хинт)
 - нажать на маркер (ОР: смена иконки маркера, хинт пропадает)
 - навести мышкой на второй маркер (ОР: смена иконки маркера, хинт)
 - выйти из режима фуллскрина (ОР: выход из режима фулскрина, иконка контрола поменялась)
-- навести на третий маркер (ОР: смена иконки маркера, хинт)
 
 3. (демка: карта с драгабельным маркером у которого есть хинт)
 - открыть карту с драгабельным маркером
