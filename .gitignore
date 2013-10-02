@@ -1,7 +1,7 @@
 /nbproject
 
 /screens/*
-!pur.txt
+!*.txt
 
 /*.pyc
 
