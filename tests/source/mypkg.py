@@ -7,7 +7,7 @@ from selenium import webdriver
 def getOrCreateWebdriver():
     DRIVER = Remote(
             desired_capabilities=DesiredCapabilities.CHROME,
-            command_executor="http://localhost:4455/wd/hub"
+            command_executor="http://10.110.40.77:4455/wd/hub"
         )
     return DRIVER
 
