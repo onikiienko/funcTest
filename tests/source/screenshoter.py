@@ -14,4 +14,4 @@ def takeScreenshot(callback, driver):
     )
 
 def compare(file1, file2, screenName):
-    diff = dali.compare_images(file1, file2, "screens" + screenName + ".png")
+    diff = dali.compare_images(file1, file2, screenName + ".png")
