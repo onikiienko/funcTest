@@ -19,9 +19,9 @@ class suite(unittest.TestCase):
             driver.get(url)
             wait_for_page_load(driver)
         
-        url = "http://functest.maps2.test/demo_ts1_test.html"
+        url = "http://functest.maps2.test/demo_ts2_test.html"
         file1 = takeScreenshot(callback, driver)
-        url = "http://functest.maps2.test/demo_ts1_pub.html"
+        url = "http://functest.maps2.test/demo_ts2_pub.html"
         file2 = takeScreenshot(callback, driver1)
         compare(file1, file2, "test_1")
     
@@ -108,15 +108,11 @@ class suite(unittest.TestCase):
 
 
 '''
-1. (demo: a simple map)
-+ Open map leveled on 13 (RR: the expected terrain tiles)
-+ Click on the region (OR: light district, balun with the name of locality)
-+ Prizumitsya 17 shifted to the Left (RR: lights in place, zoom level 17)
-+ Click on the street (OR: street lights, balun)
-+ Click on the building (RR: Balun with information about the building in which was a click)
-+ Show a list of organizations in the building (RR: a list of organizations in the building)
-+ Proskrolit list of organizations (RR: proskrolen list)
-+ Klinut on the next building (RR: previous balun imploded, opened a new one)
-+ Expand the list of organizations
-+ Close balun clicking on the X (RR: balun imploded on the map tiles only)
+2. (demo: map with two static home-markers that have hints, written in different ways: L.DG.label, bindLabel, label)
+- Open the map with a static marker and Hinte (RR: have a marker on the map)
+- Switch to fullskrina (RR: fulskrina mode, the icon of the control has changed)
+- Move your mouse over the first marker (RR: Change marker icons, hint)
+- Click on the marker (RR: Change marker icons, hint disappears)
+- Move your mouse over the second marker (RR: Change marker icons, hint)
+- Exit fullskrina (RR: exited fulskrina, the icon of the control has changed)
 '''
