@@ -78,7 +78,7 @@ Requires [архив](https://github.com/bayandin/selenium-launchers/archive/mas
 
 #Пример
  
-я развернул на 10.110.40.43
+Я развернул на 10.110.40.43
 
 log: vagrant
 
