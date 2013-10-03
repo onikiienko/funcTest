@@ -63,7 +63,7 @@ server {
 $ python tests_launcher.py
 ```
 
-С серваером всё!
+С сервером всё!
 
 #Клиент
 
