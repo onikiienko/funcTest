@@ -5,6 +5,9 @@ from dali import Dali, Options
 from selenium import webdriver
 
 def getOrCreateWebdriver():
+	'''
+	Create a browser in wich we would make a tests.
+	'''
     DRIVER = Remote(
             desired_capabilities=DesiredCapabilities.CHROME,
             command_executor="http://10.110.40.77:4455/wd/hub"
