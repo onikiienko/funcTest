@@ -27,10 +27,10 @@ $ sudo apt-get install python-pip python-dev build-essential
 $ sudo pip install --upgrade pip
 $ sudo apt-get install python-opencv
 Запросили пароль на https://github.com/2gis/dali у Игоря Павлова или Саши Баяндина
-$git clone https://github.com/2gis/dali.git
-$cd dali
-$sudo python setup.py sdist
-$sudo sudo pip install dist/dali-0.1.tar.gz
+$ git clone https://github.com/2gis/dali.git
+$ cd dali
+$ sudo python setup.py sdist
+$ sudo sudo pip install dist/dali-0.1.tar.gz
 ```
 #Тесты
 
@@ -38,7 +38,7 @@ $sudo sudo pip install dist/dali-0.1.tar.gz
 
 ```bash
 в папке /var/www/applications/ выполняем
-$git clone git@github.com:onikiienko/funcTest.git
+$ git clone git@github.com:onikiienko/funcTest.git
 ```
 #Демки
 В этом проекте кроме тестов содержатся так же демки. И они должны отдаваться во вне. Для этого нужно настроить nginx.
@@ -81,5 +81,5 @@ log: vagrant
 pass: vagrant
 В папке /var/www/applications/funcTest необходимо выполнить 
 ```bash 
-$python tests_launcher.py
+$ python tests_launcher.py
 ```
