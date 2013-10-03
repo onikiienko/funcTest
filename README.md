@@ -77,8 +77,11 @@ Requires [архив](https://github.com/bayandin/selenium-launchers/archive/mas
 С виндой всё
  
 я развернул на 10.110.40.43
+
 log: vagrant
+
 pass: vagrant
+
 В папке /var/www/applications/funcTest необходимо выполнить 
 ```bash 
 $ python tests_launcher.py
