@@ -28,7 +28,7 @@ class suite(unittest.TestCase):
 # Hover your mouse over the marker (RR: Change marker icons, hint)
     def test3_2(self):
         def callback(driver):
-            marker = driver.find_element_by_xpath('//*[@id="map"]/div[1]/div[2]/div[3]/div/div')
+            marker = driver.find_element_by_class_name('dg-marker')
             ActionChains(driver).move_to_element(marker).perform()
             wait_for_page_load(driver)
 
@@ -36,10 +36,8 @@ class suite(unittest.TestCase):
 # Grab a marker and drag it to another street (RR: marker moved to the expected street hint (provided that the tests will be mouse over the marker)
     def test3_3(self):
         def callback(driver):
-            marker = driver.find_element_by_xpath('//*[@id="map"]/div[1]/div[2]/div[3]/div/div')
-            ActionChains(driver).click_and_hold(marker).perform()
-            ActionChains(driver).move_to_element_with_offset(marker, 100, 100).perform()
-            ActionChains(driver).release().perform()
+            marker = driver.find_element_by_class_name('dg-marker_mouseover')
+            ActionChains(driver).drag_and_drop_by_offset(marker, 100, 100).perform()
             wait_for_page_load(driver)
 
 
@@ -53,12 +51,3 @@ class suite(unittest.TestCase):
             wait_for_page_load(driver)
 
         takeScreenAndCompare(callback, driver, driver1, "test3_4")
-
-#Zoomout to the 10 shifted to the Left (RR: the expected terrain tiles of the 10th zoom level)
-    def test3_5(self):
-        def callback(driver):
-            zoom = "10"
-            center = "new L.LatLng(54.99771, 82.8687)"
-            click_to_center(driver, center, zoom)
-
-        takeScreenAndCompare(callback, driver, driver1, "test3_5")
