@@ -8,6 +8,7 @@ import test_suite_3
 
 sys.path.insert(0, 'source')
 from helper import *
+from mypkg import *
 
 if __name__ == "__main__":
 	loader = TestLoader() # setup new test suite

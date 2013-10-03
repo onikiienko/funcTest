@@ -215,7 +215,8 @@ L.Control.loading = function(options) {
                 center: new L.LatLng(54.980206086231, 82.898068362003),
                 zoom: 12
             });
-
+        var loadingControl = L.Control.loading();
+        map.addControl(loadingControl);
 
             var marker = L.marker([54.980206086231, 82.898068362003], {
                                 riseOnHover : true,
