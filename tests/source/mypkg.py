@@ -8,11 +8,11 @@ def getOrCreateWebdriver():
 	'''
 	Create a browser in wich we would make a tests.
 	'''
-    DRIVER = Remote(
+	DRIVER = Remote(
             desired_capabilities=DesiredCapabilities.CHROME,
             command_executor="http://10.110.40.77:4455/wd/hub"
         )
-    return DRIVER
+	return DRIVER
 
 global dali
 global driver
