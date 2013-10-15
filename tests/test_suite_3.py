@@ -46,7 +46,7 @@ class suite(unittest.TestCase):
 # Click on the marker (RR: smenka marker icons, there is no hint)
     def test3_4(self):
         def callback(driver):
-            driver.find_element_by_class_name('dg-marker')
+            marker = driver.find_element_by_class_name('dg-marker')
             ActionChains(driver).click(marker).perform()
             wait_for_page_load(driver)
 
