@@ -19,7 +19,7 @@ if __name__ == "__main__":
 	loader = TestLoader() # setup new test suite
 	suite = TestSuite((
 			loader.loadTestsFromTestCase(test_suite_1.suite),
-			loader.loadTestsFromTestCase(test_suite_2.suite),
+			#loader.loadTestsFromTestCase(test_suite_2.suite),
 			loader.loadTestsFromTestCase(test_suite_3.suite)
 	        ))
 
