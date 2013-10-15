@@ -9,7 +9,7 @@ def getOrCreateWebdriver():
 	Create a browser in wich we would make a tests.
 	'''
 	DRIVER = Remote(
-            desired_capabilities=DesiredCapabilities.CHROME,
+            desired_capabilities=DesiredCapabilities.FIREFOX,
             command_executor="http://10.110.40.74:4455/wd/hub"
         )
 	return DRIVER
