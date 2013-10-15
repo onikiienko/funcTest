@@ -36,7 +36,7 @@ class suite(unittest.TestCase):
 # Grab a marker and drag it to another street (RR: marker moved to the expected street hint (provided that the tests will be mouse over the marker)
     def test3_3(self):
         def callback(driver):
-            marker = driver.find_element_by_class_name('dg-marker_mouseover')
+            marker = driver.find_element_by_class_name('dg-marker')
             ActionChains(driver).drag_and_drop_by_offset(marker, 100, 100).perform()
             wait_for_page_load(driver)
 
