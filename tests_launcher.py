@@ -25,7 +25,7 @@ if __name__ == "__main__":
 
 	runner = TextTestRunner(verbosity = 5)
 	runner.run(suite)
-	return runner
+	#return runner
 
 driver.quit()
 driver1.quit()
