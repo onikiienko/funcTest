@@ -20,9 +20,9 @@ class suite(unittest.TestCase):
             wait_for_page_load(driver)
         
         url = "http://functest.maps2.test/demo_ts2_test.html"
-        file1 = takeScreenshot(callback, driver)
+        file1 = takeScreenshot(dali, callback, driver)
         url = "http://functest.maps2.test/demo_ts2_pub.html"
-        file2 = takeScreenshot(callback, driver1)
+        file2 = takeScreenshot(dali1, callback, driver1)
         compare(file1, file2, "test2_1")
 
 #Switch to fullskrina (RR: fulskrina mode, the icon of the control has changed)
