@@ -1,3 +1,5 @@
+import os
+
 from mypkg import *
 
 
@@ -22,8 +24,22 @@ def takeScreenshot(_dali, callback, _driver):
     )
 
 
+def try_to_delete_file(filename):
+    try:
+        os.remove(filename)
+    except OSError:
+        pass
+
 def compare(file1, file2, screenName):
     """
-    Compare two of the grafic files
+    Compare two of the graphic files
     """
-    return dali.compare_images(file1, file2, "./screens/" + screenName + ".png")
+    result_file = "./screens/" + screenName + ".png"
+    diff = dali.compare_images(file1, file2, result_file)
+    # delete screenshots if difference equals 0
+    if diff == 0:
+        try_to_delete_file(file1)
+        try_to_delete_file(file2)
+        try_to_delete_file(result_file)
+
+    return diff
