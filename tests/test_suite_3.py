@@ -20,9 +20,9 @@ class suite(unittest.TestCase):
             wait_for_page_load(driver)
         
         url = "http://functest.maps2.test/demo_ts3_test.html"
-        file1 = takeScreenshot(callback, driver)
+        file1 = takeScreenshot(dali, callback, driver)
         url = "http://functest.maps2.test/demo_ts3_pub.html"
-        file2 = takeScreenshot(callback, driver1)
+        file2 = takeScreenshot(dali1, callback, driver1)
         compare(file1, file2, "test3_1")
     
 # Hover your mouse over the marker (RR: Change marker icons, hint)

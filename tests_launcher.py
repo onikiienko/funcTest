@@ -1,31 +1,33 @@
-import os, sys, inspect
-from unittest import TestLoader, TextTestRunner, TestSuite
+import sys
+from unittest import TestLoader, TextTestRunner, TestSuite, TestResult
 
 sys.path.insert(0, 'tests')
 
-import test_suite_1
-import test_suite_2
-import test_suite_3
+from tests import test_suite_1
+from tests import test_suite_2
+from tests import test_suite_3
 
 sys.path.insert(0, 'source')
 
-from helper import *
-from mypkg import *
+from tests.source.mypkg import *
 
+testResult = None
 '''
 Launching a tests, testsuite by testsuite. And closeing the browsers after all keyses are complited.
 '''
 if __name__ == "__main__":
-	loader = TestLoader() # setup new test suite
-	suite = TestSuite((
-			loader.loadTestsFromTestCase(test_suite_1.suite),
-			#loader.loadTestsFromTestCase(test_suite_2.suite),
-			loader.loadTestsFromTestCase(test_suite_3.suite)
-	        ))
+    # setup new test suite
+    loader = TestLoader()
+    suite = TestSuite((
+        loader.loadTestsFromTestCase(test_suite_1.suite),
+        # loader.loadTestsFromTestCase(test_suite_2.suite),
+        # loader.loadTestsFromTestCase(test_suite_3.suite)
+    ))
 
-	runner = TextTestRunner(verbosity = 5)
-	runner.run(suite)
-	#return runner
+    runner = TextTestRunner(verbosity=5)
+    #testResult = runner.run(suite)
+    runner.run(suite)
 
 driver.quit()
 driver1.quit()
+#exit(not testResult.wasSuccessful())
