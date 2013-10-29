@@ -1,29 +1,22 @@
-import unittest
-from selenium import webdriver
-import sys
-sys.path.insert(0, 'tests/source')
-from mypkg import *
-from helper import *
-from screenshoter import *
+from BaseSuite import BaseSuite
 
-class suite(unittest.TestCase):
+from source.helper import *
+from source.screenshoter import *
 
-    def setUp(self):
-        return
+class Suite(BaseSuite):
 
-    def tearDown(self):
-        return
 # Open the map with a marker dragabl
     def test3_1(self):
         def callback(driver):
             driver.get(url)
             wait_for_page_load(driver)
         
-        url = "http://functest.maps2.test/demo_ts3_test.html"
-        file1 = takeScreenshot(dali, callback, driver)
-        url = "http://functest.maps2.test/demo_ts3_pub.html"
-        file2 = takeScreenshot(dali1, callback, driver1)
-        compare(file1, file2, "test3_1")
+        url = "http://functest.maps2.test/demo_ts2_test.html"
+        file1 = takeScreenshot(self.dali1, callback, self.driver1)
+        url = "http://functest.maps2.test/demo_ts2_pub.html"
+        file2 = takeScreenshot(self.dali2, callback, self.driver2)
+        diff = compare(self.dali1, file1, file2, "test3_1")
+        self.assertEqual(diff, 0)
     
 # Hover your mouse over the marker (RR: Change marker icons, hint)
     def test3_2(self):
@@ -32,7 +25,9 @@ class suite(unittest.TestCase):
             ActionChains(driver).move_to_element(marker).perform()
             wait_for_page_load(driver)
 
-        takeScreenAndCompare(callback, driver, driver1, "test3_2")
+        diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test3_2")
+        self.assertEqual(diff, 0)
+
 # Grab a marker and drag it to another street (RR: marker moved to the expected street hint (provided that the tests will be mouse over the marker)
     def test3_3(self):
         def callback(driver):
@@ -41,7 +36,8 @@ class suite(unittest.TestCase):
             wait_for_page_load(driver)
 
 
-        takeScreenAndCompare(callback, driver, driver1, "test3_3")
+        diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test3_3")
+        self.assertEqual(diff, 0)
 
 # Click on the marker (RR: smenka marker icons, there is no hint)
     def test3_4(self):
@@ -50,4 +46,5 @@ class suite(unittest.TestCase):
             ActionChains(driver).click(marker).perform()
             wait_for_page_load(driver)
 
-        takeScreenAndCompare(callback, driver, driver1, "test3_4")
+        diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test3_4")
+        self.assertEqual(diff, 0)
