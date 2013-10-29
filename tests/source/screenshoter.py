@@ -3,13 +3,13 @@ import os
 from mypkg import *
 
 
-def takeScreenAndCompare(callback, _driver, _driver1, screenName):
+def takeScreenAndCompare(callback, _dali1, _dali2, _driver1, _driver2, screenName):
     """
     Takes parameters from tests and launching takeScreenshot, and then compare
     """
-    file1 = takeScreenshot(dali, callback, _driver)
-    file2 = takeScreenshot(dali1, callback, _driver1)
-    return compare(file1, file2, screenName)
+    file1 = takeScreenshot(_dali1, callback, _driver1)
+    file2 = takeScreenshot(_dali2, callback, _driver2)
+    return compare(_dali1, file1, file2, screenName)
 
 
 def takeScreenshot(_dali, callback, _driver):
@@ -30,7 +30,7 @@ def try_to_delete_file(filename):
     except OSError:
         pass
 
-def compare(file1, file2, screenName):
+def compare(dali, file1, file2, screenName):
     """
     Compare two of the graphic files
     """

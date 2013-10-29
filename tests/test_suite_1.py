@@ -1,18 +1,10 @@
-import unittest
+from BaseSuite import BaseSuite
 
-import sys
-sys.path.insert(0, 'tests/source')
-from .source.helper import *
+from source.helper import *
 from source.screenshoter import *
 
 
-class suite(unittest.TestCase):
-    def setUp(self):
-        return
-
-    def tearDown(self):
-        return
-
+class Suite(BaseSuite):
     # Open map leveled on 13 (RR: the expected terrain tiles)
     def test1_1(self):
         def callback(driver):
@@ -20,10 +12,10 @@ class suite(unittest.TestCase):
             wait_for_page_load(driver)
         
         url = "http://functest.maps2.test/demo_ts1_test.html"
-        file1 = takeScreenshot(dali, callback, driver)
+        file1 = takeScreenshot(self.dali1, callback, self.driver1)
         url = "http://functest.maps2.test/demo_ts1_pub.html"
-        file2 = takeScreenshot(dali1, callback, driver1)
-        diff = compare(file1, file2, "test1_1")
+        file2 = takeScreenshot(self.dali2, callback, self.driver2)
+        diff = compare(self.dali1, file1, file2, "test1_1")
         self.assertEqual(diff, 0)
 
     # Open map leveled on 13 (RR: the expected terrain tiles)
@@ -33,7 +25,7 @@ class suite(unittest.TestCase):
             center = "new L.LatLng(54.980206086231, 82.898068362003)"
             set_center(driver, center, zoom)
 
-        diff = takeScreenAndCompare(callback, driver, driver1, "test1_2")
+        diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test1_2")
         self.assertEqual(diff, 0)
 
     # Click on the region (OR: light district, balun with the name of locality)
@@ -43,7 +35,7 @@ class suite(unittest.TestCase):
             center = "new L.LatLng(54.9788, 82.86816)"
             click_to_center(driver, center, zoom)
 
-        diff = takeScreenAndCompare(callback, driver, driver1, "test1_3")
+        diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test1_3")
         self.assertEqual(diff, 0)
 
     # Prizumitsya 17 shifted to the Left (RR: lights in place, zoom level 17)
@@ -53,7 +45,7 @@ class suite(unittest.TestCase):
             center = "new L.LatLng(54.9788, 82.86816)"
             set_center(driver, center, zoom)
 
-        diff = takeScreenAndCompare(callback, driver, driver1, "test1_4")
+        diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test1_4")
         self.assertEqual(diff, 0)
 
     # Click on the street (OR: street lights, balun)
@@ -63,7 +55,7 @@ class suite(unittest.TestCase):
             center = "new L.LatLng(54.99771, 82.8687)"
             click_to_center(driver, center, zoom)
 
-        diff = takeScreenAndCompare(callback, driver, driver1, "test1_5")
+        diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test1_5")
         self.assertEqual(diff, 0)
 
     # Click on the building (RR: Balun with information about the building in which was a click)
@@ -73,7 +65,7 @@ class suite(unittest.TestCase):
             center = "new L.LatLng(54.98348, 82.89103)"
             click_to_center(driver, center, zoom)
 
-        diff = takeScreenAndCompare(callback, driver, driver1, "test1_6")
+        diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test1_6")
         self.assertEqual(diff, 0)
 
     # Show a list of organizations in the building (RR: a list of organizations in the building)
@@ -82,7 +74,7 @@ class suite(unittest.TestCase):
             driver.find_element_by_id("dg-showmorehouse").click()
             wait_for_page_load(driver)
 
-        diff = takeScreenAndCompare(callback, driver, driver1, "test1_7")
+        diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test1_7")
         self.assertEqual(diff, 0)
 
     # Proskrolit list of organizations (RR: proskrolen list)
@@ -92,7 +84,7 @@ class suite(unittest.TestCase):
             ActionChains(driver).release(driver.find_element_by_class_name("popup_footer_title")).perform()
             wait_for_page_load(driver)
 
-        diff = takeScreenAndCompare(callback, driver, driver1, "test1_8")
+        diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test1_8")
         self.assertEqual(diff, 0)
 
     # Klinut on the next building (RR: previous balun imploded, opened a new one)
@@ -102,16 +94,16 @@ class suite(unittest.TestCase):
             center = "new L.LatLng(54.98035, 82.89835)"
             click_to_center(driver, center, zoom)
 
-        diff = takeScreenAndCompare(callback, driver, driver1, "test1_9")
+        diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test1_9")
         self.assertEqual(diff, 0)
-    # Expand the list of organizations
 
+    # Expand the list of organizations
     def test1_z10(self):
         def callback(driver):
             driver.find_element_by_id("dg-showmorehouse").click()
             wait_for_page_load(driver)
 
-        diff = takeScreenAndCompare(callback, driver, driver1, "test1_10")
+        diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test1_10")
         self.assertEqual(diff, 0)
 
     # Close balun clicking on the X (RR: balun imploded on the map tiles only)
@@ -120,5 +112,9 @@ class suite(unittest.TestCase):
             driver.find_element_by_class_name("leaflet-popup-close-button").click()
             wait_for_page_load(driver)
 
-        diff = takeScreenAndCompare(callback, driver, driver1, "test1_11")
+        diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test1_11")
         self.assertEqual(diff, 0)
+
+
+if __name__ == '__main__':
+    unittest.main()
