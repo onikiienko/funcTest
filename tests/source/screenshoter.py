@@ -1,7 +1,7 @@
-import os
+import os, string, random
 
 from mypkg import *
-from screenhelper import *
+
 
 
 def takeScreenAndCompare(callback, _dali1, _dali2, _driver1, _driver2, screenName):
@@ -44,8 +44,12 @@ def compare(dali, file1, file2, screenName):
         try_to_delete_file(file2)
         try_to_delete_file(result_file)
     else:
-        print "http://" + get_ip('eth1') + '/screens/' + screenName + '.png';
+        print 'http://functest.maps2.test/screens/' + screenName + '.png';
         try_to_delete_file(file1)
         try_to_delete_file(file2)
 
     return diff
+
+def randstring(n):
+    a = string.ascii_letters + string.digits
+    return ''.join([random.choice(a) for i in range(n)])
