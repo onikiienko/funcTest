@@ -80,6 +80,8 @@ Requires [архив](https://github.com/bayandin/selenium-launchers/archive/mas
  
 Я развернул на 10.110.40.43
 
+в хосты 10.110.40.43 functest.maps2.test
+
 log: vagrant
 
 pass: vagrant
