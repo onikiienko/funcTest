@@ -81,7 +81,7 @@ class Suite(BaseSuite):
     def test1_8(self):
         def callback(driver):
             ActionChains(driver).click_and_hold(driver.find_element_by_class_name("scroller__bar")).perform()
-            ActionChains(driver).release(driver.find_element_by_class_name("dg-popup-footer")).perform()
+            ActionChains(driver).release(driver.find_element_by_class_name("leaflet-popup-tip-container")).perform()
             wait_for_page_load(driver)
 
         diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test1_8")
