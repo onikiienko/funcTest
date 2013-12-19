@@ -32,7 +32,7 @@ class Suite(BaseSuite):
     def test1_3(self):
         def callback(driver):
             zoom = "13"
-            center = "new L.LatLng(54.9788, 82.86816)"
+            center = "new L.LatLng(54.978806086231, 82.868168362003)"
             click_to_center(driver, center, zoom)
 
         diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test1_3")
