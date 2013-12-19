@@ -71,7 +71,7 @@ class Suite(BaseSuite):
     # Show a list of organizations in the building (RR: a list of organizations in the building)
     def test1_7(self):
         def callback(driver):
-            driver.find_element_by_id("dg-showmorehouse").click()
+            driver.find_element_by_id("popup-btn-all").click()
             wait_for_page_load(driver)
 
         diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test1_7")
@@ -81,7 +81,7 @@ class Suite(BaseSuite):
     def test1_8(self):
         def callback(driver):
             ActionChains(driver).click_and_hold(driver.find_element_by_class_name("scroller__bar")).perform()
-            ActionChains(driver).release(driver.find_element_by_class_name("popup_footer_title")).perform()
+            ActionChains(driver).release(driver.find_element_by_class_name("dg-popup-footer")).perform()
             wait_for_page_load(driver)
 
         diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test1_8")
@@ -100,7 +100,7 @@ class Suite(BaseSuite):
     # Expand the list of organizations
     def test1_z10(self):
         def callback(driver):
-            driver.find_element_by_id("dg-showmorehouse").click()
+            driver.find_element_by_id("popup-btn-all").click()
             wait_for_page_load(driver)
 
         diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test1_10")
