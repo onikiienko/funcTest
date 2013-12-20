@@ -6,7 +6,7 @@ def getOrCreateWebdriver():
     """
     Create a browser in wich we would make a tests.
     """
-    desired_capabilities = DesiredCapabilities.firefox
+    desired_capabilities = DesiredCapabilities.FIREFOX
     #desired_capabilities['platform'] = "windows-7-x64"
     _driver = Remote(
         desired_capabilities=desired_capabilities,
