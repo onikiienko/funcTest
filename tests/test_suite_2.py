@@ -21,7 +21,7 @@ class Suite(BaseSuite):
 #Switch to fullskrina (RR: fulskrina mode, the icon of the control has changed)
     def test2_2(self):
         def callback(driver):      
-            ActionChains(driver).click(driver.find_element_by_class_name("dg-fullscreen-icon")).perform()
+            ActionChains(driver).click(driver.find_element_by_class_name("dg-control-round_icon__fullscreen")).perform()
             wait_for_page_load(driver)
 
         diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test2_2")
@@ -57,7 +57,7 @@ class Suite(BaseSuite):
 #Exit fullskrina (RR: exited fulskrina, the icon of the control has changed)
     def test2_6(self):
         def callback(driver):
-            ActionChains(driver).click(driver.find_element_by_class_name("dg-fullscreen-icon")).perform()
+            ActionChains(driver).click(driver.find_element_by_class_name("dg-control-round_icon__fullscreen")).perform()
             wait_for_page_load(driver)
 
         diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test2_6")
