@@ -44,6 +44,7 @@ class Suite(BaseSuite):
             zoom = "17"
             center = "new L.LatLng(54.9788, 82.86816)"
             set_center(driver, center, zoom)
+            wait_for_page_load(driver)
 
         diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test1_4")
         self.assertEqual(diff, 0)
@@ -54,6 +55,7 @@ class Suite(BaseSuite):
             zoom = "17"
             center = "new L.LatLng(54.99771, 82.8687)"
             click_to_center(driver, center, zoom)
+            wait_for_page_load(driver)
 
         diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test1_5")
         self.assertEqual(diff, 0)
@@ -64,6 +66,7 @@ class Suite(BaseSuite):
             zoom = "18"
             center = "new L.LatLng(54.98348, 82.89103)"
             click_to_center(driver, center, zoom)
+            wait_for_page_load(driver)
 
         diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test1_6")
         self.assertEqual(diff, 0)
@@ -93,6 +96,7 @@ class Suite(BaseSuite):
             zoom = "18"
             center = "new L.LatLng(54.98035, 82.89835)"
             click_to_center(driver, center, zoom)
+            wait_for_page_load(driver)
 
         diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test1_9")
         self.assertEqual(diff, 0)
