@@ -2,6 +2,17 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.action_chains import ActionChains
 
+def click_object(driver, type, locator):
+    """(str, str) -> none
+    Make click in object with corrent type
+    """
+    if type = 'id':
+        driver.find_element_by_id(locator).click()
+    elif type = 'class':
+        driver.find_element_by_class_name(locator).click()
+    else:
+        ActionChains(driver).click(driver.find_element_by_class_name(locator)).perform()
+
 def click_to_center(driver, center, zoom):
     """(object, object, int) -> none
     Making a click in the center of the browsers screen
