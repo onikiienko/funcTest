@@ -6,9 +6,9 @@ def click_object(driver, type, locator):
     """(str, str) -> none
     Make click in object with corrent type
     """
-    if type = 'id':
+    if type == 'id':
         driver.find_element_by_id(locator).click()
-    elif type = 'class':
+    elif type == 'class':
         driver.find_element_by_class_name(locator).click()
     else:
         ActionChains(driver).click(driver.find_element_by_class_name(locator)).perform()
