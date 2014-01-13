@@ -46,7 +46,6 @@ def set_center(driver, center, zoom):
     Making a click in the center of the browsers screen
     """
     driver.execute_script("center = " + center + "; map.setView( center, " + zoom + ");")
-    wait_for_page_load(driver);
 
 def wait_for_page_load(driver):
     """ (object) -> none
