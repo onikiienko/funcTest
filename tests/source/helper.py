@@ -11,7 +11,7 @@ def click_object(driver, type, locator):
     elif type == 'class':
         driver.find_element_by_class_name(locator).click()
     elif type == 'xpath':
-        object_xpath = driver.find_element_by_class_name(locator)
+        object_xpath = driver.find_element_by_xpath(locator)
         ActionChains(driver).click(object_xpath).perform()
 
 def click_to_center(driver, center, zoom):
