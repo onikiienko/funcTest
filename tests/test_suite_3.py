@@ -42,7 +42,7 @@ class Suite(BaseSuite):
 # Click on the marker (RR: smenka marker icons, there is no hint)
     def test3_4(self):
         def callback(driver):
-            lick_object(driver, 'class', 'leaflet-marker-icon')
+            click_object(driver, 'class', 'leaflet-marker-icon')
             #marker = driver.find_element_by_class_name('leaflet-marker-icon')
             #ActionChains(driver).click(marker).perform()
             wait_for_page_load(driver)
