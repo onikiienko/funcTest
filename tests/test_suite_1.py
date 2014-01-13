@@ -71,7 +71,7 @@ class Suite(BaseSuite):
     # Show a list of organizations in the building (RR: a list of organizations in the building)
     def test1_7(self):
         def callback(driver):
-            driver.find_element_by_id("popup-btn-all").click()
+            click_object(driver, 'id', 'popup-btn-all')
             wait_for_page_load(driver)
 
         diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test1_7")
@@ -100,7 +100,7 @@ class Suite(BaseSuite):
     # Expand the list of organizations
     def test1_z10(self):
         def callback(driver):
-            driver.find_element_by_id("popup-btn-all").click()
+            click_object(driver, 'id', 'popup-btn-all')
             wait_for_page_load(driver)
 
         diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test1_10")
@@ -109,7 +109,7 @@ class Suite(BaseSuite):
     # Close balun clicking on the X (RR: balun imploded on the map tiles only)
     def test1_z11(self):
         def callback(driver):
-            driver.find_element_by_class_name("leaflet-popup-close-button").click()
+            click_object(driver, 'class', 'leaflet-popup-close-button')
             wait_for_page_load(driver)
 
         diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test1_11")

@@ -43,8 +43,6 @@ class Suite(BaseSuite):
     def test3_4(self):
         def callback(driver):
             click_object(driver, 'class', 'leaflet-marker-icon')
-            #marker = driver.find_element_by_class_name('leaflet-marker-icon')
-            #ActionChains(driver).click(marker).perform()
             wait_for_page_load(driver)
 
         diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test3_4")
