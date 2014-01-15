@@ -6,7 +6,7 @@ grunt.initConfig({
             options: {                      // Options
                 stdout: true
             },
-            command: 'ls'
+            command: 'python tests_launcher'
         }
     }
 });
