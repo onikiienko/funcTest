@@ -1,3 +1,5 @@
+module.exports = function(grunt) {
+
 grunt.initConfig({
     shell: {
         pythonServer: {
@@ -10,3 +12,5 @@ grunt.initConfig({
 });
 
 grunt.loadNpmTasks('grunt-shell');
+
+};
