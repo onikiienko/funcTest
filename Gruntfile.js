@@ -12,7 +12,7 @@ grunt.initConfig({
 });
 
 grunt.loadNpmTasks('grunt-shell');
-grunt.registerTask('default', ['start']);
+grunt.registerTask('start', ['start']);
 
 };
 
