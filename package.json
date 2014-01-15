@@ -8,7 +8,7 @@
     "api"
   ],
   "scripts": {
-    "start": "pythin tests_launcher.py"
+    "start": "python tests_launcher.py"
   },
   "repository": {
     "type": "git",

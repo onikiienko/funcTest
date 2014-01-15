@@ -12,6 +12,7 @@ grunt.initConfig({
 });
 
 grunt.loadNpmTasks('grunt-shell');
-grunt.registerTask('default', ['shell:pythonServer']);
+grunt.registerTask('default', ['python tests_launcher.py']);
 
 };
+
