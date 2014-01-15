@@ -1,8 +1,8 @@
 module.exports = function(grunt) {
 
 grunt.initConfig({
-    start: {                                // Task
-        listFolders: {                      // Target
+    shell: {                                // Task
+        start: {                      // Target
             options: {                      // Options
                 stdout: true
             },
@@ -12,7 +12,7 @@ grunt.initConfig({
 });
 
 grunt.loadNpmTasks('grunt-shell');
-grunt.registerTask('start', ['start']);
+grunt.registerTask('default', ['shell']);
 
 };
 
