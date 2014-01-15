@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
 
 grunt.initConfig({
-    shell: {                                // Task
+    start: {                                // Task
         listFolders: {                      // Target
             options: {                      // Options
                 stdout: true
@@ -12,7 +12,7 @@ grunt.initConfig({
 });
 
 grunt.loadNpmTasks('grunt-shell');
-grunt.registerTask('default', ['shell']);
+grunt.registerTask('default', ['start']);
 
 };
 
