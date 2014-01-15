@@ -1,17 +1,6 @@
 {
-  "name": "2GIS-Maps-API-2.0",
-  "version": "2.0.19",
-  "description": "Interactive 2GIS maps API, based on Leaflet",
-  "keywords": [
-    "2gis",
-    "map",
-    "api"
-  ],
-  "scripts": {
-    "start": "python tests_launcher.py"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:onikiienko/funcTest.git"
+  "name": "my-project-name",
+  "version": "0.1.0",
+  "devDependencies": {
   }
 }

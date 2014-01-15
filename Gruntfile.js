@@ -1,18 +1,18 @@
 module.exports = function(grunt) {
 
 grunt.initConfig({
-    shell: {
-        pythonServer: {
-            options: {
+    shell: {                                // Task
+        listFolders: {                      // Target
+            options: {                      // Options
                 stdout: true
             },
-            command: 'python tests_launcher.py'
+            command: 'ls'
         }
     }
 });
 
 grunt.loadNpmTasks('grunt-shell');
-grunt.registerTask('default', ['python tests_launcher.py']);
+grunt.registerTask('default', ['shell']);
 
 };
 
