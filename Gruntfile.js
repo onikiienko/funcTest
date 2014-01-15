@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
 
 grunt.initConfig({
-		replace: {
+		config: {
 		  dist: {
 		    options: {
 		      patterns: [
@@ -20,5 +20,5 @@ grunt.initConfig({
 
 grunt.loadNpmTasks('grunt-replace');
 grunt.loadNpmTasks('grunt-shell');
-grunt.registerTask('default', ['replace']);
+grunt.registerTask('default', ['config']);
 };
