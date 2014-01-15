@@ -22,7 +22,7 @@ class Suite(BaseSuite):
     def test1_2(self):
         def callback(driver):
             zoom = "13"
-            center = "new L.LatLng(54.980206086231, 82.898068362003)"
+            center = "new L.LatLng(54.9802, 82.8980)"
             set_center(driver, center, zoom)
 
         diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test1_2")
@@ -32,7 +32,7 @@ class Suite(BaseSuite):
     def test1_3(self):
         def callback(driver):
             zoom = "13"
-            center = "new L.LatLng(54.978806086231, 82.868168362003)"
+            center = "new L.LatLng(54.9788, 82.8681)"
             click_to_center(driver, center, zoom)
 
         diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test1_3")
@@ -53,7 +53,7 @@ class Suite(BaseSuite):
     def test1_5(self):
         def callback(driver):
             zoom = "17"
-            center = "new L.LatLng(54.99771, 82.8687)"
+            center = "new L.LatLng(54.9977, 82.8687)"
             click_to_center(driver, center, zoom)
             wait_for_page_load(driver)
 
@@ -64,7 +64,7 @@ class Suite(BaseSuite):
     def test1_6(self):
         def callback(driver):
             zoom = "18"
-            center = "new L.LatLng(54.98348, 82.89103)"
+            center = "new L.LatLng(54.9834, 82.8910)"
             click_to_center(driver, center, zoom)
             wait_for_page_load(driver)
 
@@ -94,7 +94,7 @@ class Suite(BaseSuite):
     def test1_9(self):
         def callback(driver):
             zoom = "18"
-            center = "new L.LatLng(54.98035, 82.89835)"
+            center = "new L.LatLng(54.9803, 82.8983)"
             click_to_center(driver, center, zoom)
             wait_for_page_load(driver)
 
