@@ -12,7 +12,7 @@ grunt.initConfig({
 		      ]
 		    },
 		    files: [
-		      {expand: true, flatten: true, src: ['tests/test_suite_py.py'], dest: 'public/test_suite_py.py'}
+		      {expand: true, flatten: true, src: ['tests/test_suite_1.py'], dest: 'public/test_suite_1.py'}
 		    ]
 		  }
 		}
