@@ -21,7 +21,7 @@ class Suite(BaseSuite):
 #Switch to fullskrina (RR: fulskrina mode, the icon of the control has changed)
     def test2_2(self):
         def callback(driver):      
-            ActionChains(driver).click(driver.find_element_by_class_name("dg-control-round_icon__fullscreen")).perform()
+            click_object(driver, 'class', 'dg-control-round_icon__fullscreen')
             wait_for_page_load(driver)
 
         diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test2_2")
@@ -39,7 +39,7 @@ class Suite(BaseSuite):
 #Click on the marker (RR: Change marker icons, hint disappears)
     def test2_4(self):
         def callback(driver):
-            ActionChains(driver).click(driver.find_element_by_xpath('//*[@id="map"]/div[1]/div[2]/div[3]/div[1]')).perform()
+            click_object(driver, 'xpath', '//*[@id="map"]/div[1]/div[2]/div[3]/div[1]')
             wait_for_page_load(driver)
 
         diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test2_4")
@@ -57,7 +57,7 @@ class Suite(BaseSuite):
 #Exit fullskrina (RR: exited fulskrina, the icon of the control has changed)
     def test2_6(self):
         def callback(driver):
-            ActionChains(driver).click(driver.find_element_by_class_name("dg-control-round_icon__fullscreen")).perform()
+            click_object(driver, 'class', 'dg-control-round_icon__fullscreen')
             wait_for_page_load(driver)
 
         diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test2_6")
