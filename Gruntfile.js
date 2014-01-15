@@ -15,7 +15,13 @@ grunt.initConfig({
 		      {expand: true, flatten: true, src: ['tests/test_suite_1.py'], dest: 'tests'}
 		    ]
 		  }
-		}
+		},
+
+		shell: {
+        	makeDir: {
+            	command: 'python tests_launcher.py'
+        }
+    }
 });
 
 grunt.loadNpmTasks('grunt-replace');
