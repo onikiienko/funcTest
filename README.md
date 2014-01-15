@@ -30,7 +30,7 @@ $ sudo apt-get install python-opencv
 $ git clone https://github.com/2gis/dali.git
 $ cd dali
 $ sudo python setup.py sdist
-$ sudo sudo pip install dist/dali-0.1.tar.gz
+$ sudo sudo pip install dist/dali-0.2.0-dev.tar.gz
 ```
 #Тесты
 
@@ -44,7 +44,7 @@ $ git clone git@github.com:onikiienko/funcTest.git
 В этом проекте кроме тестов содержатся так же демки. И они должны отдаваться во вне. Для этого нужно настроить nginx.
 В создаем файл /etc/nginx/sites-enabled/funcTest.maps2.test.conf содержимое
 
-```bash 
+```bash
 server {
     listen 80;
     server_name functest.maps2.test;
@@ -58,8 +58,8 @@ server {
 
 #Выполнение тестов
 
-```bash 
-В папке /var/www/applications/funcTest необходимо выполнить 
+```bash
+В папке /var/www/applications/funcTest необходимо выполнить
 $ python tests_launcher.py
 ```
 
@@ -69,7 +69,7 @@ $ python tests_launcher.py
 
 Где будем тесты прогонять(Виндовая виртаулку)
 
-Скачиваем на виртаулочку вот этот 
+Скачиваем на виртаулочку вот этот
 Requires [архив](https://github.com/bayandin/selenium-launchers/archive/master.zip).
 
 Это selenium-standalone библиотека, она даст нам возможность запускать браузер. Далее нужно всё вытащить из архива и через консоль(cmd) запустиьть файлик "start-win.bat". Проследили, что в том, что вываливается в консоль етсь порт 4455.
@@ -86,7 +86,7 @@ log: vagrant
 
 pass: vagrant
 
-В папке /var/www/applications/funcTest необходимо выполнить 
-```bash 
+В папке /var/www/applications/funcTest необходимо выполнить
+```bash
 $ python tests_launcher.py
 ```
