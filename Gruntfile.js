@@ -7,13 +7,9 @@ function makePaterns(){
 	var patterns = [];
 	for(var key in config){
 		patterns.push({match: key, replacement: config[key]})
-     	console.log(config[key]);
 	}
-	console.log(patterns);
 	return patterns;
 }
-
-
 
 module.exports = function(grunt) {
 	grunt.initConfig({

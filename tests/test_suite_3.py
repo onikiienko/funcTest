@@ -5,9 +5,10 @@ from source.screenshoter import *
 
 class Suite(BaseSuite):
 
-
-# "@@test"
-# "@@test"
+# "@@test1"
+# "@@test2"
+# "@@test3"
+# "@@test4"
 
 # Open the map with a marker dragabl
     def test3_1(self):

@@ -1,3 +1,5 @@
 {
-    "test": "http://functest.maps2.test/demo_ts1_test.html"
+    "test1": "http://functest.maps2.test/demo_ts1_test.html"
+    "test2": "http://functest.maps2.test/demo_ts1_test.html"
+    "test3": "http://functest.maps2.test/demo_ts1_test.html"
 }
