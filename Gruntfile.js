@@ -1,4 +1,4 @@
-var config = require('./config.main.json');
+var config = require('./config.json');
 
 
 module.exports = function(grunt) {
