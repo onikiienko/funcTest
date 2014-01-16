@@ -1,3 +1,6 @@
+var config = require('./config.main.json')
+
+
 module.exports = function(grunt) {
 
 grunt.initConfig({
@@ -7,7 +10,7 @@ grunt.initConfig({
 		      patterns: [
 		        {
 		          match: 'test',
-		          replacement: '"http://functest.maps2.test/demo_ts1_test.html"'
+		          replacement: config.test
 		        }
 		      ]
 		    },
