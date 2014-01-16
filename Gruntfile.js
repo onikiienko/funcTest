@@ -1,4 +1,4 @@
-var config = require('./config.main.json')
+var config = require('./config.main.json');
 
 
 module.exports = function(grunt) {
@@ -10,7 +10,7 @@ grunt.initConfig({
 		      patterns: [
 		        {
 		          match: 'test',
-		          replacement: config.test
+		          replacement: config[test]
 		        }
 		      ]
 		    },
