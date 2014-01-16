@@ -1,10 +1,15 @@
 var config = require('./config.json');
 
-for(var key in config)
-{
-     console.log(config[key]);
-}
+
 // Здесь получаем нужное свойство
+
+function makePaterns(){
+	var patterns = [];
+	for(var key in config){
+		patterns.push({match: key, replacement: config[key]})
+     	console.log(config[key]);
+	}
+}
 
 
 
@@ -13,13 +18,7 @@ module.exports = function(grunt) {
 		replace: {
 		  dist: {
 			options: {
-			    patterns: 
-			    	[
-			        	{
-			          		match: 'test',
-			          		replacement: config['test']
-			        	}
-			      	]
+			    patterns: makePaterns()
 			},		
 			files: 
 				[
