@@ -9,6 +9,7 @@ function makePaterns(){
 		patterns.push({match: key, replacement: config[key]})
      	console.log(config[key]);
 	}
+	console.log(patterns);
 	return patterns;
 }
 
