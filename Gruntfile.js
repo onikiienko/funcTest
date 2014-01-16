@@ -3,8 +3,10 @@ var config = require('./config.json');
 // Здесь парсим json
 var parseConfig = JSON.parse(config);
 
-for (i in parseConfig){
-console.log( parseConfig.i );	
+
+for(var key in parseConfig)
+{
+     console.log(parseConfig[key]);
 }
 // Здесь получаем нужное свойство
 
