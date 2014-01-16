@@ -1,5 +1,14 @@
 var config = require('./config.json');
 
+// Здесь парсим json
+var parseConfig = JSON.parse(config);
+
+for (i in parseConfig){
+console.log( data.i );	
+}
+// Здесь получаем нужное свойство
+
+
 
 module.exports = function(grunt) {
 	grunt.initConfig({
