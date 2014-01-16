@@ -4,7 +4,7 @@ var config = require('./config.json');
 var parseConfig = JSON.parse(config);
 
 for (i in parseConfig){
-console.log( data.i );	
+console.log( parseConfig.i );	
 }
 // Здесь получаем нужное свойство
 
