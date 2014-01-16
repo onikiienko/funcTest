@@ -10,7 +10,7 @@ grunt.initConfig({
 		      patterns: [
 		        {
 		          match: 'test',
-		          replacement: config[test]
+		          replacement: config['test']
 		        }
 		      ]
 		    },
