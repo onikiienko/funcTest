@@ -33,19 +33,19 @@ function makePaterns(){
 	var patterns = [];
 	for(var key in config){
 		patterns.push({match: key, replacement: config[key]});
-	}
+	};
 	return patterns;
 }
 
 function fillConfig() {
-		config = require('./config.json');
-		var fs = require('fs');
+	config = require('./config.json');
+	var fs = require('fs');
 
-		var exists = fs.existsSync('./config.local.json'); 
-		if (exists) {
-		    var localConfig = require('./config.local.json');
-			for(var key in localConfig){
-				config[key] = localConfig[key];
-			};
-		 };
+	var exists = fs.existsSync('./config.local.json'); 
+	if (exists) {
+	    var localConfig = require('./config.local.json');
+		for(var key in localConfig){
+			config[key] = localConfig[key];
+		};
+	 };
 }
