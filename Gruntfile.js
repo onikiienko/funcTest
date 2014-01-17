@@ -32,7 +32,7 @@ function makePaterns(){
 	fillConfig();
 	var patterns = [];
 	for(var key in config){
-		patterns.push({match: key, replacement: config[key]})
+		patterns.push({match: key, replacement: config[key]});
 	}
 	return patterns;
 }
@@ -46,8 +46,6 @@ function fillConfig() {
 		    var localConfig = require('./config.local.json');
 			for(var key in localConfig){
 				config[key] = localConfig[key];
-			}
-		 } else {
-		    console.log("no local file was found");
-		 }
+			};
+		 };
 }
