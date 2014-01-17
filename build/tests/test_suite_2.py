@@ -11,11 +11,11 @@ class Suite(BaseSuite):
             driver.get(url)
             wait_for_page_load(driver)
         
-        url = "http://functest.maps2.test/demo_ts2_test.html"
+        url = "@@testApplication" + "/demo_ts1_test.html"
         file1 = takeScreenshot(self.dali1, callback, self.driver1)
-        url = "http://functest.maps2.test/demo_ts2_pub.html"
+        url = "@@testApplication" + "/demo_ts1_pub.html"
         file2 = takeScreenshot(self.dali2, callback, self.driver2)
-        diff = compare(self.dali1, file1, file2, "test1_1")
+        diff = compare(self.dali1, file1, file2, "test2_1")
         self.assertEqual(diff, 0)
 
 #Switch to fullskrina (RR: fulskrina mode, the icon of the control has changed)

@@ -17,11 +17,10 @@ if __name__ == "__main__":
     # setup new test suite
     loader = TestLoader()
     suite = TestSuite((
-        #loader.loadTestsFromTestCase(test_suite_1.Suite),
+        loader.loadTestsFromTestCase(test_suite_1.Suite),
         loader.loadTestsFromTestCase(test_suite_2.Suite),
-        #loader.loadTestsFromTestCase(test_suite_3.Suite)
+        loader.loadTestsFromTestCase(test_suite_3.Suite)
     ))
 
     runner = TextTestRunner(verbosity=5)
-    #testResult = runner.run(suite)
     runner.run(suite)

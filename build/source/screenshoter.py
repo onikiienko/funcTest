@@ -44,7 +44,7 @@ def compare(dali, file1, file2, screenName):
         try_to_delete_file(file2)
         try_to_delete_file(result_file)
     else:
-        print 'http://functest.maps2.test' + '/screens/' + screenName + '.png';
+        print '@@functest' + '/screens/' + screenName + '.png';
         #try_to_delete_file(file1)
         #try_to_delete_file(file2)
 

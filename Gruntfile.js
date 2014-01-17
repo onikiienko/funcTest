@@ -20,9 +20,9 @@ module.exports = function(grunt) {
 			},		
 			files: 
 				[
-			      	{expand: true, flatten: true, src: ['tests/test_suite_1.py'], dest: 'tests'},
-			      	{expand: true, flatten: true, src: ['tests/test_suite_2.py'], dest: 'tests'},
-			      	{expand: true, flatten: true, src: ['tests/test_suite_3.py'], dest: 'tests'}
+			      	{expand: true, flatten: true, src: ['build/tests/*'], dest: 'tests'},
+			      	{expand: true, flatten: true, src: ['build/demos/*'], dest: 'public'},
+			      	{expand: true, flatten: true, src: ['build/source/*'], dest: 'tests/source'}
 			    ]
 			}
 		},

@@ -5,20 +5,15 @@ from source.screenshoter import *
 
 class Suite(BaseSuite):
 
-# "@@test1"
-# "@@test2"
-# "@@test3"
-# "@@test4"
-
 # Open the map with a marker dragabl
     def test3_1(self):
         def callback(driver):
             driver.get(url)
             wait_for_page_load(driver)
         
-        url = "http://functest.maps2.test/demo_ts2_test.html"
+        url = "@@testApplication" + "/demo_ts1_test.html"
         file1 = takeScreenshot(self.dali1, callback, self.driver1)
-        url = "http://functest.maps2.test/demo_ts2_pub.html"
+        url = "@@testApplication" + "/demo_ts1_pub.html"
         file2 = takeScreenshot(self.dali2, callback, self.driver2)
         diff = compare(self.dali1, file1, file2, "test3_1")
         self.assertEqual(diff, 0)

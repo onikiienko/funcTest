@@ -2,5 +2,9 @@
   "name": "my-project-name",
   "version": "0.1.0",
   "devDependencies": {
-  }
+    "grunt":"latest",
+    "grunt-shell":"latest",
+    "grunt-replace":"latest"
+  },
+  "private":true
 }

@@ -3,13 +3,6 @@ from BaseSuite import BaseSuite
 from source.helper import *
 from source.screenshoter import *
 
-
-# "@@test1"
-# "@@test2"
-# "@@test3"
-# "@@test4"
-
-
 class Suite(BaseSuite):
     # Open map leveled on 13 (RR: the expected terrain tiles)
     def test1_1(self):
@@ -17,9 +10,9 @@ class Suite(BaseSuite):
             driver.get(url)
             wait_for_page_load(driver)
         
-        url = "http://functest.maps2.test/demo_ts1_test.html"
+        url = "@@testApplication" + "/demo_ts1_test.html"
         file1 = takeScreenshot(self.dali1, callback, self.driver1)
-        url = "http://functest.maps2.test/demo_ts1_pub.html"
+        url = "@@testApplication" + "/demo_ts1_pub.html"
         file2 = takeScreenshot(self.dali2, callback, self.driver2)
         diff = compare(self.dali1, file1, file2, "test1_1")
         self.assertEqual(diff, 0)

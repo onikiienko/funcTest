@@ -7,3 +7,13 @@
 /*.pyc
 
 /*.png
+
+/node_modules
+
+/public/demo_*
+
+/tests/test*
+
+/tests/source/mypkg.py
+
+/tests/source/screenshoter.py
