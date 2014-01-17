@@ -8,6 +8,8 @@
 
 /*.png
 
+/config.local.json
+
 node_modules/*
 
 /public/demo_*
