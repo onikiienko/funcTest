@@ -38,19 +38,19 @@ class Suite(BaseSuite):
         self.assertEqual(diff, 0)
 
 # Switch lang to en (RR: Content in pop-up translated to english)
-    def test4_3(self):
+    def test4_4(self):
         def callback(driver):
             script = "map.setLang('en')"
-            ommand_line(driver, script)
+            command_line(driver, script)
 
         diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test4_4")
         self.assertEqual(diff, 0)
 
 # Switch lang to cs (RR: Content in pop-up translated to cs)
-    def test4_3(self):
+    def test4_5(self):
         def callback(driver):
             script = "map.setLang('cs')"
-            ommand_line(driver, script)
+            command_line(driver, script)
 
         diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test4_5")
         self.assertEqual(diff, 0)
