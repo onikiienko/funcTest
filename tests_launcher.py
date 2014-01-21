@@ -19,7 +19,8 @@ if __name__ == "__main__":
     suite = TestSuite((
         loader.loadTestsFromTestCase(test_suite_1.Suite),
         loader.loadTestsFromTestCase(test_suite_2.Suite),
-        loader.loadTestsFromTestCase(test_suite_3.Suite)
+        loader.loadTestsFromTestCase(test_suite_3.Suite),
+        loader.loadTestsFromTestCase(ts_geoclicker_dark.Suite)
     ))
 
     runner = TextTestRunner(verbosity=5)
