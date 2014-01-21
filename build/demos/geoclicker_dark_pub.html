@@ -16,6 +16,8 @@
 <body>
     <div id="map"></div>
     <script type="text/javascript">
+    var map;
+
         L.onLoad(function () {
         /*
          * L.Control.Loading is a control that shows a loading indicator when tiles are
@@ -216,7 +218,7 @@
 
 
 
-            var map = new L.Map('map', {
+            map = new L.Map('map', {
                 center: new L.LatLng(59.93988006784822, 30.30166625976562),
                 zoom: 10
             });
