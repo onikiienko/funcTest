@@ -4,6 +4,7 @@ from unittest import TestLoader, TextTestRunner, TestSuite, TestResult
 from tests import test_suite_1
 from tests import test_suite_2
 from tests import test_suite_3
+from tests import ts_geoclicker_dark
 
 from tests.source.mypkg import *
 
