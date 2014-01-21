@@ -19,3 +19,5 @@ node_modules/*
 /tests/source/mypkg.py
 
 /tests/source/screenshoter.py
+
+/*.log
