@@ -24,6 +24,7 @@ class Suite(BaseSuite):
             zoom = "10"
             center = "new L.LatLng(59.95019685841227, 30.53237915039062)"
             click_to_center(driver, center, zoom)
+            wait_for_page_load(driver)
 
         diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test4_2")
         self.assertEqual(diff, 0)
@@ -33,6 +34,7 @@ class Suite(BaseSuite):
         def callback(driver):
             script = "map.setLang('it')"
             command_line(driver, script)
+            wait_for_page_load(driver)
 
         diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test4_3")
         self.assertEqual(diff, 0)
@@ -42,6 +44,7 @@ class Suite(BaseSuite):
         def callback(driver):
             script = "map.setLang('en')"
             command_line(driver, script)
+            wait_for_page_load(driver)
 
         diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test4_4")
         self.assertEqual(diff, 0)
@@ -51,6 +54,7 @@ class Suite(BaseSuite):
         def callback(driver):
             script = "map.setLang('cs')"
             command_line(driver, script)
+            wait_for_page_load(driver)
 
         diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test4_5")
         self.assertEqual(diff, 0)
