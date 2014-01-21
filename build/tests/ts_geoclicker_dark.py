@@ -8,6 +8,7 @@ class Suite(BaseSuite):
 # Open the map
     def test4_1(self):
         def callback(driver):
+            driver.maximize_window()
             driver.get(url)
             wait_for_page_load(driver)
 
