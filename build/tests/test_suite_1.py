@@ -9,7 +9,7 @@ class Suite(BaseSuite):
         def callback(driver):
             driver.get(url)
             wait_for_page_load(driver)
-        
+
         url = "@@functest" + "/demo_ts1_test.html"
         file1 = takeScreenshot(self.dali1, callback, self.driver1)
         url = "@@functest" + "/demo_ts1_pub.html"
@@ -33,6 +33,7 @@ class Suite(BaseSuite):
             zoom = "13"
             center = "new L.LatLng(54.9788, 82.8681)"
             click_to_center(driver, center, zoom)
+            wait_for_page_load(driver)
 
         diff = takeScreenAndCompare(callback, self.dali1, self.dali2, self.driver1, self.driver2, "test1_3")
         self.assertEqual(diff, 0)

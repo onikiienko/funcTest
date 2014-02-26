@@ -18,7 +18,7 @@ def takeScreenshot(_dali, callback, _driver):
     Making a screenshot with user's parameters.
     """
     return _dali.take_screenshot(
-        resolution="1024x768",
+        resolution="10000x10000",
         scenario=callback,
         scenario_args=_driver,
         path_to_save="public/screens"

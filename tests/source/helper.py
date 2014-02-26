@@ -24,7 +24,7 @@ def click_to_center(driver, center, zoom):
 
     height = element.size['height'] / 2
     width = element.size['width'] / 2
-    
+
     ActionChains(driver).move_to_element_with_offset(element, width, height).click().perform()
 
 def hover_on_center(driver, center, zoom):
@@ -37,7 +37,7 @@ def hover_on_center(driver, center, zoom):
 
     height = element.size['height'] / 2
     width = element.size['width'] / 2
-    
+
     ActionChains(driver).move_to_element_with_offset(element, width, height).perform()
 
 
@@ -63,3 +63,9 @@ def checking_for_flag_enable(driver):
     except:
         print "waiting..."
         return False
+
+def command_line(driver, script):
+    """(object, str) -> none
+    Execute script like in command line
+    """
+    driver.execute_script(script + ";")
