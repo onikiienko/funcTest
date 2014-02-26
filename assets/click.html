@@ -15,16 +15,16 @@
     var map,
         balloonHTML;
 
-    L.onLoad(function () {
-        map = new L.Map('map', {
-            "center": new L.LatLng(54.980206086231, 82.898068362003),
+    DG.then(function () {
+        map = new DG.map('map', {
+            "center": new DG.LatLng(54.980206086231, 82.898068362003),
             "zoom": 13,
-            "dgGeoclicker": true
+            "geoclicker": false
         });
-        map.dgGeoclicker.disable();
+        //map.dgGeoclicker.disable();
 
         map.on('click', function(e) {
-        var popup = L.popup()
+        var popup = DG.popup()
             .setLatLng(e.latlng)
             .setContent('Мы находимся тут:<br>' + e.latlng + '<br> Высота полёта: ' + map.getZoom())
             .openOn(map);
