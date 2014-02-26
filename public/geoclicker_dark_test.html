@@ -4,7 +4,7 @@
         <title>2GIS maps api demo</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src= "@@testApplication/2.0/loader.js?pkg=full&skin=dark"></script>
+        <script src= "http://127.0.0.1:3000/2.0/loader.js?pkg=full&skin=dark"></script>
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
@@ -23,13 +23,6 @@
                     });
 
                     map.addControl(DG.Control.loading());
-
-                    var marker = L.marker([54.980206086231, 82.898068362003], {
-                        riseOnHover : true,
-                        draggable : true,
-                        label : 'Подсказка при наведении!'
-                    });
-                    marker.addTo(map);
             });
         </script>
     </body>
