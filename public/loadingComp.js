@@ -100,12 +100,12 @@ DG.Control.Loading = DG.Control.extend({
     },
 
     _showIndicator: function() {
-        document.body.style.backgroundColor = "Red";
+        //document.body.style.backgroundColor = "Red";
         document.body.className = 'laoding';
     },
 
     _hideIndicator: function() {
-        document.body.style.backgroundColor = "Blue";
+        //document.body.style.backgroundColor = "Blue";
         document.body.className = 'loaded';
     },
 

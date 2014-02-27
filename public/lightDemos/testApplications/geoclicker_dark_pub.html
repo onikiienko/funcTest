@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2GIS maps api demo</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src= "http://127.0.0.1:3000/2.0/loader.js?pkg=full&skin=light"></script>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id="map"></div>
+        <script>
+            DG.then(function() {
+                // загрузка кода модуля
+                return DG.plugin('loadingComp.js');
+            }).then(function() {
+                    map = new DG.Map('map', {
+                        "center": new DG.LatLng(54.980156831455, 82.897440725094),
+                        "zoom": 13,
+                        "geoclicker": true,
+                        "worldCopyJump": true,
+                        "locationControl": true
+                    });
+
+                    map.addControl(DG.Control.loading());
+            });
+        </script>
+    </body>
+</html>

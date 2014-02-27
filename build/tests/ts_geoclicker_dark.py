@@ -12,9 +12,9 @@ class Suite(BaseSuite):
             driver.get(url)
             wait_for_page_load(driver)
 
-        url = "@@functest" + "/geoclicker_dark_test.html"
+        url = "@@functest" + "/@@dirDemos/geoclicker.html"
         file1 = takeScreenshot(self.dali1, callback, self.driver1)
-        url = "@@functest" + "/geoclicker_dark_pub.html"
+        url = "@@functest" + "/@@dirDemos/geoclicker.html"
         file2 = takeScreenshot(self.dali2, callback, self.driver2)
         diff = compare(self.dali1, file1, file2, "test4_1")
         self.assertEqual(diff, 0)

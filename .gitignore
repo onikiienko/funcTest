@@ -12,9 +12,11 @@
 
 node_modules/*
 
-/public/demo_*
+/public/darkDemos/*.html
+/public/lightDemos/*.html
 
-/tests/test*
+/tests/darkTests/*
+/tests/lightTests/*
 
 /tests/source/mypkg.py
 
