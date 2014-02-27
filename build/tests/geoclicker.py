@@ -1,7 +1,7 @@
 from BaseSuite import BaseSuite
 
-from source.helper import *
-from source.screenshoter import *
+from tests.source.helper import *
+from tests.source.screenshoter import *
 
 class Suite(BaseSuite):
 
