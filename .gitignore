@@ -2,9 +2,13 @@
 /nbproject
 
 /tests/lightTests/*
+!*.txt
 /tests/darkTests/*
+!*.txt
 /public/darkDemos/*
+!*.txt
 /public/lightDemos/*
+!*.txt
 /tests/source/mypkg.py
 /tests/source/screenshoter.py
 
@@ -15,4 +19,3 @@
 node_modules/*
 
 /*.log
-!/*.txt
