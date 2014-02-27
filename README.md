@@ -1,19 +1,15 @@
 ReadMe
 ========
 
-Разворачивание и запуск тестов на серверах.
+Разворачивание и запуск тестов на сервере.
 
-Для этого нам нужно будет:
-- поработать над виртуалкой, где будут храниться тесты, скриншоты, проводиться запуск.
-- поработать над настройкой виндовой виртуалки, где и будут проходить тесты  в браузерах
-
-Для запуска тестов нам понадобпиться виртуалка с ubuntu, на ней будет необходимо поствить окружение, это:
-- python-opencv to compare screenshots,
-- selenium-server-standalone to run under,
-- pip, setuptools to install.
-- dali (https://github.com/2gis/dali) для него нужно попросить чтоб тебя добавили к проекту в github
-- скачать проект с тестами(https://github.com/onikiienko/funcTest), настроить выполнить команду
-- демки
+Для запуска тестов нам понадобпиться машина с windows, на ней будет необходимо поствить окружение, это:
+- [mapsapi2.0](https://github.com/2gis/maps-api-2.0/blob/master/CONTRIBUTING.md#windows)
+- python-opencv
+- [selenium-server-standalone и webdrivers](https://github.com/bayandin/selenium-launchers/archive/master.zip).
+- pip
+- [dali](https://github.com/2gis/dali)
+- [скачать проект с тестами](https://github.com/onikiienko/funcTest)
 
 Делается всё это командами(в папке /var/www/applications/):
 
@@ -26,6 +22,7 @@ $ sudo pip install thrift==0.9.0 selenium==2.33.0
 $ sudo apt-get install python-pip python-dev build-essential
 $ sudo pip install --upgrade pip
 $ sudo apt-get install python-opencv
+
 Запросили пароль на https://github.com/2gis/dali у Игоря Павлова или Саши Баяндина
 $ git clone https://github.com/2gis/dali.git
 $ cd dali
@@ -37,19 +34,24 @@ $ sudo sudo pip install dist/dali-0.2.0-dev.tar.gz
 Далее нужно скачать сами тесты и настроить сервер под правильную раздачу файлов.
 
 ```bash
-в папке /var/www/applications/ выполняем
+$ cd /var/www/applications/
 $ git clone git@github.com:onikiienko/funcTest.git
 ```
+Делаем сборку
+```bash
+$ grunt build
+```
+
 #Демки
 В этом проекте кроме тестов содержатся так же демки. И они должны отдаваться во вне. Для этого нужно настроить nginx.
-В создаем файл /etc/nginx/sites-enabled/funcTest.maps2.test.conf содержимое
+В создаем файл /etc/nginx/sites-enabled/funcTest.conf содержимое
 
 ```bash
 server {
     listen 80;
-    server_name functest.maps2.test;
-    access_log /var/log/nginx/functest.maps2.test.log;
-    error_log  /var/log/nginx/functest.maps2.test.log;
+    server_name functest;
+    access_log /var/log/nginx/functest.log;
+    error_log  /var/log/nginx/functest.log;
     charset utf-8;
     root /var/www/applications/funcTest/public/;
     index index.html;
@@ -60,33 +62,8 @@ server {
 
 ```bash
 В папке /var/www/applications/funcTest необходимо выполнить
-$ python tests_launcher.py
+$ python tests_launcher_dark.py
+$ python tests_launcher_light.py
 ```
 
-С сервером всё!
-
-#Клиент
-
-Где будем тесты прогонять(Виндовая виртаулку)
-
-Скачиваем на виртаулочку вот этот
-Requires [архив](https://github.com/bayandin/selenium-launchers/archive/master.zip).
-
-Это selenium-standalone библиотека, она даст нам возможность запускать браузер. Далее нужно всё вытащить из архива и через консоль(cmd) запустиьть файлик "start-win.bat". Проследили, что в том, что вываливается в консоль етсь порт 4455.
-
-С виндой всё.
-
-#Пример
-
-Я развернул на 10.110.40.43
-
-в хосты 10.110.40.43 functest.maps2.test
-
-log: vagrant
-
-pass: vagrant
-
-В папке /var/www/applications/funcTest необходимо выполнить
-```bash
-$ python tests_launcher.py
-```
+selenium-standalone библиотека, она даст нам возможность запускать браузер. Далее нужно всё вытащить из архива и через консоль(cmd) запустиьть файлик "start-win.bat". Проследили, что в том, что вываливается в консоль етсь порт 4455.
