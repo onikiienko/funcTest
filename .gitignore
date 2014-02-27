@@ -1,25 +1,10 @@
 *.pyc
 /nbproject
 
-/public/screens/*
-!*.txt
-
 /*.pyc
 
 /*.png
 
-/config.local.json
-
 node_modules/*
-
-/public/darkDemos/*.html
-/public/lightDemos/*.html
-
-/tests/darkTests/*
-/tests/lightTests/*
-
-/tests/source/mypkg.py
-
-/tests/source/screenshoter.py
 
 /*.log
