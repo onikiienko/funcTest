@@ -5,9 +5,13 @@
 !*.txt
 /tests/darkTests/*
 !*.txt
-/public/darkDemos/*
+/public/darkDemos/publicApplications*
 !*.txt
-/public/lightDemos/*
+/public/lightDemos/publicApplications*
+!*.txt
+/public/darkDemos/testApplications*
+!*.txt
+/public/lightDemos/testApplications*
 !*.txt
 /tests/source/mypkg.py
 /tests/source/screenshoter.py
