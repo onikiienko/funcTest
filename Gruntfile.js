@@ -107,7 +107,7 @@ module.exports = function(grunt) {
 			},
 		},
     shell: {
-        makeDemos: {
+        build: {
             command: [
                 'grunt darkTest',
                 'grunt darkPublic',
@@ -124,13 +124,13 @@ module.exports = function(grunt) {
 
 	grunt.loadNpmTasks('grunt-replace');
 	grunt.loadNpmTasks('grunt-shell');
-	grunt.registerTask('makeDemos', ['shell:makeDemos'])
+	grunt.registerTask('build', ['shell:build'])
 	grunt.registerTask('darkTest', ['replace:darkTest']);
 	grunt.registerTask('darkPublic', ['replace:darkPublic']);
 	grunt.registerTask('lightTest', ['replace:lightTest']);
 	grunt.registerTask('lightPublic', ['replace:lightPublic'])
 	grunt.registerTask('replaceApp', ['replace:replaceApp'])
-	grunt.registerTask('default', ['makeDemos']);
+	grunt.registerTask('default', ['build']);
 };
 
 
