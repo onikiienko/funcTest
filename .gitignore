@@ -1,10 +1,10 @@
 *.pyc
 /nbproject
 
-/tests/lightTests
-/tests/darkTests
-/public/darkDemos
-/public/lightDemos
+/tests/lightTests/*
+/tests/darkTests/*
+/public/darkDemos/*
+/public/lightDemos/*
 /tests/source/mypkg.py
 /tests/source/screenshoter.py
 
