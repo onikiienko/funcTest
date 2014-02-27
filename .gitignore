@@ -1,6 +1,6 @@
 *.pyc
 /nbproject
-
+!/*.txt
 /tests/lightTests/*
 !*.txt
 /tests/darkTests/*
@@ -23,3 +23,5 @@
 node_modules/*
 
 /*.log
+
+!/*.txt
