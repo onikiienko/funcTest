@@ -2,9 +2,13 @@
   "name": "funfTest",
   "version": "0.1.0",
   "devDependencies": {
-    "grunt":"latest",
-    "grunt-shell":"latest",
-    "grunt-replace":"latest"
+    "grunt": "latest",
+    "grunt-shell": "latest",
+    "grunt-replace": "latest"
   },
-  "private":true
+  "private": true,
+  "dependencies": {
+    "http": "0.0.0",
+    "connect": "~2.13.0"
+  }
 }

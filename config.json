@@ -1,6 +1,6 @@
 {
-    "functest": "http://functest",
-    "publicApplication": "http://maps.api.2gis.ru",
+    "functest": "http://127.0.0.1:3001",
+    "publicApplication": "http://maps.api.2gis.ru/2.0",
     "testApplication": "http://127.0.0.1:3000",
     "webDriverIp": "http://127.0.0.1:4455/wd/hub"
 }
