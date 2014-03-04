@@ -1,8 +1,9 @@
 import unittest
-
-from source.helper import *
-from source.screenshoter import *
-from dali import Dali
+import sys
+sys.path.insert(0, './tests/source')
+import helper
+import screenshoter
+import dali
 
 
 class BaseSuite(unittest.TestCase):

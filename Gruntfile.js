@@ -118,18 +118,35 @@ module.exports = function(grunt) {
             options: {
                 stdout: true
             }
+        },install: {
+            command: [
+    			'apt-get install python-opencv python-numpy',
+				'pip install thrift==0.9.0 selenium==2.34.0'
+            ].join('&&'),
+            options: {
+                stdout: true
+            }
+        },
+        test: {
+            command: [
+            	'python tests_launcher_dark.py'
+				].join('&&'),
+            options: {
+                stdout: true
+            }
         }
     }
 	});
 
 	grunt.loadNpmTasks('grunt-replace');
 	grunt.loadNpmTasks('grunt-shell');
-	grunt.registerTask('build', ['shell:build'])
+	grunt.registerTask('build', ['shell:build']);
+	grunt.registerTask('test', ['shell:test']);
 	grunt.registerTask('darkTest', ['replace:darkTest']);
 	grunt.registerTask('darkPublic', ['replace:darkPublic']);
 	grunt.registerTask('lightTest', ['replace:lightTest']);
-	grunt.registerTask('lightPublic', ['replace:lightPublic'])
-	grunt.registerTask('replaceApp', ['replace:replaceApp'])
+	grunt.registerTask('lightPublic', ['replace:lightPublic']);
+	grunt.registerTask('replaceApp', ['replace:replaceApp']);
 	grunt.registerTask('default', ['build']);
 };
 

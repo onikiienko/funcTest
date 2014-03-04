@@ -1,12 +1,10 @@
 import sys
-from unittest import TestLoader, TextTestRunner, TestSuite, TestResult
-
-from tests.darkTests import test_suite_1
-from tests.darkTests import test_suite_2
-from tests.darkTests import test_suite_3
-from tests.darkTests import geoclicker
+sys.path.insert(0, './tests/darkTests')
+import test_suite_1
 
 from tests.source.mypkg import *
+
+from unittest import TestLoader, TextTestRunner, TestSuite, TestResult
 
 '''
 Launching a tests, testsuite by testsuite. And closeing the browsers after all keyses are complited.
