@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2GIS maps api demo</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src= "@@application/2.0/loader.js?pkg=full&skin=@@skinColor"></script>
+        <link rel="stylesheet" href="@@functest/style.css" />
+    </head>
+    <body>
+        <div id="map"></div>
+        <script>
+            DG.then(function () {
+                var map, wkt,
+                    latLng = [55.751288, 37.607741];
+
+                map = DG.map('map', {
+                    center: latLng,
+                    zoom: 17
+                });
+                wkt = new DG.Wkt();
+
+                DG.ajax({
+                    url: 'http://catalog.api.2gis.ru/geo/search',
+                    data: {
+                        output: 'jsonp',
+                        key: 'ruxlih0718',
+                        version: 1.3,
+                        q: latLng[1] + ',' + latLng[0],
+                        types: 'metro',
+                        radius: 250,
+                        limit: 100
+                    },
+                    type: 'jsonp',
+                    success: function(data) {
+                        data.result.forEach(function(metro) {
+                            // считываем строку в WKT-формате 
+                            wkt.read(metro.centroid);
+                            // извлекаем координаты для маркера
+                            var lng = wkt.components[0].x;
+                            var lat = wkt.components[0].y;
+                            // создаем и добавляем маркер на карту
+                            marker = DG.marker([lat, lng]);
+                            marker.bindPopup(metro.name);
+                            map.addLayer(marker);
+                        });
+                    },
+                    error: function(error) {
+                        console.log(error);
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

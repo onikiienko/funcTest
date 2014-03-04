@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2GIS maps api demo</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src= "@@application/2.0/loader.js?pkg=full&skin=@@skinColor"></script>
+        <link rel="stylesheet" href="@@functest/style.css" />
+        <link rel="stylesheet" href="http://leaflet.github.io/Leaflet.markercluster/example/screen.css" />
+        <link rel="stylesheet" href="http://leaflet.github.io/Leaflet.markercluster/dist/MarkerCluster.css" />
+        <link rel="stylesheet" href="http://leaflet.github.io/Leaflet.markercluster/dist/MarkerCluster.Default.css" />
+        <script src="http://maps.api.2gis.ru/2.0/cluster_realworld.js"></script>
+    </head>
+    <body>
+        <div id="map"></div>
+        <script>
+            DG.then(function() {
+                // загрузка кода модуля
+                return DG.plugin('http://leaflet.github.io/Leaflet.markercluster/dist/leaflet.markercluster-src.js');
+            }).then(function() {
+                map = DG.map('map', {
+                    center: DG.latLng(54.92, 82.82),
+                    zoom: 14
+                });
+                var markers = DG.markerClusterGroup();
+                // обработка координат для установки маркеров
+                for (var i = 0; i < addressPoints.length; i++) {
+                    var a = addressPoints[i];
+                    var title = a[2];
+                    var marker = DG.marker([a[0], a[1]], { title: title });
+                    marker.bindPopup(title);
+                    markers.addLayer(marker);
+                }
+                map.addLayer(markers);
+            });
+        </script>
+    </body>
+</html>

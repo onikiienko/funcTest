@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2GIS maps api demo</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src= "@@application/2.0/loader.js?pkg=full&skin=@@skinColor"></script>
+        <link rel="stylesheet" href="@@functest/style.css" />
+        <style>
+            #container {
+                height:400px;
+                position: relative;
+            }
+            #content {
+                position: absolute;
+                background:#000;
+                background:rgba(51,51,51,.9);
+                width:200px;
+                height: 400px;
+                z-index: 1000;
+            }
+        </style>
+    </head>
+    <body>
+        <div id='container'>
+            <div id='content'></div>
+            <div id="map" style="width: 100%; height: 400px;"></div>
+        </div>
+        <script>
+            DG.then(function() {
+                var map;
+                map = DG.map('map', {
+                    center: [54.98, 82.89],
+                    zoom: 10,
+                    maxBounds: [
+                        [54.8220, 82.4304],
+                        [55.1372, 83.3505]
+                    ],
+                    minZoom: 10,
+                    maxZoom: 15
+                });
+                DG.control.zoom({position: 'topright'}).addTo(map);
+                map.fitBounds(map.getBounds(), {
+                    paddingTopLeft: [200, 0]
+                });
+            });
+        </script>
+    </body>
+</html>

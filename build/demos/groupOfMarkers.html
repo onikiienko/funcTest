@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2GIS maps api demo</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src= "@@application/2.0/loader.js?pkg=full&skin=@@skinColor"></script>
+        <link rel="stylesheet" href="@@functest/style.css" />
+    </head>
+    <body>
+        <div id="map"></div>
+		<script>
+			DG.then(function() {
+				var map,
+					marker1,
+					marker2,
+					marker3,
+					group;
+
+		        map = DG.map('map', {
+		            center: [54.98, 82.89],
+		            zoom: 13
+		    	});
+				
+				marker1 = DG.marker([54.96, 82.889]).addTo(map);
+				marker2 = DG.marker([54.98, 82.893]).addTo(map);
+				marker3 = DG.marker([54.99, 82.896]).addTo(map);
+				
+				group = DG.featureGroup([marker1, marker2, marker3]);
+				group.addTo(map);
+			    group.on('click', function(e) {
+			    	map.setView([e.latlng.lat, e.latlng.lng]);
+			    });
+			});
+		</script>
+	</body>
+</html>

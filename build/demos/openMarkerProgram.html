@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2GIS maps api demo</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src= "@@application/2.0/loader.js?pkg=full&skin=@@skinColor"></script>
+        <link rel="stylesheet" href="@@functest/style.css" />
+    </head>
+    <body>
+        <input id="showPopup" type="button" value="Открыть балун" />
+        <div id="map"></div>
+        <script>
+            var openPopupBtn = document.getElementById('showPopup')
+            DG.then(function() {
+                var map,
+                    marker;
+                map = DG.map('map', {
+                    center: [54.98, 82.89],
+                    zoom: 15
+                });
+                marker = DG.marker([54.98, 82.89]).addTo(map);
+                marker.bindPopup('Я балун!');
+                openPopupBtn.onclick = function() {
+                    marker.openPopup();
+                }
+            });
+        </script>
+    </body>
+</html>

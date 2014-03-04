@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2GIS maps api demo</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src= "@@application/2.0/loader.js?pkg=full&skin=@@skinColor"></script>
+        <link rel="stylesheet" href="@@functest/style.css" />
+    </head>
+    <body>
+        <div id="map"></div>
+        <script>
+            DG.then(function() {
+                var map;
+                    popups = DG.featureGroup(),
+                    coordinates = [];
+
+                 map = DG.map('map', {
+                    center: [54.98, 82.89],
+                    zoom: 13
+                });
+
+                 // создаем 10 баулнов в случайных местах и добавляем их в группу
+                for (i = 0; i < 10; i++) {
+                    coordinates[0] = 54.98 - Math.random();
+                    coordinates[1] = 82.89 + Math.random();
+                    DG.popup()
+                        .setLatLng(coordinates)
+                        .setContent('Я балун №' + i)
+                        .addTo(popups);
+                }
+
+                popups.addTo(map);
+                //фокусируем область видимости на балунах
+                map.fitBounds(popups.getBounds());
+            });
+        </script>
+    </body>
+</html>

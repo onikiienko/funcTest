@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2GIS maps api demo</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src= "@@application/2.0/loader.js?pkg=full&skin=@@skinColor"></script>
+        <link rel="stylesheet" href="@@functest/style.css" />
+    </head>
+    <body>
+        <div id="map"></div>
+        <script>
+            DG.then(function() {
+                var map;
+                map = DG.map('map', {
+                    center: [54.98, 82.89],
+                    zoom: 14
+                });
+                DG.circle([54.98, 82.87], 200, {color: "red"})
+                    .bindPopup('Я круг')
+                    .bindLabel('Нажми на круг')
+                    .addTo(map);
+                DG.circleMarker([54.985, 82.89])
+                    .bindPopup('Я круглый маркер')
+                    .bindLabel('Нажми на круглый маркер')
+                    .setRadius(100)
+                    .addTo(map);
+                DG.rectangle(
+                    [[54.98, 82.87], [54.975, 82.91]],
+                    {color: "green"})
+                    .bindPopup('Я прямоугольник')
+                    .bindLabel('Нажми на прямоугольник')
+                    .addTo(map);
+                DG.polygon(
+                    [[54.985, 82.875], [54.98, 82.96], [54.979, 82.92]],
+                    {color: "yellow"})
+                    .bindPopup('Я многоугольник')
+                    .bindLabel('Нажми на многоугольник')
+                    .addTo(map);
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2GIS maps api demo</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src= "@@application/2.0/loader.js?pkg=full&skin=@@skinColor"></script>
+        <link rel="stylesheet" href="@@functest/style.css" />
+    </head>
+    <body>
+        <input id="create" type="button" value="Показать карту" />
+        <div id="map"></div>
+        <script>
+            var createButton = document.getElementById("create");
+
+            createButton.onclick = function() {
+                var container = document.createElement('div'),
+                    mapBlock = document.getElementById('map');
+
+                container.id = 'map';
+                container.style.width = "100%";
+                container.style.height = "400px";
+                mapBlock.appendChild(container);
+
+                DG.then(function(){
+                    DG.map('map', {
+                        center: [54.98, 82.89],
+                        zoom: 13
+                    });
+                });                    
+            }
+        </script>
+    </body>
+</html>

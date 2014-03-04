@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2GIS maps api demo</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src= "@@application/2.0/loader.js?pkg=full&skin=@@skinColor"></script>
+        <link rel="stylesheet" href="@@functest/style.css" />
+    </head>
+    <body>
+        Вы кликнули в: 
+        <div id = "clicked_element">никуда</div>
+        <div id="map"></div>
+        <script>
+            DG.then(function() {
+                var map,
+                    clickedElement = document.getElementById('clicked_element'),
+                    coords = [
+                        [54.99, 82.88],
+                        [54.985, 82.94],
+                        [54.984, 82.925],
+                        [54.981, 82.928]
+                    ];
+                 map = DG.map('map', {
+                    center: [54.98, 82.89],
+                    zoom: 13
+                })
+
+                map.on('click', function(e) {
+                    clickedElement.innerHTML = 'карту, координаты ' + e.latlng.lat + ', ' + e.latlng.lng;
+                });
+
+                DG.marker([54.98, 82.89])
+                    .on('click', function() {
+                        clickedElement.innerHTML = 'маркер';
+                    }).addTo(map);
+
+                DG.polygon(coords)
+                    .on('click', function() {
+                        clickedElement.innerHTML = 'многоугольник';
+                    }).addTo(map);
+            });
+        </script>
+    </body>
+</html>
