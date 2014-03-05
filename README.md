@@ -3,6 +3,20 @@ ReadMe
 
 Разворачивание и запуск тестов на сервере.
 
+http://habrahabr.ru/company/yandex/blog/173769/
+http://selenium.googlecode.com/git/docs/api/javascript/module_selenium-webdriver.html
+sudo npm install selenium-webdriver -g
+
+# Changing the path to the Chrome binary
+$ export CHROME_BIN=/usr/local/bin/my-chrome-build
+
+# Changing the path to the Chrome Canary binary
+$ export CHROME_CANARY_BIN=/usr/local/bin/my-chrome-build
+
+# Changing the path to the PhantomJs binary
+$ export PHANTOMJS_BIN=$HOME/local/bin/phantomjs
+
+
 Для запуска тестов нам понадобпиться машина с windows, на ней будет необходимо поствить окружение, это:
 - [mapsapi2.0](https://github.com/2gis/maps-api-2.0/blob/master/CONTRIBUTING.md#windows)
 - python-opencv

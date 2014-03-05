@@ -4,7 +4,8 @@
   "devDependencies": {
     "grunt": "latest",
     "grunt-shell": "latest",
-    "grunt-replace": "latest"
+    "grunt-replace": "latest",
+    "assert": "latest"
   },
   "private": true,
   "dependencies": {
