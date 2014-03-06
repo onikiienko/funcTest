@@ -10,13 +10,13 @@ sudo npm install imagediff -S (https://github.com/uber/image-diff)
 http://www.imagemagick.org/script/install-source.php#unix
 
 
-# Changing the path to the Chrome binary
+## Changing the path to the Chrome binary
 $ export CHROME_BIN=/usr/local/bin/my-chrome-build
 
-# Changing the path to the Chrome Canary binary
+## Changing the path to the Chrome Canary binary
 $ export CHROME_CANARY_BIN=/usr/local/bin/my-chrome-build
 
-# Changing the path to the PhantomJs binary
+## Changing the path to the PhantomJs binary
 $ export PHANTOMJS_BIN=$HOME/local/bin/phantomjs
 
 
@@ -30,7 +30,7 @@ $ export PHANTOMJS_BIN=$HOME/local/bin/phantomjs
 
 Делается всё это командами(в папке /var/www/applications/):
 
-#Окружение
+##Окружение
 
 ```bash
 $ sudo apt-get install python-opencv python-numpy
@@ -46,7 +46,7 @@ $ cd dali
 $ sudo python setup.py sdist
 $ sudo sudo pip install dist/dali-0.2.0-dev.tar.gz
 ```
-#Тесты
+##Тесты
 
 Далее нужно скачать сами тесты и настроить сервер под правильную раздачу файлов.
 
@@ -59,7 +59,7 @@ $ git clone git@github.com:onikiienko/funcTest.git
 $ grunt build
 ```
 
-#Демки
+##Демки
 В этом проекте кроме тестов содержатся так же демки. И они должны отдаваться во вне. Для этого нужно настроить nginx.
 В создаем файл /etc/nginx/sites-enabled/funcTest.conf содержимое
 
@@ -75,7 +75,7 @@ server {
 }
 ```
 
-#Выполнение тестов
+##Выполнение тестов
 
 ```bash
 В папке /var/www/applications/funcTest необходимо выполнить
