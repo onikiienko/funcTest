@@ -6,6 +6,9 @@ ReadMe
 http://habrahabr.ru/company/yandex/blog/173769/
 http://selenium.googlecode.com/git/docs/api/javascript/module_selenium-webdriver.html
 sudo npm install selenium-webdriver -g
+sudo npm install imagediff -S (https://github.com/uber/image-diff)
+http://www.imagemagick.org/script/install-source.php#unix
+
 
 # Changing the path to the Chrome binary
 $ export CHROME_BIN=/usr/local/bin/my-chrome-build
