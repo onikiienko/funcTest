@@ -3,6 +3,23 @@ var config = {};
 module.exports = function(grunt) {
 	grunt.initConfig({
 		replace: {
+			copyFiles: {
+				options: {
+					force: true,
+					patterns: [
+					]
+				},
+				files: [
+				  {expand: true, flatten: true, src: ['build/testSuites/*'], dest: 'public/testSuites/dark'},
+				  {expand: true, flatten: true, src: ['build/testSuites/*'], dest: 'public/testSuites/light'},
+				  {expand: true, flatten: true, src: ['build/demos/*'], dest: 'public/demos/light/public'},
+				  {expand: true, flatten: true, src: ['build/demos/*'], dest: 'public/demos/light/test'},
+				  {expand: true, flatten: true, src: ['build/demos/*'], dest: 'public/demos/dark/public'},
+				  {expand: true, flatten: true, src: ['build/demos/*'], dest: 'public/demos/dark/test'},
+				  {expand: true, flatten: true, src: ['build/source/*'], dest: 'public/'},
+				  {expand: true, flatten: true, src: ['build/*.js'], dest: './'}
+				]
+			},
 			darkTest: {
 				options: {
 					patterns: [
@@ -13,17 +30,12 @@ module.exports = function(grunt) {
 					{
 						match: 'application',
 						replacement: '@@testApplication'
-					},
-					{
-						match: 'dirDemos',
-						replacement: 'darkDemos/testApplications'
 					}
 					]
 				},
 				files: [
-				  {expand: true, flatten: true, src: ['build/demos/*.html'], dest: 'public/darkDemos/testApplications/'},
-				  {expand: true, flatten: true, src: ['build/tests/*.py'], dest: 'tests/darkTests/'}
-				]
+				  {expand: true, flatten: true, src: ['public/demos/dark/test/*.html'], dest: 'public/demos/dark/test'}
+				]	
 			},
 			darkPublic: {
 				options: {
@@ -35,17 +47,12 @@ module.exports = function(grunt) {
 					{
 						match: 'application',
 						replacement: '@@publicApplication'
-					},
-					{
-						match: 'dirDemos',
-						replacement: 'darkDemos/publicApplications'
 					}
 					]
 				},
 				files: [
-				  {expand: true, flatten: true, src: ['build/demos/*.html'], dest: 'public/darkDemos/publicApplications/'},
-				  {expand: true, flatten: true, src: ['build/tests/*.py'], dest: 'tests/darkTests/'}
-				]
+				  {expand: true, flatten: true, src: ['public/demos/dark/public/*.html'], dest: 'public/demos/dark/public'}
+				]	
 			},
 			lightTest: {
 				options: {
@@ -57,17 +64,12 @@ module.exports = function(grunt) {
 					{
 						match: 'application',
 						replacement: '@@testApplication'
-					},
-					{
-						match: 'dirDemos',
-						replacement: 'lightDemos/testApplications'
 					}
 					]
 				},
 				files: [
-				  {expand: true, flatten: true, src: ['build/demos/*.html'], dest: 'public/lightDemos/testApplications/'},
-				  {expand: true, flatten: true, src: ['build/tests/*.py'], dest: 'tests/lightTests/'}
-				]
+				  {expand: true, flatten: true, src: ['public/demos/light/test/*.html'], dest: 'public/demos/light/test'}
+				]	
 			},
 			lightPublic: {
 				options: {
@@ -79,74 +81,96 @@ module.exports = function(grunt) {
 					{
 						match: 'application',
 						replacement: '@@publicApplication'
-					},
-					{
-						match: 'dirDemos',
-						replacement: 'lightDemos/publicApplications'
 					}
 					]
 				},
 				files: [
-				  {expand: true, flatten: true, src: ['build/demos/*.html'], dest: 'public/lightDemos/publicApplications/'},
-				  {expand: true, flatten: true, src: ['build/tests/*.py'], dest: 'tests/lightTests/'}
-				]
+				  {expand: true, flatten: true, src: ['public/demos/light/public/*.html'], dest: 'public/demos/light/public'}
+				]	
 			},
-			replaceApp: {
+			lightSuite: {
+				options: {
+					patterns: [
+					{
+					  match: 'skinColor',
+					  replacement: 'light'
+					}
+					]
+				},
+				files: [
+				  {expand: true, flatten: true, src: ['public/testSuites/light/*'], dest: 'public/testSuites/light'}
+				]	
+			},
+			darkSuite: {
+				options: {
+					patterns: [
+					{
+					  match: 'skinColor',
+					  replacement: 'dark'
+					}
+					]
+				},
+				files: [
+				  {expand: true, flatten: true, src: ['public/testSuites/dark/*'], dest: 'public/testSuites/dark'}
+				]	
+			},
+			replaceApps: {
 				options: {
 				    patterns: makePaterns()
 				},		
 				files: [
-			      	{expand: true, flatten: true, src: ['tests/lightTests/*'], dest: 'tests/lightTests/'},
-			      	{expand: true, flatten: true, src: ['tests/darkTests/*'], dest: 'tests/darkTests/'},
-			      	{expand: true, flatten: true, src: ['build/source/*'], dest: 'tests/source/'},
-			      	{expand: true, flatten: true, src: ['public/lightDemos/publicApplications/*'], dest: 'public/lightDemos/publicApplications/'},
-			      	{expand: true, flatten: true, src: ['public/lightDemos/testApplications/*'], dest: 'public/lightDemos/testApplications/'},
-			      	{expand: true, flatten: true, src: ['public/darkDemos/publicApplications/*'], dest: 'public/darkDemos/publicApplications/'},
-			      	{expand: true, flatten: true, src: ['public/darkDemos/testApplications/*'], dest: 'public/darkDemos/testApplications/'}
+			      	{expand: true, flatten: true, src: ['public/demos/dark/public/*'], dest: 'public/demos/dark/public'},
+			      	{expand: true, flatten: true, src: ['public/demos/dark/test/*'], dest: 'public/demos/dark/test'},
+			      	{expand: true, flatten: true, src: ['public/demos/light/public/*'], dest: 'public/demos/light/public'},
+			      	{expand: true, flatten: true, src: ['public/demos/light/test/*'], dest: 'public/demos/light/test'},
+			      	{expand: true, flatten: true, src: ['public/testSuites/dark/*'], dest: 'public/testSuites/dark'},
+			      	{expand: true, flatten: true, src: ['public/testSuites/light/*'], dest: 'public/testSuites/light'}
 			    ]
 			},
-		},
-    shell: {
-        build: {
-            command: [
-                'grunt darkTest',
-                'grunt darkPublic',
-                'grunt lightTest',
-                'grunt lightPublic',
-                'grunt replaceApp'
-            ].join('&&'),
-            options: {
-                stdout: true
-            }
-        },install: {
-            command: [
-    			'apt-get install python-opencv python-numpy',
-				'pip install thrift==0.9.0 selenium==2.34.0'
-            ].join('&&'),
-            options: {
-                stdout: true
-            }
-        },
-        test: {
-            command: [
-            	'python tests_launcher_dark.py'
-				].join('&&'),
-            options: {
-                stdout: true
-            }
-        }
-    }
+		},	
+
+	    shell: {
+	        makeDirs: {
+	            command: [
+	                'mkdir ./public',
+	                'mkdir ./public/screens'
+	            ].join('&&'),
+	            options: {
+	                stdout: true
+	            }
+	        },
+			build: {
+	            command: [
+	                'rm -R public',
+	                'grunt mkdir',
+	                'grunt cp',
+	                'grunt darkTest',
+	                'grunt darkPublic',
+	                'grunt lightTest',
+	                'grunt lightPublic',
+	                'grunt replaceApps',
+	                'grunt darkSuite',
+	                'grunt lightSuite'
+	            ].join('&&'),
+	            options: {
+	                stdout: true
+	            }
+			}
+	    }
 	});
 
 	grunt.loadNpmTasks('grunt-replace');
 	grunt.loadNpmTasks('grunt-shell');
+	grunt.registerTask('mkdir', ['shell:makeDirs']);
 	grunt.registerTask('build', ['shell:build']);
-	grunt.registerTask('test', ['shell:test']);
+	grunt.registerTask('cp', ['replace:copyFiles']);
 	grunt.registerTask('darkTest', ['replace:darkTest']);
 	grunt.registerTask('darkPublic', ['replace:darkPublic']);
 	grunt.registerTask('lightTest', ['replace:lightTest']);
 	grunt.registerTask('lightPublic', ['replace:lightPublic']);
-	grunt.registerTask('replaceApp', ['replace:replaceApp']);
+	grunt.registerTask('replaceApps', ['replace:replaceApps']);
+	grunt.registerTask('darkSuite', ['replace:darkSuite']);
+	grunt.registerTask('lightSuite', ['replace:lightSuite']);
 	grunt.registerTask('default', ['build']);
 };
 
