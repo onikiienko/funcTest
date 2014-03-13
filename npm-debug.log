@@ -1,0 +1,634 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@1.3.21
+3 info using node@v0.10.24
+4 verbose readDependencies using package.json deps
+5 verbose install where, deps [ '/Users/onikiienko/myProjects/funcTest',
+5 verbose install   [ 'http',
+5 verbose install     'connect',
+5 verbose install     'sys',
+5 verbose install     'image-diff',
+5 verbose install     'async',
+5 verbose install     'grunt-copy-to',
+5 verbose install     'grunt',
+5 verbose install     'grunt-shell',
+5 verbose install     'grunt-replace',
+5 verbose install     'assert' ] ]
+6 info preinstall funfTest@0.1.0
+7 warn package.json assert@1.1.1 assert is also the name of a node core module.
+8 warn package.json http@0.0.0 http is also the name of a node core module.
+9 warn package.json http@0.0.0 No description
+10 warn package.json http@0.0.0 No repository field.
+11 warn package.json sys@0.0.1 No repository field.
+12 verbose readDependencies using package.json deps
+13 verbose already installed skipping sys@0.0.1 /Users/onikiienko/myProjects/funcTest
+14 verbose already installed skipping image-diff@~1.0.1 /Users/onikiienko/myProjects/funcTest
+15 verbose already installed skipping async@~0.2.10 /Users/onikiienko/myProjects/funcTest
+16 verbose already installed skipping grunt-copy-to@0.0.10 /Users/onikiienko/myProjects/funcTest
+17 verbose cache add [ 'grunt@latest', null ]
+18 verbose cache add name=undefined spec="grunt@latest" args=["grunt@latest",null]
+19 verbose parsed url { protocol: null,
+19 verbose parsed url   slashes: null,
+19 verbose parsed url   auth: null,
+19 verbose parsed url   host: null,
+19 verbose parsed url   port: null,
+19 verbose parsed url   hostname: null,
+19 verbose parsed url   hash: null,
+19 verbose parsed url   search: null,
+19 verbose parsed url   query: null,
+19 verbose parsed url   pathname: 'grunt@latest',
+19 verbose parsed url   path: 'grunt@latest',
+19 verbose parsed url   href: 'grunt@latest' }
+20 verbose cache add name="grunt" spec="latest" args=["grunt","latest"]
+21 verbose parsed url { protocol: null,
+21 verbose parsed url   slashes: null,
+21 verbose parsed url   auth: null,
+21 verbose parsed url   host: null,
+21 verbose parsed url   port: null,
+21 verbose parsed url   hostname: null,
+21 verbose parsed url   hash: null,
+21 verbose parsed url   search: null,
+21 verbose parsed url   query: null,
+21 verbose parsed url   pathname: 'latest',
+21 verbose parsed url   path: 'latest',
+21 verbose parsed url   href: 'latest' }
+22 verbose addNamed [ 'grunt', 'latest' ]
+23 verbose addNamed [ null, null ]
+24 verbose cache add [ 'grunt-shell@latest', null ]
+25 verbose cache add name=undefined spec="grunt-shell@latest" args=["grunt-shell@latest",null]
+26 verbose parsed url { protocol: null,
+26 verbose parsed url   slashes: null,
+26 verbose parsed url   auth: null,
+26 verbose parsed url   host: null,
+26 verbose parsed url   port: null,
+26 verbose parsed url   hostname: null,
+26 verbose parsed url   hash: null,
+26 verbose parsed url   search: null,
+26 verbose parsed url   query: null,
+26 verbose parsed url   pathname: 'grunt-shell@latest',
+26 verbose parsed url   path: 'grunt-shell@latest',
+26 verbose parsed url   href: 'grunt-shell@latest' }
+27 verbose cache add name="grunt-shell" spec="latest" args=["grunt-shell","latest"]
+28 verbose parsed url { protocol: null,
+28 verbose parsed url   slashes: null,
+28 verbose parsed url   auth: null,
+28 verbose parsed url   host: null,
+28 verbose parsed url   port: null,
+28 verbose parsed url   hostname: null,
+28 verbose parsed url   hash: null,
+28 verbose parsed url   search: null,
+28 verbose parsed url   query: null,
+28 verbose parsed url   pathname: 'latest',
+28 verbose parsed url   path: 'latest',
+28 verbose parsed url   href: 'latest' }
+29 verbose addNamed [ 'grunt-shell', 'latest' ]
+30 verbose addNamed [ null, null ]
+31 silly lockFile c5c58d45-grunt-latest grunt@latest
+32 verbose lock grunt@latest /Users/onikiienko/.npm/c5c58d45-grunt-latest.lock
+33 verbose cache add [ 'assert@latest', null ]
+34 verbose cache add name=undefined spec="assert@latest" args=["assert@latest",null]
+35 verbose parsed url { protocol: null,
+35 verbose parsed url   slashes: null,
+35 verbose parsed url   auth: null,
+35 verbose parsed url   host: null,
+35 verbose parsed url   port: null,
+35 verbose parsed url   hostname: null,
+35 verbose parsed url   hash: null,
+35 verbose parsed url   search: null,
+35 verbose parsed url   query: null,
+35 verbose parsed url   pathname: 'assert@latest',
+35 verbose parsed url   path: 'assert@latest',
+35 verbose parsed url   href: 'assert@latest' }
+36 verbose cache add name="assert" spec="latest" args=["assert","latest"]
+37 verbose parsed url { protocol: null,
+37 verbose parsed url   slashes: null,
+37 verbose parsed url   auth: null,
+37 verbose parsed url   host: null,
+37 verbose parsed url   port: null,
+37 verbose parsed url   hostname: null,
+37 verbose parsed url   hash: null,
+37 verbose parsed url   search: null,
+37 verbose parsed url   query: null,
+37 verbose parsed url   pathname: 'latest',
+37 verbose parsed url   path: 'latest',
+37 verbose parsed url   href: 'latest' }
+38 verbose addNamed [ 'assert', 'latest' ]
+39 verbose addNamed [ null, null ]
+40 silly lockFile 13075074-assert-latest assert@latest
+41 verbose lock assert@latest /Users/onikiienko/.npm/13075074-assert-latest.lock
+42 verbose cache add [ 'grunt-replace@latest', null ]
+43 verbose cache add name=undefined spec="grunt-replace@latest" args=["grunt-replace@latest",null]
+44 verbose parsed url { protocol: null,
+44 verbose parsed url   slashes: null,
+44 verbose parsed url   auth: null,
+44 verbose parsed url   host: null,
+44 verbose parsed url   port: null,
+44 verbose parsed url   hostname: null,
+44 verbose parsed url   hash: null,
+44 verbose parsed url   search: null,
+44 verbose parsed url   query: null,
+44 verbose parsed url   pathname: 'grunt-replace@latest',
+44 verbose parsed url   path: 'grunt-replace@latest',
+44 verbose parsed url   href: 'grunt-replace@latest' }
+45 verbose cache add name="grunt-replace" spec="latest" args=["grunt-replace","latest"]
+46 verbose parsed url { protocol: null,
+46 verbose parsed url   slashes: null,
+46 verbose parsed url   auth: null,
+46 verbose parsed url   host: null,
+46 verbose parsed url   port: null,
+46 verbose parsed url   hostname: null,
+46 verbose parsed url   hash: null,
+46 verbose parsed url   search: null,
+46 verbose parsed url   query: null,
+46 verbose parsed url   pathname: 'latest',
+46 verbose parsed url   path: 'latest',
+46 verbose parsed url   href: 'latest' }
+47 verbose addNamed [ 'grunt-replace', 'latest' ]
+48 verbose addNamed [ null, null ]
+49 silly lockFile bc79c167-grunt-replace-latest grunt-replace@latest
+50 verbose lock grunt-replace@latest /Users/onikiienko/.npm/bc79c167-grunt-replace-latest.lock
+51 verbose already installed skipping http@0.0.0 /Users/onikiienko/myProjects/funcTest
+52 verbose already installed skipping connect@~2.13.0 /Users/onikiienko/myProjects/funcTest
+53 silly lockFile 8ed5d71a-grunt-shell-latest grunt-shell@latest
+54 verbose lock grunt-shell@latest /Users/onikiienko/.npm/8ed5d71a-grunt-shell-latest.lock
+55 info addNameTag [ 'grunt', 'latest' ]
+56 info addNameTag [ 'assert', 'latest' ]
+57 info addNameTag [ 'grunt-replace', 'latest' ]
+58 info addNameTag [ 'grunt-shell', 'latest' ]
+59 verbose url raw assert
+60 verbose url resolving [ 'https://registry.npmjs.org/', './assert' ]
+61 verbose url resolved https://registry.npmjs.org/assert
+62 info trying registry request attempt 1 at 13:22:15
+63 http GET https://registry.npmjs.org/assert
+64 verbose url raw grunt-shell
+65 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-shell' ]
+66 verbose url resolved https://registry.npmjs.org/grunt-shell
+67 info trying registry request attempt 1 at 13:22:15
+68 verbose etag "C1QGLL1KMTR51O7X563G4NLC5"
+69 http GET https://registry.npmjs.org/grunt-shell
+70 verbose url raw grunt-replace
+71 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-replace' ]
+72 verbose url resolved https://registry.npmjs.org/grunt-replace
+73 info trying registry request attempt 1 at 13:22:15
+74 verbose etag "6ST2F9AW7XGPOTE7PTQHC2X9N"
+75 http GET https://registry.npmjs.org/grunt-replace
+76 verbose url raw grunt
+77 verbose url resolving [ 'https://registry.npmjs.org/', './grunt' ]
+78 verbose url resolved https://registry.npmjs.org/grunt
+79 info trying registry request attempt 1 at 13:22:15
+80 verbose etag "EOMS3KHLEIB2UGPRWGD5HZZO6"
+81 http GET https://registry.npmjs.org/grunt
+82 http 200 https://registry.npmjs.org/assert
+83 silly registry.get cb [ 200,
+83 silly registry.get   { date: 'Thu, 13 Mar 2014 11:22:16 GMT',
+83 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B)',
+83 silly registry.get     etag: '"B4RHEWJGTCNW8BKRYZRICDBME"',
+83 silly registry.get     'content-type': 'application/json',
+83 silly registry.get     via: '1.1 varnish',
+83 silly registry.get     'cache-control': 'max-age=1',
+83 silly registry.get     'content-length': '9435',
+83 silly registry.get     'accept-ranges': 'bytes',
+83 silly registry.get     age: '1082',
+83 silly registry.get     'x-served-by': 'cache-v36-ASH, cache-fra1229-FRA',
+83 silly registry.get     'x-cache': 'HIT, HIT',
+83 silly registry.get     'x-cache-hits': '98, 1',
+83 silly registry.get     'x-timer': 'S1394697307.005553007,VS0,VS-737,VE-737,VE12429104',
+83 silly registry.get     vary: 'Accept',
+83 silly registry.get     'keep-alive': 'timeout=10, max=50',
+83 silly registry.get     connection: 'Keep-Alive' } ]
+84 verbose addNamed [ 'assert', '1.1.1' ]
+85 verbose addNamed [ '1.1.1', '1.1.1' ]
+86 silly lockFile a2659742-assert-1-1-1 assert@1.1.1
+87 verbose lock assert@1.1.1 /Users/onikiienko/.npm/a2659742-assert-1-1-1.lock
+88 silly lockFile 4ca22084-pmjs-org-assert-assert-1-1-1-tgz https://registry.npmjs.org/assert/-/assert-1.1.1.tgz
+89 verbose lock https://registry.npmjs.org/assert/-/assert-1.1.1.tgz /Users/onikiienko/.npm/4ca22084-pmjs-org-assert-assert-1-1-1-tgz.lock
+90 verbose addRemoteTarball [ 'https://registry.npmjs.org/assert/-/assert-1.1.1.tgz',
+90 verbose addRemoteTarball   '766549ef4a6014b1e19c7c53f9816eabda440760' ]
+91 info retry fetch attempt 1 at 13:22:16
+92 verbose fetch to= /var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736187-0.5820355324540287/tmp.tgz
+93 http GET https://registry.npmjs.org/assert/-/assert-1.1.1.tgz
+94 http 200 https://registry.npmjs.org/grunt
+95 silly registry.get cb [ 200,
+95 silly registry.get   { date: 'Thu, 13 Mar 2014 11:22:16 GMT',
+95 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B)',
+95 silly registry.get     etag: '"DHQ9VOIBG1F1M8GCP4IL096O"',
+95 silly registry.get     'content-type': 'application/json',
+95 silly registry.get     via: '1.1 varnish',
+95 silly registry.get     'cache-control': 'max-age=1',
+95 silly registry.get     'content-length': '82271',
+95 silly registry.get     'accept-ranges': 'bytes',
+95 silly registry.get     age: '127',
+95 silly registry.get     'x-served-by': 'cache-v44-ASH, cache-fra1233-FRA',
+95 silly registry.get     'x-cache': 'HIT, HIT',
+95 silly registry.get     'x-cache-hits': '1, 2',
+95 silly registry.get     'x-timer': 'S1394709736.007775068,VS0,VE0',
+95 silly registry.get     vary: 'Accept',
+95 silly registry.get     'keep-alive': 'timeout=10, max=50',
+95 silly registry.get     connection: 'Keep-Alive' } ]
+96 verbose addNamed [ 'grunt', '0.4.4' ]
+97 verbose addNamed [ '0.4.4', '0.4.4' ]
+98 silly lockFile 6f9e9a40-grunt-0-4-4 grunt@0.4.4
+99 verbose lock grunt@0.4.4 /Users/onikiienko/.npm/6f9e9a40-grunt-0-4-4.lock
+100 silly lockFile e3269c2a--npmjs-org-grunt-grunt-0-4-4-tgz https://registry.npmjs.org/grunt/-/grunt-0.4.4.tgz
+101 verbose lock https://registry.npmjs.org/grunt/-/grunt-0.4.4.tgz /Users/onikiienko/.npm/e3269c2a--npmjs-org-grunt-grunt-0-4-4-tgz.lock
+102 verbose addRemoteTarball [ 'https://registry.npmjs.org/grunt/-/grunt-0.4.4.tgz',
+102 verbose addRemoteTarball   'f37fa46e2e52e37f9a0370542a74281c09c73f53' ]
+103 info retry fetch attempt 1 at 13:22:16
+104 verbose fetch to= /var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736308-0.045721687376499176/tmp.tgz
+105 http GET https://registry.npmjs.org/grunt/-/grunt-0.4.4.tgz
+106 http 200 https://registry.npmjs.org/grunt-shell
+107 silly registry.get cb [ 200,
+107 silly registry.get   { date: 'Thu, 13 Mar 2014 11:22:16 GMT',
+107 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+107 silly registry.get     etag: '"EQJEZPUALEXNGR6O9IXTT4TFI"',
+107 silly registry.get     'content-type': 'application/json',
+107 silly registry.get     via: '1.1 varnish',
+107 silly registry.get     'cache-control': 'max-age=1',
+107 silly registry.get     'content-length': '23835',
+107 silly registry.get     'accept-ranges': 'bytes',
+107 silly registry.get     age: '2688',
+107 silly registry.get     'x-served-by': 'cache-v36-ASH, cache-fra1229-FRA',
+107 silly registry.get     'x-cache': 'MISS, HIT',
+107 silly registry.get     'x-cache-hits': '0, 1',
+107 silly registry.get     'x-timer': 'S1394697667.442332745,VS0,VS-738,VE-729,VE12068761',
+107 silly registry.get     vary: 'Accept',
+107 silly registry.get     'keep-alive': 'timeout=10, max=50',
+107 silly registry.get     connection: 'Keep-Alive' } ]
+108 verbose addNamed [ 'grunt-shell', '0.6.4' ]
+109 verbose addNamed [ '0.6.4', '0.6.4' ]
+110 silly lockFile 380bc4a7-grunt-shell-0-6-4 grunt-shell@0.6.4
+111 verbose lock grunt-shell@0.6.4 /Users/onikiienko/.npm/380bc4a7-grunt-shell-0-6-4.lock
+112 silly lockFile 380bc4a7-grunt-shell-0-6-4 grunt-shell@0.6.4
+113 silly lockFile 380bc4a7-grunt-shell-0-6-4 grunt-shell@0.6.4
+114 silly lockFile 8ed5d71a-grunt-shell-latest grunt-shell@latest
+115 silly lockFile 8ed5d71a-grunt-shell-latest grunt-shell@latest
+116 info already installed grunt-shell@0.6.4
+117 http 200 https://registry.npmjs.org/grunt-replace
+118 silly registry.get cb [ 200,
+118 silly registry.get   { date: 'Thu, 13 Mar 2014 11:22:16 GMT',
+118 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+118 silly registry.get     etag: '"II024WGYHV8WUBSL47JPQ5IE"',
+118 silly registry.get     'content-type': 'application/json',
+118 silly registry.get     via: '1.1 varnish',
+118 silly registry.get     'cache-control': 'max-age=1',
+118 silly registry.get     'content-length': '42548',
+118 silly registry.get     'accept-ranges': 'bytes',
+118 silly registry.get     age: '9',
+118 silly registry.get     'x-served-by': 'cache-v43-ASH, cache-fra1223-FRA',
+118 silly registry.get     'x-cache': 'HIT, MISS',
+118 silly registry.get     'x-cache-hits': '1, 0',
+118 silly registry.get     'x-timer': 'S1394694734.115083456,VS0,VS13,VE22,VE15002063',
+118 silly registry.get     vary: 'Accept',
+118 silly registry.get     'keep-alive': 'timeout=10, max=50',
+118 silly registry.get     connection: 'Keep-Alive' } ]
+119 verbose addNamed [ 'grunt-replace', '0.7.2' ]
+120 verbose addNamed [ '0.7.2', '0.7.2' ]
+121 silly lockFile c83c268d-grunt-replace-0-7-2 grunt-replace@0.7.2
+122 verbose lock grunt-replace@0.7.2 /Users/onikiienko/.npm/c83c268d-grunt-replace-0-7-2.lock
+123 silly lockFile ca3b8d9c--replace-grunt-replace-0-7-2-tgz https://registry.npmjs.org/grunt-replace/-/grunt-replace-0.7.2.tgz
+124 verbose lock https://registry.npmjs.org/grunt-replace/-/grunt-replace-0.7.2.tgz /Users/onikiienko/.npm/ca3b8d9c--replace-grunt-replace-0-7-2-tgz.lock
+125 verbose addRemoteTarball [ 'https://registry.npmjs.org/grunt-replace/-/grunt-replace-0.7.2.tgz',
+125 verbose addRemoteTarball   '038d5fdcf624f49dc28364d5d20e32c3ea2796c4' ]
+126 info retry fetch attempt 1 at 13:22:16
+127 verbose fetch to= /var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736342-0.37915303464978933/tmp.tgz
+128 http GET https://registry.npmjs.org/grunt-replace/-/grunt-replace-0.7.2.tgz
+129 http 200 https://registry.npmjs.org/assert/-/assert-1.1.1.tgz
+130 verbose tar unpack /var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736187-0.5820355324540287/tmp.tgz
+131 silly lockFile 963c44a5-36187-0-5820355324540287-package tar:///var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736187-0.5820355324540287/package
+132 verbose lock tar:///var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736187-0.5820355324540287/package /Users/onikiienko/.npm/963c44a5-36187-0-5820355324540287-package.lock
+133 silly lockFile 65186edb-36187-0-5820355324540287-tmp-tgz tar:///var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736187-0.5820355324540287/tmp.tgz
+134 verbose lock tar:///var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736187-0.5820355324540287/tmp.tgz /Users/onikiienko/.npm/65186edb-36187-0-5820355324540287-tmp-tgz.lock
+135 silly gunzTarPerm modes [ '755', '644' ]
+136 silly gunzTarPerm extractEntry package.json
+137 silly gunzTarPerm extractEntry .npmignore
+138 silly gunzTarPerm extractEntry README.md
+139 silly gunzTarPerm extractEntry LICENSE
+140 silly gunzTarPerm extractEntry assert.js
+141 silly gunzTarPerm extractEntry test.js
+142 silly gunzTarPerm extractEntry .travis.yml
+143 silly gunzTarPerm extractEntry .zuul.yml
+144 silly lockFile 963c44a5-36187-0-5820355324540287-package tar:///var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736187-0.5820355324540287/package
+145 silly lockFile 963c44a5-36187-0-5820355324540287-package tar:///var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736187-0.5820355324540287/package
+146 silly lockFile 65186edb-36187-0-5820355324540287-tmp-tgz tar:///var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736187-0.5820355324540287/tmp.tgz
+147 silly lockFile 65186edb-36187-0-5820355324540287-tmp-tgz tar:///var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736187-0.5820355324540287/tmp.tgz
+148 verbose tar pack [ '/Users/onikiienko/.npm/assert/1.1.1/package.tgz',
+148 verbose tar pack   '/var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736187-0.5820355324540287/package' ]
+149 verbose tarball /Users/onikiienko/.npm/assert/1.1.1/package.tgz
+150 verbose folder /var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736187-0.5820355324540287/package
+151 silly lockFile 963c44a5-36187-0-5820355324540287-package tar:///var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736187-0.5820355324540287/package
+152 verbose lock tar:///var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736187-0.5820355324540287/package /Users/onikiienko/.npm/963c44a5-36187-0-5820355324540287-package.lock
+153 silly lockFile 62d3d42d-nko-npm-assert-1-1-1-package-tgz tar:///Users/onikiienko/.npm/assert/1.1.1/package.tgz
+154 verbose lock tar:///Users/onikiienko/.npm/assert/1.1.1/package.tgz /Users/onikiienko/.npm/62d3d42d-nko-npm-assert-1-1-1-package-tgz.lock
+155 silly lockFile 963c44a5-36187-0-5820355324540287-package tar:///var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736187-0.5820355324540287/package
+156 silly lockFile 963c44a5-36187-0-5820355324540287-package tar:///var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736187-0.5820355324540287/package
+157 silly lockFile 62d3d42d-nko-npm-assert-1-1-1-package-tgz tar:///Users/onikiienko/.npm/assert/1.1.1/package.tgz
+158 silly lockFile 62d3d42d-nko-npm-assert-1-1-1-package-tgz tar:///Users/onikiienko/.npm/assert/1.1.1/package.tgz
+159 silly lockFile e4561448-kiienko-npm-assert-1-1-1-package /Users/onikiienko/.npm/assert/1.1.1/package
+160 verbose lock /Users/onikiienko/.npm/assert/1.1.1/package /Users/onikiienko/.npm/e4561448-kiienko-npm-assert-1-1-1-package.lock
+161 silly lockFile e4561448-kiienko-npm-assert-1-1-1-package /Users/onikiienko/.npm/assert/1.1.1/package
+162 silly lockFile e4561448-kiienko-npm-assert-1-1-1-package /Users/onikiienko/.npm/assert/1.1.1/package
+163 verbose tar unpack /Users/onikiienko/.npm/assert/1.1.1/package.tgz
+164 silly lockFile ac29ce0a-kiienko-npm-assert-1-1-1-package tar:///Users/onikiienko/.npm/assert/1.1.1/package
+165 verbose lock tar:///Users/onikiienko/.npm/assert/1.1.1/package /Users/onikiienko/.npm/ac29ce0a-kiienko-npm-assert-1-1-1-package.lock
+166 silly lockFile 62d3d42d-nko-npm-assert-1-1-1-package-tgz tar:///Users/onikiienko/.npm/assert/1.1.1/package.tgz
+167 verbose lock tar:///Users/onikiienko/.npm/assert/1.1.1/package.tgz /Users/onikiienko/.npm/62d3d42d-nko-npm-assert-1-1-1-package-tgz.lock
+168 silly gunzTarPerm modes [ '755', '644' ]
+169 silly gunzTarPerm extractEntry package.json
+170 silly gunzTarPerm extractEntry .npmignore
+171 silly gunzTarPerm extractEntry README.md
+172 silly gunzTarPerm extractEntry LICENSE
+173 silly gunzTarPerm extractEntry assert.js
+174 silly gunzTarPerm extractEntry test.js
+175 silly gunzTarPerm extractEntry .travis.yml
+176 silly gunzTarPerm extractEntry .zuul.yml
+177 silly lockFile ac29ce0a-kiienko-npm-assert-1-1-1-package tar:///Users/onikiienko/.npm/assert/1.1.1/package
+178 silly lockFile ac29ce0a-kiienko-npm-assert-1-1-1-package tar:///Users/onikiienko/.npm/assert/1.1.1/package
+179 silly lockFile 62d3d42d-nko-npm-assert-1-1-1-package-tgz tar:///Users/onikiienko/.npm/assert/1.1.1/package.tgz
+180 silly lockFile 62d3d42d-nko-npm-assert-1-1-1-package-tgz tar:///Users/onikiienko/.npm/assert/1.1.1/package.tgz
+181 verbose chmod /Users/onikiienko/.npm/assert/1.1.1/package.tgz 644
+182 verbose chown /Users/onikiienko/.npm/assert/1.1.1/package.tgz [ 501, 20 ]
+183 silly lockFile 4ca22084-pmjs-org-assert-assert-1-1-1-tgz https://registry.npmjs.org/assert/-/assert-1.1.1.tgz
+184 silly lockFile 4ca22084-pmjs-org-assert-assert-1-1-1-tgz https://registry.npmjs.org/assert/-/assert-1.1.1.tgz
+185 silly lockFile a2659742-assert-1-1-1 assert@1.1.1
+186 silly lockFile a2659742-assert-1-1-1 assert@1.1.1
+187 silly lockFile 13075074-assert-latest assert@latest
+188 silly lockFile 13075074-assert-latest assert@latest
+189 info already installed assert@1.1.1
+190 http 200 https://registry.npmjs.org/grunt/-/grunt-0.4.4.tgz
+191 http 200 https://registry.npmjs.org/grunt-replace/-/grunt-replace-0.7.2.tgz
+192 verbose tar unpack /var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736342-0.37915303464978933/tmp.tgz
+193 silly lockFile 1bee80ed-6342-0-37915303464978933-package tar:///var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736342-0.37915303464978933/package
+194 verbose lock tar:///var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736342-0.37915303464978933/package /Users/onikiienko/.npm/1bee80ed-6342-0-37915303464978933-package.lock
+195 silly lockFile cb97b262-6342-0-37915303464978933-tmp-tgz tar:///var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736342-0.37915303464978933/tmp.tgz
+196 verbose lock tar:///var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736342-0.37915303464978933/tmp.tgz /Users/onikiienko/.npm/cb97b262-6342-0-37915303464978933-tmp-tgz.lock
+197 silly gunzTarPerm modes [ '755', '644' ]
+198 silly gunzTarPerm extractEntry package.json
+199 verbose tar unpack /var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736308-0.045721687376499176/tmp.tgz
+200 silly lockFile 1895d471-308-0-045721687376499176-package tar:///var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736308-0.045721687376499176/package
+201 verbose lock tar:///var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736308-0.045721687376499176/package /Users/onikiienko/.npm/1895d471-308-0-045721687376499176-package.lock
+202 silly lockFile 97bd14f4-308-0-045721687376499176-tmp-tgz tar:///var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736308-0.045721687376499176/tmp.tgz
+203 verbose lock tar:///var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736308-0.045721687376499176/tmp.tgz /Users/onikiienko/.npm/97bd14f4-308-0-045721687376499176-tmp-tgz.lock
+204 silly gunzTarPerm extractEntry README.md
+205 silly gunzTarPerm extractEntry LICENSE-MIT
+206 silly gunzTarPerm modes [ '755', '644' ]
+207 silly gunzTarPerm extractEntry package.json
+208 silly gunzTarPerm extractEntry tasks/replace.js
+209 silly gunzTarPerm extractEntry .npmignore
+210 silly gunzTarPerm extractEntry README.md
+211 silly gunzTarPerm extractEntry LICENSE-MIT
+212 silly gunzTarPerm extractEntry internal-tasks/bump.js
+213 silly gunzTarPerm extractEntry internal-tasks/subgrunt.js
+214 silly gunzTarPerm extractEntry lib/grunt.js
+215 silly gunzTarPerm extractEntry lib/grunt/cli.js
+216 silly gunzTarPerm extractEntry lib/grunt/config.js
+217 silly gunzTarPerm extractEntry lib/grunt/event.js
+218 silly lockFile 1bee80ed-6342-0-37915303464978933-package tar:///var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736342-0.37915303464978933/package
+219 silly lockFile 1bee80ed-6342-0-37915303464978933-package tar:///var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736342-0.37915303464978933/package
+220 silly lockFile cb97b262-6342-0-37915303464978933-tmp-tgz tar:///var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736342-0.37915303464978933/tmp.tgz
+221 silly lockFile cb97b262-6342-0-37915303464978933-tmp-tgz tar:///var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736342-0.37915303464978933/tmp.tgz
+222 verbose tar pack [ '/Users/onikiienko/.npm/grunt-replace/0.7.2/package.tgz',
+222 verbose tar pack   '/var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736342-0.37915303464978933/package' ]
+223 verbose tarball /Users/onikiienko/.npm/grunt-replace/0.7.2/package.tgz
+224 verbose folder /var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736342-0.37915303464978933/package
+225 silly lockFile 1bee80ed-6342-0-37915303464978933-package tar:///var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736342-0.37915303464978933/package
+226 verbose lock tar:///var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736342-0.37915303464978933/package /Users/onikiienko/.npm/1bee80ed-6342-0-37915303464978933-package.lock
+227 silly lockFile 7b74442b--grunt-replace-0-7-2-package-tgz tar:///Users/onikiienko/.npm/grunt-replace/0.7.2/package.tgz
+228 verbose lock tar:///Users/onikiienko/.npm/grunt-replace/0.7.2/package.tgz /Users/onikiienko/.npm/7b74442b--grunt-replace-0-7-2-package-tgz.lock
+229 silly gunzTarPerm extractEntry lib/grunt/fail.js
+230 silly gunzTarPerm extractEntry lib/grunt/file.js
+231 silly gunzTarPerm extractEntry lib/grunt/help.js
+232 silly gunzTarPerm extractEntry lib/grunt/log.js
+233 silly gunzTarPerm extractEntry lib/grunt/option.js
+234 silly gunzTarPerm extractEntry lib/grunt/task.js
+235 silly gunzTarPerm extractEntry lib/grunt/template.js
+236 silly gunzTarPerm extractEntry lib/util/task.js
+237 silly lockFile 1bee80ed-6342-0-37915303464978933-package tar:///var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736342-0.37915303464978933/package
+238 silly lockFile 1bee80ed-6342-0-37915303464978933-package tar:///var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736342-0.37915303464978933/package
+239 silly lockFile 7b74442b--grunt-replace-0-7-2-package-tgz tar:///Users/onikiienko/.npm/grunt-replace/0.7.2/package.tgz
+240 silly lockFile 7b74442b--grunt-replace-0-7-2-package-tgz tar:///Users/onikiienko/.npm/grunt-replace/0.7.2/package.tgz
+241 silly lockFile 78aacdab--npm-grunt-replace-0-7-2-package /Users/onikiienko/.npm/grunt-replace/0.7.2/package
+242 verbose lock /Users/onikiienko/.npm/grunt-replace/0.7.2/package /Users/onikiienko/.npm/78aacdab--npm-grunt-replace-0-7-2-package.lock
+243 silly lockFile 78aacdab--npm-grunt-replace-0-7-2-package /Users/onikiienko/.npm/grunt-replace/0.7.2/package
+244 silly lockFile 78aacdab--npm-grunt-replace-0-7-2-package /Users/onikiienko/.npm/grunt-replace/0.7.2/package
+245 verbose tar unpack /Users/onikiienko/.npm/grunt-replace/0.7.2/package.tgz
+246 silly lockFile 842cf722--npm-grunt-replace-0-7-2-package tar:///Users/onikiienko/.npm/grunt-replace/0.7.2/package
+247 verbose lock tar:///Users/onikiienko/.npm/grunt-replace/0.7.2/package /Users/onikiienko/.npm/842cf722--npm-grunt-replace-0-7-2-package.lock
+248 silly lockFile 7b74442b--grunt-replace-0-7-2-package-tgz tar:///Users/onikiienko/.npm/grunt-replace/0.7.2/package.tgz
+249 verbose lock tar:///Users/onikiienko/.npm/grunt-replace/0.7.2/package.tgz /Users/onikiienko/.npm/7b74442b--grunt-replace-0-7-2-package-tgz.lock
+250 silly gunzTarPerm modes [ '755', '644' ]
+251 silly gunzTarPerm extractEntry package.json
+252 silly gunzTarPerm extractEntry README.md
+253 silly gunzTarPerm extractEntry LICENSE-MIT
+254 silly gunzTarPerm extractEntry tasks/replace.js
+255 silly lockFile 842cf722--npm-grunt-replace-0-7-2-package tar:///Users/onikiienko/.npm/grunt-replace/0.7.2/package
+256 silly lockFile 842cf722--npm-grunt-replace-0-7-2-package tar:///Users/onikiienko/.npm/grunt-replace/0.7.2/package
+257 silly lockFile 7b74442b--grunt-replace-0-7-2-package-tgz tar:///Users/onikiienko/.npm/grunt-replace/0.7.2/package.tgz
+258 silly lockFile 7b74442b--grunt-replace-0-7-2-package-tgz tar:///Users/onikiienko/.npm/grunt-replace/0.7.2/package.tgz
+259 verbose chmod /Users/onikiienko/.npm/grunt-replace/0.7.2/package.tgz 644
+260 verbose chown /Users/onikiienko/.npm/grunt-replace/0.7.2/package.tgz [ 501, 20 ]
+261 silly lockFile ca3b8d9c--replace-grunt-replace-0-7-2-tgz https://registry.npmjs.org/grunt-replace/-/grunt-replace-0.7.2.tgz
+262 silly lockFile ca3b8d9c--replace-grunt-replace-0-7-2-tgz https://registry.npmjs.org/grunt-replace/-/grunt-replace-0.7.2.tgz
+263 silly lockFile c83c268d-grunt-replace-0-7-2 grunt-replace@0.7.2
+264 silly lockFile c83c268d-grunt-replace-0-7-2 grunt-replace@0.7.2
+265 silly lockFile bc79c167-grunt-replace-latest grunt-replace@latest
+266 silly lockFile bc79c167-grunt-replace-latest grunt-replace@latest
+267 silly lockFile 1895d471-308-0-045721687376499176-package tar:///var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736308-0.045721687376499176/package
+268 silly lockFile 1895d471-308-0-045721687376499176-package tar:///var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736308-0.045721687376499176/package
+269 silly lockFile 97bd14f4-308-0-045721687376499176-tmp-tgz tar:///var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736308-0.045721687376499176/tmp.tgz
+270 silly lockFile 97bd14f4-308-0-045721687376499176-tmp-tgz tar:///var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736308-0.045721687376499176/tmp.tgz
+271 verbose tar pack [ '/Users/onikiienko/.npm/grunt/0.4.4/package.tgz',
+271 verbose tar pack   '/var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736308-0.045721687376499176/package' ]
+272 verbose tarball /Users/onikiienko/.npm/grunt/0.4.4/package.tgz
+273 verbose folder /var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736308-0.045721687376499176/package
+274 silly lockFile 1895d471-308-0-045721687376499176-package tar:///var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736308-0.045721687376499176/package
+275 verbose lock tar:///var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736308-0.045721687376499176/package /Users/onikiienko/.npm/1895d471-308-0-045721687376499176-package.lock
+276 silly lockFile 1b421606-enko-npm-grunt-0-4-4-package-tgz tar:///Users/onikiienko/.npm/grunt/0.4.4/package.tgz
+277 verbose lock tar:///Users/onikiienko/.npm/grunt/0.4.4/package.tgz /Users/onikiienko/.npm/1b421606-enko-npm-grunt-0-4-4-package-tgz.lock
+278 silly lockFile 1895d471-308-0-045721687376499176-package tar:///var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736308-0.045721687376499176/package
+279 silly lockFile 1895d471-308-0-045721687376499176-package tar:///var/folders/lb/gg7zsnwn4yl2_7dnbrxmjpjc0000gn/T/npm-19261-e8UEucuo/1394709736308-0.045721687376499176/package
+280 silly lockFile 1b421606-enko-npm-grunt-0-4-4-package-tgz tar:///Users/onikiienko/.npm/grunt/0.4.4/package.tgz
+281 silly lockFile 1b421606-enko-npm-grunt-0-4-4-package-tgz tar:///Users/onikiienko/.npm/grunt/0.4.4/package.tgz
+282 silly lockFile f77d7871-ikiienko-npm-grunt-0-4-4-package /Users/onikiienko/.npm/grunt/0.4.4/package
+283 verbose lock /Users/onikiienko/.npm/grunt/0.4.4/package /Users/onikiienko/.npm/f77d7871-ikiienko-npm-grunt-0-4-4-package.lock
+284 silly lockFile f77d7871-ikiienko-npm-grunt-0-4-4-package /Users/onikiienko/.npm/grunt/0.4.4/package
+285 silly lockFile f77d7871-ikiienko-npm-grunt-0-4-4-package /Users/onikiienko/.npm/grunt/0.4.4/package
+286 verbose tar unpack /Users/onikiienko/.npm/grunt/0.4.4/package.tgz
+287 silly lockFile 251cf32e-ikiienko-npm-grunt-0-4-4-package tar:///Users/onikiienko/.npm/grunt/0.4.4/package
+288 verbose lock tar:///Users/onikiienko/.npm/grunt/0.4.4/package /Users/onikiienko/.npm/251cf32e-ikiienko-npm-grunt-0-4-4-package.lock
+289 silly lockFile 1b421606-enko-npm-grunt-0-4-4-package-tgz tar:///Users/onikiienko/.npm/grunt/0.4.4/package.tgz
+290 verbose lock tar:///Users/onikiienko/.npm/grunt/0.4.4/package.tgz /Users/onikiienko/.npm/1b421606-enko-npm-grunt-0-4-4-package-tgz.lock
+291 silly gunzTarPerm modes [ '755', '644' ]
+292 silly gunzTarPerm extractEntry package.json
+293 silly gunzTarPerm extractEntry .npmignore
+294 silly gunzTarPerm extractEntry README.md
+295 silly gunzTarPerm extractEntry LICENSE-MIT
+296 silly gunzTarPerm extractEntry internal-tasks/bump.js
+297 silly gunzTarPerm extractEntry internal-tasks/subgrunt.js
+298 silly gunzTarPerm extractEntry lib/grunt.js
+299 silly gunzTarPerm extractEntry lib/grunt/cli.js
+300 silly gunzTarPerm extractEntry lib/grunt/config.js
+301 silly gunzTarPerm extractEntry lib/grunt/event.js
+302 silly gunzTarPerm extractEntry lib/grunt/fail.js
+303 silly gunzTarPerm extractEntry lib/grunt/file.js
+304 silly gunzTarPerm extractEntry lib/grunt/help.js
+305 silly gunzTarPerm extractEntry lib/grunt/log.js
+306 silly gunzTarPerm extractEntry lib/grunt/option.js
+307 silly gunzTarPerm extractEntry lib/grunt/task.js
+308 silly gunzTarPerm extractEntry lib/grunt/template.js
+309 silly gunzTarPerm extractEntry lib/util/task.js
+310 silly lockFile 251cf32e-ikiienko-npm-grunt-0-4-4-package tar:///Users/onikiienko/.npm/grunt/0.4.4/package
+311 silly lockFile 251cf32e-ikiienko-npm-grunt-0-4-4-package tar:///Users/onikiienko/.npm/grunt/0.4.4/package
+312 silly lockFile 1b421606-enko-npm-grunt-0-4-4-package-tgz tar:///Users/onikiienko/.npm/grunt/0.4.4/package.tgz
+313 silly lockFile 1b421606-enko-npm-grunt-0-4-4-package-tgz tar:///Users/onikiienko/.npm/grunt/0.4.4/package.tgz
+314 verbose chmod /Users/onikiienko/.npm/grunt/0.4.4/package.tgz 644
+315 verbose chown /Users/onikiienko/.npm/grunt/0.4.4/package.tgz [ 501, 20 ]
+316 silly lockFile e3269c2a--npmjs-org-grunt-grunt-0-4-4-tgz https://registry.npmjs.org/grunt/-/grunt-0.4.4.tgz
+317 silly lockFile e3269c2a--npmjs-org-grunt-grunt-0-4-4-tgz https://registry.npmjs.org/grunt/-/grunt-0.4.4.tgz
+318 silly lockFile 6f9e9a40-grunt-0-4-4 grunt@0.4.4
+319 silly lockFile 6f9e9a40-grunt-0-4-4 grunt@0.4.4
+320 silly lockFile c5c58d45-grunt-latest grunt@latest
+321 silly lockFile c5c58d45-grunt-latest grunt@latest
+322 silly resolved [ { name: 'grunt-replace',
+322 silly resolved     description: 'Replace text patterns using pattern-replace.',
+322 silly resolved     version: '0.7.2',
+322 silly resolved     homepage: 'http://github.com/outaTiME/grunt-replace',
+322 silly resolved     author: { name: 'outaTiME', url: 'http://outa.im/' },
+322 silly resolved     repository:
+322 silly resolved      { type: 'git',
+322 silly resolved        url: 'http://github.com/outaTiME/grunt-replace.git' },
+322 silly resolved     bugs: { url: 'http://github.com/outaTiME/grunt-replace/issues' },
+322 silly resolved     licenses: [ [Object] ],
+322 silly resolved     engines: { node: '>= 0.8.0' },
+322 silly resolved     scripts: { test: 'grunt test' },
+322 silly resolved     dependencies: { 'pattern-replace': '0.1.2', chalk: '~0.4.0' },
+322 silly resolved     devDependencies:
+322 silly resolved      { grunt: '~0.4.0',
+322 silly resolved        'grunt-contrib-clean': '~0.5.0',
+322 silly resolved        'grunt-contrib-jshint': '~0.8.0',
+322 silly resolved        'grunt-contrib-nodeunit': '~0.3.0' },
+322 silly resolved     peerDependencies: { grunt: '~0.4.0' },
+322 silly resolved     keywords:
+322 silly resolved      [ 'gruntplugin',
+322 silly resolved        'replace',
+322 silly resolved        'replacement',
+322 silly resolved        'pattern',
+322 silly resolved        'patterns',
+322 silly resolved        'match',
+322 silly resolved        'text',
+322 silly resolved        'string',
+322 silly resolved        'regex',
+322 silly resolved        'regexp',
+322 silly resolved        'json',
+322 silly resolved        'yaml',
+322 silly resolved        'flatten' ],
+322 silly resolved     files: [ 'tasks', 'LICENSE-MIT' ],
+322 silly resolved     readme: '# grunt-replace [![Build Status](https://secure.travis-ci.org/outaTiME/grunt-replace.png?branch=master)](http://travis-ci.org/outaTiME/grunt-replace)\n\n> Replace text patterns with a given replacement using [pattern-replace](https://github.com/outaTiME/pattern-replace).\n\n\n\n## Getting Started\nThis plugin requires Grunt `~0.4.0`\n\nIf you haven\'t used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you\'re familiar with that process, you may install this plugin with this command:\n\n```shell\nnpm install grunt-replace --save-dev\n```\n\nOnce the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:\n\n```js\ngrunt.loadNpmTasks(\'grunt-replace\');\n```\n\n*This plugin was designed to work with Grunt 0.4.x. If you\'re still using grunt v0.3.x it\'s strongly recommended that [you upgrade](http://gruntjs.com/upgrading-from-0.3-to-0.4), but in case you can\'t please use [v0.3.2](https://github.com/outaTiME/grunt-replace/tree/grunt-0.3-stable).*\n\n\n\n## Replace Task\n_Run this task with the `grunt replace` command._\n\nTask targets, files and options may be specified according to the grunt [Configuring tasks](http://gruntjs.com/configuring-tasks) guide.\n\n### Options\n\n\n\n#### patterns\nType: `Array`\n\nDefine patterns that will be used to replace the contents of source files.\n\n#### patterns.match\nType: `String|RegExp`\n\nIndicates the matching expression.\n\nIf matching type is `String` and `expression` attribute is `false` we use a simple variable lookup mechanism `@@string` (in any other case we use the default regexp replace logic):\n\n```javascript\n{\n  patterns: [\n    {\n      match: \'foo\',\n      replacement: \'bar\', // replaces "@@foo" to "bar"\n      expression: false   // simple variable lookup\n    }\n  ]\n}\n```\n\n#### patterns.replacement\nType: `String|Function|Object`\n\nIndicates the replacement for match, for more information about replacement check out the [String.replace].\n\nYou can specify a function as replacement. In this case, the function will be invoked after the match has been performed. The function\'s result (return value) will be used as the replacement string.\n\n```javascript\n{\n  patterns: [\n    {\n      match: /foo/g,\n      replacement: function () {\n        return \'bar\'; // replaces "foo" to "bar"\n      }\n    }\n  ]\n}\n```\n\nAlso supports object as replacement (we create string representation of object using [JSON.stringify]):\n\n```javascript\n{\n  patterns: [\n    {\n      match: /foo/g,\n      replacement: [1, 2, 3] // replaces "foo" with string representation of "array" object\n    }\n  ]\n}\n```\n\n[String.replace]: http://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace\n[JSON.stringify]: http://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify\n\n#### patterns.json\nType: `Object`\n\nIf an attribute `json` found in pattern definition we flatten the object using `delimiter` concatenation and each key–value pair will be used for the replacement (simple variable lookup mechanism and no regexp support).\n\n```javascript\n{\n  patterns: [\n    {\n      json: {\n        "key": "value" // replaces "@@key" to "value"\n      }\n    }\n  ]\n}\n```\n\nAlso supports nested objects:\n\n```javascript\n{\n  patterns: [\n    {\n      json: {\n        "key": "value",   // replaces "@@key" to "value"\n        "inner": {        // replaces "@@inner" with string representation of "inner" object\n          "key": "value"  // replaces "@@inner.key" to "value"\n        }\n      }\n    }\n  ]\n}\n```\n\n#### patterns.yaml\nType: `String`\n\nIf an attribute `yaml` found in pattern definition we flatten the object using `delimiter` concatenation and each key–value pair will be used for the replacement (simple variable lookup mechanism and no regexp support).\n\n```javascript\n{\n  patterns: [\n    {\n      yaml: \'key: value\'  // replaces "@@key" to "value"\n    }\n  ]\n}\n```\n\n#### patterns.expression\nType: `Boolean`\nDefault: `false`\n\nIndicates the type of matching.\n\nIf detects regexp instance in `match` attribute, we assume to works with expression matcher (in any other case should be forced).\n\n#### variables\nType: `Object`\n\nThis is the old way to define patterns using plain object (simple variable lookup mechanism and no regexp support), you can still using but for more control you should use the new `patterns` way.\n\n```javascript\n{\n  variables: {\n    \'key\': \'value\' // replaces "@@key" to "value"\n  }\n}\n```\n\n#### prefix\nType: `String`\nDefault: `@@`\n\nThe prefix added for matching (prevent bad replacements / easy way).\n\n> This only applies for simple variable lookup mechanism.\n\n#### usePrefix\nType: `Boolean`\nDefault: `true`\n\nIf set to `false`, we match the pattern without `prefix` concatenation (useful when you want to lookup an simple string).\n\n> This only applies for simple variable lookup mechanism.\n\n#### preservePrefix\nType: `Boolean`\nDefault: `false`\n\nIf set to `true`, we preserve the `prefix` in target.\n\n> This only applies for simple variable lookup mechanism and `patterns.replacement` is an string.\n\n#### delimiter\nType: `String`\nDefault: `.`\n\nThe delimiter used to flatten when using object as replacement.\n\n#### preserveOrder\nType: `Boolean`\nDefault: `false`\n\nIf set to `true`, we preserve the patterns definition order, otherwise these will be sorted (in ascending order) to prevent replacement issues like `head` / `header` (typo regexps will be resolved at last).\n\n\n#### excludeBuiltins\nType: `Boolean`\nDefault: `false`\n\nIf set to `true`, we exclude built-in matching rules.\n\n#### force\nType: `Boolean`\nDefault: `false`\n\nForce the copy of files even when those files don\'t have any match found for replacement.\n\n#### noProcess\nType: `String`\n\nThis option is an advanced way to control which file contents are processed.\n\n> `processContentExclude` has been renamed to `noProcess` and the option name will be removed in the future.\n\n#### encoding\nType: `String`\nDefault: `grunt.file.defaultEncoding`\n\nThe file encoding to copy files with.\n\n#### mode\nType: `Boolean` or `Number`\nDefault: `false`\n\nWhether to copy or set the existing file permissions. Set to `true` to copy the existing file permissions. Or set to the mode, i.e.: `0644`, that copied files will be set to.\n\n### Built-in Replacements\n\nFew matching rules are provided by default and can be used anytime (these will be affected by the `options` given):\n\n *  `__SOURCE_FILE__`:\n\n    Replace match with the source file.\n\n *  `__SOURCE_PATH__`:\n\n    Replace match with the path of source file.\n\n *  `__SOURCE_FILENAME__`:\n\n    Replace match with the filename of source file.\n\n *  `__TARGET_FILE__`:\n\n    Replace match with the target file.\n\n *  `__TARGET_PATH__`:\n\n    Replace match with the path of target file.\n\n *  `__TARGET_FILENAME__`:\n\n    Replace match with the filename of target file.\n\n> If you are looking how to use an `built-in` replacements, check out the [How to insert filename in target](#how-to-insert-filename-in-target) usage.\n\n### Usage Examples\n\n#### Basic\n\nFile `src/manifest.appcache`:\n\n```\nCACHE MANIFEST\n# @@timestamp\n\nCACHE:\n\nfavicon.ico\nindex.html\n\nNETWORK:\n*\n```\n\nGruntfile, define pattern (for timestamp) and the source files for lookup:\n\n```js\nreplace: {\n  dist: {\n    options: {\n      patterns: [\n        {\n          match: \'timestamp\',\n          replacement: \'<%= grunt.template.today() %>\'\n        }\n      ]\n    },\n    files: [\n      {expand: true, flatten: true, src: [\'src/manifest.appcache\'], dest: \'build/\'}\n    ]\n  }\n}\n```\n\n#### Multiple matching\n\nFile `src/manifest.appcache`:\n\n```\nCACHE MANIFEST\n# @@timestamp\n\nCACHE:\n\nfavicon.ico\nindex.html\n\nNETWORK:\n*\n```\n\n\nFile `src/humans.txt`:\n\n```\n              __     _\n   _    _/__  /./|,//_`\n  /_//_// /_|///  //_, outaTiME v.@@version\n\n/* TEAM */\n  Web Developer / Graphic Designer: Ariel Oscar Falduto\n  Site: http://www.outa.im\n  Twitter: @outa7iME\n  Contact: afalduto at gmail dot com\n  From: Buenos Aires, Argentina\n\n/* SITE */\n  Last update: @@timestamp\n  Standards: HTML5, CSS3, robotstxt.org, humanstxt.org\n  Components: H5BP, Modernizr, jQuery, Twitter Bootstrap, LESS, Jade, Grunt\n  Software: Sublime Text 2, Photoshop, LiveReload\n\n```\n\nGruntfile:\n\n```js\nreplace: {\n  dist: {\n    options: {\n      patterns: [\n        {\n          match: \'version\',\n          replacement: \'<%= pkg.version %>\'\n        },\n        {\n          match: \'timestamp\',\n          replacement: \'<%= grunt.template.today() %>\'\n        }\n      ]\n    },\n    files: [\n      {expand: true, flatten: true, src: [\'src/manifest.appcache\', \'src/humans.txt\'], dest: \'build/\'}\n    ]\n  }\n}\n```\n\n#### Cache busting\n\nFile `src/assets/index.html`:\n\n```html\n<head>\n  <link rel="stylesheet" href="/css/style.css?rel=@@timestamp">\n  <script src="/js/app.js?rel=@@timestamp"></script>\n</head>\n```\n\nGruntfile:\n\n```js\nreplace: {\n  dist: {\n    options: {\n      patterns: [\n        {\n          match: \'timestamp\',\n          replacement: \'<%= new Date().getTime() %>\'\n        }\n      ]\n    },\n    files: [\n      {src: [\'src/assets/index.html\'], dest: \'build/index.html\'}\n    ]\n  }\n}\n```\n\n#### Include file\n\nFile `src/index.html`:\n\n```html\n<body>\n  @@include\n</body>\n```\n\nGruntfile:\n\n```js\nreplace: {\n  dist: {\n    options: {\n      patterns: [\n        {\n          match: \'include\',\n          replacement: \'<%= grunt.file.read("includes/content.html") %>\'\n        }\n      ]\n    },\n    files: [\n      {expand: true, flatten: true, src: [\'src/index.html\'], dest: \'build/\'}\n    ]\n  }\n}\n```\n\n#### Regular expression\n\nFile `src/username.txt`:\n\n```\nJohn Smith\n```\n\nGruntfile:\n\n```js\nreplace: {\n  dist: {\n    options: {\n      patterns: [\n        {\n          match: /(\\w+)\\s(\\w+)/,\n          replacement: \'$2, $1\' // replaces "John Smith" to "Smith, John"\n        }\n      ]\n    },\n    files: [\n      {expand: true, flatten: true, src: [\'src/username.txt\'], dest: \'build/\'}\n    ]\n  }\n}\n```\n\n#### Lookup for `foo` instead of `@@foo`\n\nThe `String` matching type or `expression` in `false` generates a simple variable lookup mechanism `@@string`, to skip this mode use one of the below rules ... make your choice:\n\nGruntfile:\n\n```js\n// option 1 (explicitly using an regexp)\nreplace: {\n  dist: {\n    options: {\n      patterns: [\n        {\n          match: /foo/g,\n          replacement: \'bar\'\n        }\n      ]\n    },\n    files: [\n      {expand: true, flatten: true, src: [\'src/foo.txt\'], dest: \'build/\'}\n    ]\n  }\n}\n\n// option 2 (easy way)\nreplace: {\n  dist: {\n    options: {\n      patterns: [\n        {\n          match: \'foo\',\n          replacement: \'bar\'\n        }\n      ],\n      usePrefix: false\n    },\n    files: [\n      {expand: true, flatten: true, src: [\'src/foo.txt\'], dest: \'build/\'}\n    ]\n  }\n}\n\n// option 3 (old way)\nreplace: {\n  dist: {\n    options: {\n      patterns: [\n        {\n          match: \'foo\',\n          replacement: \'bar\'\n        }\n      ],\n      prefix: \'\' // remove prefix\n    },\n    files: [\n      {expand: true, flatten: true, src: [\'src/foo.txt\'], dest: \'build/\'}\n    ]\n  }\n}\n```\n\n#### How to insert filename in target\n\nFile `src/app.js`:\n\n```js\n// filename: @@__SOURCE_FILENAME__\n\nvar App = App || (function () {\n\n  return {\n\n    // app contents\n\n  };\n\n}());\n\nwindow.App = App;\n```\n\nGruntfile:\n\n```js\nreplace: {\n  dist: {\n    options: {\n      // pass, we use built-in replacements\n    },\n    files: [\n      {expand: true, flatten: true, src: [\'src/**/*.js\'], dest: \'build/\'}\n    ]\n  }\n}\n```\n\n## Release History\n\n * 2014-03-11   v0.7.1   Task name update.\n * 2014-03-11   v0.7.0   New [pattern-replace](https://github.com/outaTiME/pattern-replace) modular core for replacements.\n * 2014-02-13   v0.6.2   Attach process data for function replacements (source / target). Add delimiter option for object as replacement. Dependencies updated.\n * 2014-02-06   v0.6.1   Rename excludePrefix to preservePrefix (more readable) and adds usePrefix flag. Support the noProcess option like [grunt-contrib-copy](https://github.com/gruntjs/grunt-contrib-copy).\n * 2014-02-05   v0.6.0   Object replacement allowed. New excludePrefix flag (thanks [@shinnn](https://github.com/shinnn)). Encoding / Mode options added.\n * 2013-09-18   v0.5.1   New pattern matching for JSON object.\n * 2013-09-17   v0.5.0   Regular expression matching now supported and notation has been updated but is backward compatible.\n * 2013-05-03   v0.4.4   Fix escape $ before performing regexp replace (thanks [@warpech](https://github.com/warpech)).\n * 2013-04-14   v0.4.3   Detect path destinations correctly on Windows.\n * 2013-04-02   v0.4.2   Add peerDependencies and update description.\n * 2013-04-02   v0.4.1   Add trace when force flag.\n * 2013-02-28   v0.4.0   First official release for Grunt 0.4.0.\n * 2012-11-20   v0.3.2   New examples added.\n * 2012-09-25   v0.3.1   Rename grunt-contrib-lib dep to grunt-lib-contrib, add force flag.\n * 2012-09-25   v0.3.0   General cleanup and consolidation. Global options depreciated.\n\n---\n\nTask submitted by [Ariel Falduto](http://outa.im/)\n',
+322 silly resolved     readmeFilename: 'README.md',
+322 silly resolved     _id: 'grunt-replace@0.7.2',
+322 silly resolved     dist: { shasum: '038d5fdcf624f49dc28364d5d20e32c3ea2796c4' },
+322 silly resolved     _from: 'grunt-replace@latest',
+322 silly resolved     _resolved: 'https://registry.npmjs.org/grunt-replace/-/grunt-replace-0.7.2.tgz' },
+322 silly resolved   { name: 'grunt',
+322 silly resolved     description: 'The JavaScript Task Runner',
+322 silly resolved     version: '0.4.4',
+322 silly resolved     author: { name: '"Cowboy" Ben Alman', url: 'http://benalman.com/' },
+322 silly resolved     homepage: 'http://gruntjs.com/',
+322 silly resolved     repository: { type: 'git', url: 'git://github.com/gruntjs/grunt.git' },
+322 silly resolved     bugs: { url: 'http://github.com/gruntjs/grunt/issues' },
+322 silly resolved     licenses: [ [Object] ],
+322 silly resolved     main: 'lib/grunt',
+322 silly resolved     scripts: { test: 'grunt test' },
+322 silly resolved     engines: { node: '>= 0.8.0' },
+322 silly resolved     keywords:
+322 silly resolved      [ 'task',
+322 silly resolved        'async',
+322 silly resolved        'cli',
+322 silly resolved        'minify',
+322 silly resolved        'uglify',
+322 silly resolved        'build',
+322 silly resolved        'lodash',
+322 silly resolved        'unit',
+322 silly resolved        'test',
+322 silly resolved        'qunit',
+322 silly resolved        'nodeunit',
+322 silly resolved        'server',
+322 silly resolved        'init',
+322 silly resolved        'scaffold',
+322 silly resolved        'make',
+322 silly resolved        'jake',
+322 silly resolved        'tool' ],
+322 silly resolved     dependencies:
+322 silly resolved      { async: '~0.1.22',
+322 silly resolved        'coffee-script': '~1.3.3',
+322 silly resolved        colors: '~0.6.2',
+322 silly resolved        dateformat: '1.0.2-1.2.3',
+322 silly resolved        eventemitter2: '~0.4.13',
+322 silly resolved        'findup-sync': '~0.1.2',
+322 silly resolved        glob: '~3.1.21',
+322 silly resolved        hooker: '~0.2.3',
+322 silly resolved        'iconv-lite': '~0.2.11',
+322 silly resolved        minimatch: '~0.2.12',
+322 silly resolved        nopt: '~1.0.10',
+322 silly resolved        rimraf: '~2.2.6',
+322 silly resolved        lodash: '~0.9.2',
+322 silly resolved        'underscore.string': '~2.2.1',
+322 silly resolved        which: '~1.0.5',
+322 silly resolved        'js-yaml': '~2.0.5',
+322 silly resolved        exit: '~0.1.1',
+322 silly resolved        getobject: '~0.1.0',
+322 silly resolved        'grunt-legacy-util': '~0.1.2' },
+322 silly resolved     devDependencies:
+322 silly resolved      { temporary: '~0.0.4',
+322 silly resolved        'grunt-contrib-jshint': '~0.6.4',
+322 silly resolved        'grunt-contrib-nodeunit': '~0.2.0',
+322 silly resolved        'grunt-contrib-watch': '~0.5.3',
+322 silly resolved        difflet: '~0.2.3',
+322 silly resolved        semver: '2.1.0',
+322 silly resolved        shelljs: '~0.2.5' },
+322 silly resolved     readme: '# Grunt: The JavaScript Task Runner\n\n[![Build Status](https://secure.travis-ci.org/gruntjs/grunt.png?branch=master)](http://travis-ci.org/gruntjs/grunt)\n[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)\n\n<img align="right" height="260" src="http://gruntjs.com/img/grunt-logo-no-wordmark.svg">\n\n\n### Documentation\n\nVisit the [gruntjs.com](http://gruntjs.com/) website for all the things.\n\n### Support / Contributing\nBefore you make an issue, please read our [Contributing](http://gruntjs.com/contributing) guide.\n\nYou can find the grunt team in [#grunt on irc.freenode.net](http://webchat.freenode.net/?channels=grunt).\n\n### Release History\nSee the [CHANGELOG](CHANGELOG).\n',
+322 silly resolved     readmeFilename: 'README.md',
+322 silly resolved     _id: 'grunt@0.4.4',
+322 silly resolved     dist: { shasum: 'f37fa46e2e52e37f9a0370542a74281c09c73f53' },
+322 silly resolved     _from: 'grunt@latest',
+322 silly resolved     _resolved: 'https://registry.npmjs.org/grunt/-/grunt-0.4.4.tgz' } ]
+323 info install grunt-replace@0.7.2 into /Users/onikiienko/myProjects/funcTest
+324 info install grunt@0.4.4 into /Users/onikiienko/myProjects/funcTest
+325 info installOne grunt-replace@0.7.2
+326 info installOne grunt@0.4.4
+327 info /Users/onikiienko/myProjects/funcTest/node_modules/grunt-replace unbuild
+328 info preuninstall grunt-replace@0.6.2
+329 info /Users/onikiienko/myProjects/funcTest/node_modules/grunt unbuild
+330 info preuninstall grunt@0.4.2
+331 info uninstall grunt-replace@0.6.2
+332 info uninstall grunt@0.4.2
+333 verbose true,/Users/onikiienko/myProjects/funcTest/node_modules,/Users/onikiienko/myProjects/funcTest/node_modules unbuild grunt-replace@0.6.2
+334 info postuninstall grunt-replace@0.6.2
+335 verbose true,/Users/onikiienko/myProjects/funcTest/node_modules,/Users/onikiienko/myProjects/funcTest/node_modules unbuild grunt@0.4.2
+336 info postuninstall grunt@0.4.2
+337 info /Users/onikiienko/myProjects/funcTest/node_modules/grunt unbuild
+338 verbose tar unpack /Users/onikiienko/.npm/grunt-replace/0.7.2/package.tgz
+339 silly lockFile 9cdf5e2d-cTest-node-modules-grunt-replace tar:///Users/onikiienko/myProjects/funcTest/node_modules/grunt-replace
+340 verbose lock tar:///Users/onikiienko/myProjects/funcTest/node_modules/grunt-replace /Users/onikiienko/.npm/9cdf5e2d-cTest-node-modules-grunt-replace.lock
+341 silly lockFile 7b74442b--grunt-replace-0-7-2-package-tgz tar:///Users/onikiienko/.npm/grunt-replace/0.7.2/package.tgz
+342 verbose lock tar:///Users/onikiienko/.npm/grunt-replace/0.7.2/package.tgz /Users/onikiienko/.npm/7b74442b--grunt-replace-0-7-2-package-tgz.lock
+343 error error rolling back Error: EACCES, unlink '/Users/onikiienko/myProjects/funcTest/node_modules/grunt/node_modules/.bin/cake'
+343 error error rolling back  grunt@0.4.4 { [Error: EACCES, unlink '/Users/onikiienko/myProjects/funcTest/node_modules/grunt/node_modules/.bin/cake']
+343 error error rolling back   errno: 3,
+343 error error rolling back   code: 'EACCES',
+343 error error rolling back   path: '/Users/onikiienko/myProjects/funcTest/node_modules/grunt/node_modules/.bin/cake' }
+344 error Error: EACCES, unlink '/Users/onikiienko/myProjects/funcTest/node_modules/grunt/node_modules/.bin/cake'
+344 error  { [Error: EACCES, unlink '/Users/onikiienko/myProjects/funcTest/node_modules/grunt/node_modules/.bin/cake']
+344 error   errno: 3,
+344 error   code: 'EACCES',
+344 error   path: '/Users/onikiienko/myProjects/funcTest/node_modules/grunt/node_modules/.bin/cake' }
+345 error Please try running this command again as root/Administrator.
+346 error System Darwin 13.1.0
+347 error command "node" "/usr/local/bin/npm" "install"
+348 error cwd /Users/onikiienko/myProjects/funcTest
+349 error node -v v0.10.24
+350 error npm -v 1.3.21
+351 error path /Users/onikiienko/myProjects/funcTest/node_modules/grunt/node_modules/.bin/cake
+352 error code EACCES
+353 error errno 3
+354 error stack Error: EACCES, unlink '/Users/onikiienko/myProjects/funcTest/node_modules/grunt/node_modules/.bin/cake'
+355 verbose exit [ 3, true ]
