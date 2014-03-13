@@ -3,7 +3,8 @@ var wd = require('selenium-webdriver'),
 	assert = require('assert'),
 	imageDiff = require('image-diff'),
 	async = require('async'),
-	os=require('os');
+	os=require('os'),
+	clc = require('cli-color');
 
 	var SELENIUM_HOST = 'http://localhost:4455/wd/hub';
 	var currentTestSuite = {};
@@ -57,10 +58,10 @@ function run(browser, testSuite){
 function printResult(data){
 	for (var i = 0; i <= data.length - 1; i++) {
 		if (data[i].result){
-			console.log(i + ":   " + data[i].testName + ": pass");
+			console.log(clc.blueBright(data[i].testName) + '  :  ' + clc.greenBright('pass'));
 			removeScreenshots(data[i].screenshots);
 		}else{
-			console.log(i + ":   " +"!!!!!!!!!!! " + data[i].testName + " !!!!!!!!!!!");
+			console.log(clc.blueBright(data[i].testName) + '  :  ' + clc.redBright('fail'));
 			giveUrl(data[i].screenshots);
 		}
 	};

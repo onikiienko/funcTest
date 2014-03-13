@@ -2,7 +2,7 @@ var wd = require('selenium-webdriver'),
 	map = require('../../helper');
 
 var testSuite = [
-	function test1(driver) {
+	function clickInHouse(driver) {
 		map.waitForDownload(driver);
 		map.clickCenter(driver);
 		map.waitForDownload(driver);
@@ -10,7 +10,7 @@ var testSuite = [
 		map.waitForDownload(driver);
 		return wd.promise.Promise;
 	},
-	function test2(driver) {
+	function clickInStreet(driver) {
 		map.waitForDownload(driver);
 		return wd.promise.Promise;
 	}

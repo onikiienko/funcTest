@@ -61,8 +61,18 @@ $ sh start-linux.sh
 ```bash
 node test.js firefox light geoclicker
 node test.js chrome dark
+gurnt && node test.js android light controls
 ```
 
 ## Результаты тестов
-
+Результаты имеют такой вид:
+```bash
+clickInHouse  :  fail
+http://10.110.40.37:3001/screens/diff1394725895368.png
+http://10.110.40.37:3001/screens/1394725895357.png
+http://10.110.40.37:3001/screens/1394725891314.png
+clickInStreet  : pass
+```
+Если тест не прошел, то в консоли отображаются ссылки на скриншоты.
+Если тест прошел, то пишет pass.
 ## Написание тестов

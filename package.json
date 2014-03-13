@@ -14,6 +14,7 @@
     "sys": "0.0.1",
     "image-diff": "~1.0.1",
     "async": "~0.2.10",
-    "grunt-copy-to": "0.0.10"
+    "grunt-copy-to": "0.0.10",
+    "cli-color": "~0.2.3"
   }
 }
