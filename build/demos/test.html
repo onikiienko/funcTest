@@ -4,7 +4,7 @@
         <title>2GIS maps api demo</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src= "@@application/loader.js?pkg=full&skin=dark"></script>
+        <script src= "@@application/loader.js?pkg=full&skin=@@skinColor"></script>
         <link rel="stylesheet" href="@@functest/style.css" />
     </head>
     <body>
@@ -37,7 +37,7 @@
                     type: 'jsonp',
                     success: function(data) {
                         data.result.forEach(function(metro) {
-                            // считываем строку в WKT-формате 
+                            // считываем строку в WKT-формате
                             wkt.read(metro.centroid);
                             // извлекаем координаты для маркера
                             var lng = wkt.components[0].x;

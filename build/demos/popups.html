@@ -14,8 +14,8 @@
                 // загрузка кода модуля
                 return DG.plugin('@@functest/loadingComp.js');
             }).then(function() {
-                var map = new L.Map('map', {
-                    center: new L.LatLng(59.94056795376941, 30.325012207031246),
+                var map = new DG.Map('map', {
+                    center: new DG.LatLng(59.94056795376941, 30.325012207031246),
                     zoom: 10,
                     dgGeoclicker: true
                 });
@@ -25,42 +25,42 @@
                     (МФК «Сан Сити»), 13 этаж';
         		testImage = '<img src="http://www.peoples.ru/images/interesting/interesting_2012070705232613.jpg" width="400" height="300">';
                 videoSPB = '<iframe src="http://player.vimeo.com/video/73053894?badge=0&amp;color=ffd503" width="500" height="281" frameborder="0" ></iframe>';
-                bigData = '<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam molestie et libero id porttitor. Quisque laoreet hendrerit auctor. Integer vulputate elementum vestibulum. Ut vehicula, libero id consequat feugiat, lectus ligula mollis mi, quis scelerisque odio eros eget elit. Sed lobortis ut justo ut commodo. Sed placerat quis quam ut porttitor. Integer placerat dictum tellus, sed tempor nunc ornare sed. Etiam euismod et massa vel semper. Nullam cursus egestas posuere. Curabitur eu tempor sapien, quis mollis quam. </p><p> Curabitur cursus leo et volutpat porttitor. Phasellus ut metus pellentesque, tristique leo et, commodo velit. Vestibulum et pulvinar felis. Nulla sit amet ultricies dui. Fusce luctus, tortor nec tincidunt convallis, justo velit varius urna, non venenatis velit magna venenatis nibh. Donec gravida at lacus sit amet ullamcorper. Sed in lacus blandit, tristique mi sit amet, accumsan dolor. Sed turpis est, ultricies ac tempus consequat, dictum et orci. Aliquam in mollis ligula. Nulla sed dignissim sem. </p><p> Suspendisse ac vehicula tellus, id vehicula sapien. Curabitur et elementum urna, porttitor feugiat mauris. Maecenas accumsan sem a aliquet aliquet. Ut eu mauris sed justo sodales convallis. Donec ac nisl aliquet, vulputate purus vitae, vulputate mi. Pellentesque eget vehicula nulla. Donec dui lectus, iaculis nec turpis ut, volutpat aliquam arcu. Ut tincidunt at ante ut congue. Curabitur vitae sapien a massa tincidunt mollis. </p><p> Phasellus vitae facilisis metus. Donec feugiat laoreet velit et mattis. Phasellus eu rhoncus neque. Suspendisse potenti. Maecenas rutrum a leo dictum tincidunt. Pellentesque sit amet nulla nec sem ornare cursus. Praesent facilisis felis sed ultrices consequat. Sed ac purus quam. Curabitur ut lacus vel purus tincidunt congue. Proin sit amet sapien vel nulla bibendum vulputate nec et turpis. Proin diam orci, pharetra nec lorem in, congue facilisis ipsum. </p><p> Quisque ut purus lobortis, vehicula nisl a, ultrices nisl. Sed vel quam lacus. Cras convallis ante neque, id laoreet tellus imperdiet quis. Curabitur accumsan erat eget justo varius, sed molestie augue aliquam. Vivamus dui tortor, tempor non elit vel, rutrum aliquam metus. Maecenas tellus orci, rutrum porta purus vitae, tristique mollis lacus. In hac habitasse platea dictumst. Quisque auctor eget risus sit amet dictum. Donec vel sapien vel nisi tristique sollicitudin. Curabitur gravida gravida diam sit amet accumsan. Proin iaculis elementum erat ac egestas. Nulla id lectus velit. Donec magna odio, imperdiet non dapibus a, aliquam eu lacus. Maecenas faucibus lorem laoreet lacus sagittis, id luctus eros auctor. Nam scelerisque sem sit amet quam tempus, sit amet commodo magna commodo. Praesent a sapien porta, laoreet metus nec, tincidunt nisi. </p> ';
+                bigData = '<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam molestie et libero id porttitor. Quisque laoreet hendrerit auctor. Integer vulputate elementum vestibulum. Ut vehicula, libero id consequat feugiat, lectus ligula mollis mi, quis scelerisque odio eros eget elit. Sed lobortis ut justo ut commodo. Sed placerat quis quam ut porttitor. Integer placerat dictum tellus, sed tempor nunc ornare sed. Etiam euismod et massa vel semper. Nullam cursus egestas posuere. Curabitur eu tempor sapien, quis mollis quam. </p><p> Curabitur cursus leo et volutpat porttitor. Phasellus ut metus pellentesque, tristique leo et, commodo velit. Vestibulum et pulvinar felis. Nulla sit amet ultricies dui. Fusce luctus, tortor nec tincidunt convallis, justo velit varius urna, non venenatis velit magna venenatis nibh. Donec gravida at lacus sit amet ullamcorper. Sed in lacus blandit, tristique mi sit amet, accumsan dolor. Sed turpis est, ultricies ac tempus consequat, dictum et orci. Aliquam in mollis ligula. Nulla sed dignissim sem. </p><p> Suspendisse ac vehicula tellus, id vehicula sapien. Curabitur et elementum urna, porttitor feugiat mauris. Maecenas accumsan sem a aliquet aliquet. Ut eu mauris sed justo sodales convallis. Donec ac nisl aliquet, vulputate purus vitae, vulputate mi. Pellentesque eget vehicula nulla. Donec dui lectus, iaculis nec turpis ut, volutpat aliquam arcu. Ut tincidunt at ante ut congue. Curabitur vitae sapien a massa tincidunt mollis. </p><p> Phasellus vitae facilisis metus. Donec feugiat laoreet velit et mattis. Phasellus eu rhoncus neque. Suspendisse potenti. Maecenas rutrum a leo dictum tincidunt. Pellentesque sit amet nulla nec sem ornare cursus. Praesent facilisis felis sed ultrices consequat. Sed ac purus quam. Curabitur ut lacus vel purus tincidunt congue. Proin sit amet sapien vel nulla bibendum vulputate nec et turpis. Proin diam orci, pharetra nec lorem in, congue facilisis ipsum. </p><p> Quisque ut purus lobortis, vehicula nisl a, ultrices nisDG. Sed vel quam lacus. Cras convallis ante neque, id laoreet tellus imperdiet quis. Curabitur accumsan erat eget justo varius, sed molestie augue aliquam. Vivamus dui tortor, tempor non elit vel, rutrum aliquam metus. Maecenas tellus orci, rutrum porta purus vitae, tristique mollis lacus. In hac habitasse platea dictumst. Quisque auctor eget risus sit amet dictum. Donec vel sapien vel nisi tristique sollicitudin. Curabitur gravida gravida diam sit amet accumsan. Proin iaculis elementum erat ac egestas. Nulla id lectus velit. Donec magna odio, imperdiet non dapibus a, aliquam eu lacus. Maecenas faucibus lorem laoreet lacus sagittis, id luctus eros auctor. Nam scelerisque sem sit amet quam tempus, sit amet commodo magna commodo. Praesent a sapien porta, laoreet metus nec, tincidunt nisi. </p> ';
 
-                var popup = L.popup({maxHeight:100})
+                var popup = DG.popup({maxHeight:100})
                             .setLatLng([59.94056795376941, 30.325012207031246])
                             .setContent(balloonHTML),
-                    popup1 = L.popup()
+                    popup1 = DG.popup()
                             .setLatLng([59.94056795376941, 30.88531494140625])
                             .setContent(balloonHTML);
-        			popup2 = L.popup({maxHeight:150})
+        			popup2 = DG.popup({maxHeight:150})
                             .setLatLng([60.09237788969751, 30.620482177734375])
                             .setContent('a');
-        			popup3 = L.popup({maxHeight:315, maxWidth:560})
+        			popup3 = DG.popup({maxHeight:315, maxWidth:560})
                             .setLatLng([59.94056795376941, 29.7152709960937])
                             .setContent(videoSPB);
-        			popup4 = L.popup({maxWidth:70})
+        			popup4 = DG.popup({maxWidth:70})
                             .setLatLng([59.94056795376941, 30.620482177734375])
                             .setContent('Narrow popup');
-        			popup5 = L.popup({minWidth:700, closeButton:false})
+        			popup5 = DG.popup({minWidth:700, closeButton:false})
                             .setLatLng([59.85295378759353, 30.88531494140625])
                             .setContent('<p align="center">six slices of prosciutto</p>');
-        			popup6 = L.popup({maxWidth:4000})
+        			popup6 = DG.popup({maxWidth:4000})
                             .setLatLng([59.67295378759353, 29.7152709960937])
                             .setContent(testImage);
-                    popup7 = L.popup({maxWidth:250})
+                    popup7 = DG.popup({maxWidth:250})
                             .setLatLng([59.67295378759353, 30.2152709960937])
                             .setContent(testImage);
-        			popup8 = L.popup({maxHeight:150, maxWidth:450})
+        			popup8 = DG.popup({maxHeight:150, maxWidth:450})
                             .setLatLng([59.67295378759353, 30.71331494140625])
                             .setContent(testImage);
-        			popup9 = L.popup({maxHeight:300, maxWidth:194})
+        			popup9 = DG.popup({maxHeight:300, maxWidth:194})
                             .setLatLng([59.94056795376941, 31.23031494140625])
                             .setContent({header: 'HEADER', body: bigData, footer: 'FOOTER'});
-        			popup10 = L.popup({minWidth:194, maxWidth: 200})
+        			popup10 = DG.popup({minWidth:194, maxWidth: 200})
                             .setLatLng([59.67295378759353, 31.23031494140625])
                             .setContent({header: '<p>HEADER</p><p align="center">header</p>', body: 'CONTENT', footer: '<p>FOOTER</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>'});
-        			popup11 = L.popup({maxHeight:30})
+        			popup11 = DG.popup({maxHeight:30})
                             .setLatLng([60.07056795376941, 30.325012207031246])
                             .setContent('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam molestie et libero id porttitor. Quisque laoreet hendrerit auctor. Integer vulputate elementum vestibulum. Ut vehicula, libero id consequat feugiat, lectus ligula mollis mi, quis scelerisque odio eros eget elit. Sed lobortis ut justo ut commodo. Sed placerat quis quam ut porttitor. Integer placerat dictum tellus, sed tempor nunc ornare sed. Etiam euismod et massa vel semper. Nullam cursus egestas posuere. Curabitur eu tempor sapien, quis mollis quam.');
 
