@@ -22,7 +22,10 @@
                 container.style.height = "400px";
                 mapBlock.appendChild(container);
 
-                DG.then(function(){
+                DG.then(function() {
+                // загрузка кода модуля
+                return DG.plugin('@@functest/loadingComp.js');
+            }).then(function(){
                     DG.map('map', {
                         center: [54.98, 82.89],
                         zoom: 13

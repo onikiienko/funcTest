@@ -29,6 +29,9 @@
         </div>
         <script>
             DG.then(function() {
+                // загрузка кода модуля
+                return DG.plugin('@@functest/loadingComp.js');
+            }).then(function() {
                 var map;
                 map = DG.map('map', {
                     center: [54.98, 82.89],

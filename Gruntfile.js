@@ -127,8 +127,7 @@ module.exports = function(grunt) {
 			      	{expand: true, flatten: true, src: ['public/testSuites/light/*'], dest: 'public/testSuites/light'}
 			    ]
 			},
-		},	
-
+		},
 	    shell: {
 	        makeDirs: {
 	            command: [

@@ -10,16 +10,16 @@
     <body>
         <div id="map"></div>
         <script>
-            var map,
-                balloonHTML;
-
-            L.onLoad(function () {
-                map = new L.Map('map', {
+            DG.then(function() {
+                // загрузка кода модуля
+                return DG.plugin('@@functest/loadingComp.js');
+            }).then(function() {
+                var map = new L.Map('map', {
                     center: new L.LatLng(59.94056795376941, 30.325012207031246),
                     zoom: 10,
                     dgGeoclicker: true
                 });
-                balloonHTML = '<a href="http://www.2gis.ru/" target="_blank">\n\
+                var balloonHTML = '<a href="http://www.2gis.ru/" target="_blank">\n\
                     <img src="http://maps.api.2gis.ru/2.0/2gis-logo.png" alt="2GIS" title="2GIS" width="146" height="70" style="border: none"></a>\n\
                     <p>Компания «ДубльГИС»</p>Тел.: (383) 363-05-55<br />Адрес: г. Новосибирск, Карла Маркса площадь, 7<br />\n\
                     (МФК «Сан Сити»), 13 этаж';

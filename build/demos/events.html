@@ -13,6 +13,9 @@
         <div id="map"></div>
         <script>
             DG.then(function() {
+                // загрузка кода модуля
+                return DG.plugin('@@functest/loadingComp.js');
+            }).then(function() {
                 var map,
                     clickedElement = document.getElementById('clicked_element'),
                     coords = [

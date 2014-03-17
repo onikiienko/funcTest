@@ -16,6 +16,9 @@
         <script>
             DG.then(function() {
                 // загрузка кода модуля
+                return DG.plugin('@@functest/loadingComp.js');
+            }).then(function() {
+                // загрузка кода модуля
                 return DG.plugin('http://leaflet.github.io/Leaflet.markercluster/dist/leaflet.markercluster-src.js');
             }).then(function() {
                 map = DG.map('map', {

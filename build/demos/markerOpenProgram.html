@@ -13,6 +13,9 @@
         <script>
             var openPopupBtn = document.getElementById('showPopup')
             DG.then(function() {
+                // загрузка кода модуля
+                return DG.plugin('@@functest/loadingComp.js');
+            }).then(function() {
                 var map,
                     marker;
                 map = DG.map('map', {
