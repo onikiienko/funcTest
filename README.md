@@ -19,6 +19,12 @@ $ git clone https://github.com/onikiienko/funcTest.git
 $ npm install
 ```
 
+- создаем папку public и даем права на создание и редактирование файлов по всему проекту
+
+```bash
+$ mkdir public && chmod -R 777 .
+```
+
 - делаем сборку
 
 ```bash
@@ -54,9 +60,9 @@ $ sh start-linux.sh
 ## Запуск приложения
 Запускается командой node.js
 При запуске приложения аргументами нужно передавать:
-1. название браузера (firefox, chrome...)
-2. цвет контров(light, dark)
-3. (опуионально) передать название модуля(geoclicker, controls...) если его не передавать, то прогоняться будут ВСЕ тесты.
+- название браузера (firefox, chrome...)
+- цвет контров(light, dark)
+- (опуионально) передать название модуля(geoclicker, controls...) если его не передавать, то прогоняться будут ВСЕ тесты.
 Примеры запуска тестов.
 ```bash
 node test.js firefox light geoclicker
@@ -76,3 +82,4 @@ clickInStreet  : pass
 Если тест не прошел, то в консоли отображаются ссылки на скриншоты.
 Если тест прошел, то пишет pass.
 ## Написание тестов
+Дока на webdriver [тут](http://selenium.googlecode.com/git/docs/api/javascript/class_webdriver_WebElement.html) и [тут](http://selenium.googlecode.com/git/docs/api/javascript/class_webdriver_ActionSequence.html)
