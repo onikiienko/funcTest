@@ -19,10 +19,10 @@ $ git clone https://github.com/onikiienko/funcTest.git
 $ npm install
 ```
 
-- создаем папку public
+- создаем папку public и даем права на создание и редактирование файлов по всему проекту
 
 ```bash
-$ mkdir public
+$ mkdir public && chmod -R 777 .
 ```
 
 - делаем сборку
