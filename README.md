@@ -19,6 +19,12 @@ $ git clone https://github.com/onikiienko/funcTest.git
 $ npm install
 ```
 
+- создаем папку public
+
+```bash
+$ mkdir public
+```
+
 - делаем сборку
 
 ```bash
