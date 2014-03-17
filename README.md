@@ -83,3 +83,4 @@ clickInStreet  : pass
 Если тест прошел, то пишет pass.
 ## Написание тестов
 Дока на webdriver [тут](http://selenium.googlecode.com/git/docs/api/javascript/class_webdriver_WebElement.html) и [тут](http://selenium.googlecode.com/git/docs/api/javascript/class_webdriver_ActionSequence.html) статья яндекса [тут](http://habrahabr.ru/company/yandex/blog/173769/)
+Тест-сьюты описаны [тут](http://testrail.2gis.local/index.php?/projects/overview/46)
