@@ -82,3 +82,4 @@ clickInStreet  : pass
 Если тест не прошел, то в консоли отображаются ссылки на скриншоты.
 Если тест прошел, то пишет pass.
 ## Написание тестов
+Дока на webdriver тут http://selenium.googlecode.com/git/docs/api/javascript/class_webdriver_WebElement.html
