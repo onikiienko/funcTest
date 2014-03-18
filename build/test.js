@@ -14,40 +14,50 @@ var wd = require('selenium-webdriver'),
 
 function runner(browser, skincolor){
 	if (arguments[2]){
-		currentTestSuite = require("./public/testSuites/" + skincolor + "/" + arguments[2] + ".js");
-		run(browser, arguments[2]);
+		file = require("./public/testSuites/" + skincolor + "/" + arguments[2] + ".js");
+		run(browser, file);
 	}else{
 		require("fs").readdirSync("./public/testSuites/" + skincolor).forEach(function(file) {
-			currentTestSuite = require("./public/testSuites/" + skincolor + "/" + file);
+			console.log(file);
+			file = require("./public/testSuites/" + skincolor + "/" + file);
 			run(browser, file);
 		});
 	};
 }
 
-function run(browser, testSuite){
+function run(browser, file){
 	var driver1 = makeDriver(browser);
 	var driver2 = makeDriver(browser);
 	driver1.manage().window().maximize();
 	driver2.manage().window().maximize();
-	
-	console.log("testSuite:  " + testSuite);
+	var promise1 = driver1.get(file.publicUrl);
+	var promise2 = driver2.get(file.testUrl);
 
-	var testSuite = currentTestSuite.testSuite.map(function (test) {
-		return wd.promise
-			.all([
-				makeMoves(driver1, test, currentTestSuite.publicUrl),
-				makeMoves(driver2, test, currentTestSuite.testUrl),
-			])
-			.then(compareImages.bind(null, test))
-	});
-
-	wd.promise
-		.all(testSuite)
+		wd.promise
+		.all([promise1, promise2])
 		.then(
 			function(data) {
-				printResult(data);
-				driver1.quit();
-				driver2.quit();
+				var testSuite = file.testSuite.map(function (test) {
+					return wd.promise
+						.all([
+							makeMoves(driver1, test),
+							makeMoves(driver2, test)
+						])
+						.then(compareImages.bind(null, test))
+				});
+
+				wd.promise
+					.all(testSuite)
+					.then(
+						function(data) {
+							printResult(data);
+							driver1.quit();
+							driver2.quit();
+						},
+						function(err) {
+							console.log(err);
+						}
+					);
 			},
 			function(err) {
 				console.log(err);
@@ -115,9 +125,9 @@ function saveScreenshot(data) {
     return wd.promise.checkedNodeCall(writeFile.bind(null, screenName, base64Data));
 };
 
-function makeMoves(driver, test, url){
-	return driver.get(url)
-	.then(test.bind(null, driver))
+function makeMoves(driver, test) {
+	var promise = wd.promise.when(test(driver));
+	return promise
 	.then(function() {
 		return driver.takeScreenshot();
 	})
