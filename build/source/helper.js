@@ -1,8 +1,7 @@
 
 function waitForDownload(driver){
-	driver.isElementPresent({ css: '.loaded' }).then(function() {
-		driver.sleep(1000);
-	    return;
+	return driver.isElementPresent({ css: '.loaded' }).then(function() {
+		return driver.sleep(1000);
 	});
 }
 
