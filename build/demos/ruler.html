@@ -19,9 +19,7 @@
                     center: [54.98, 82.89],
                     zoom: 13
                 });
-                DG.control.location({position: 'bottomright'}).addTo(map);
-                DG.control.scale().addTo(map);
-                DG.control.ruler({position: 'bottomleft'}).addTo(map);
+                DG.control.ruler().addTo(map);
                 map.addControl(DG.Control.loading());
             });
         </script>
