@@ -11,7 +11,7 @@ var wd = require('selenium-webdriver'),
 	var currentTestSuite = {};
 
 	var args = process.argv.slice(2);
-	
+
 runner(args[0], args[1], args[2]);
 
 function runner(browser, skincolor){

@@ -3,25 +3,21 @@ var wd = require('selenium-webdriver'),
 
 var testSuite = [
 	function enableRuler(driver) {
-		helper.waitForDownload(driver);
-		driver.executeScript("alert('Ruler')");
-		driver.findElement({class: ".dg-control-round_icon__ruler"}).click();
-		helper.waitForDownload(driver);
-		return wd.promise.Promise;
+		return helper.waitForDownload(driver)
+			.then(function() {
+				return driver.findElement({css: ".dg-control-round_icon__ruler"}).click();
+			});
 	},
 	function markFirstPoint(driver) {
-		helper.waitForDownload(driver);
-		helper.clickCenter(driver);
-		helper.waitForDownload(driver);
-		return wd.promise.Promise;
+		return helper.waitForDownload(driver)
+			.then(function() {
+				return helper.clickCenter(driver);
+			});
 	},
 	function dragPoint(driver) {
-		helper.waitForDownload(driver);
-		driver.findElement(webdriver.By.xpath("//*[@id='map']/div[1]/div[2]/div[3]/div/div/div")).mouseDown();
-		helper.mouseMove();
-		return wd.promise.Promise;
-	},
-
+		var dropElement = driver.findElement({css: ".dg-ruler-label__point"});
+		return new wd.ActionSequence(driver).dragAndDrop(dropElement, {x: 30, y: 30}).perform();
+	}
 ];
 
 module.exports.testSuite = testSuite;
