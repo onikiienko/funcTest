@@ -40,6 +40,8 @@
                     .bindPopup('Я многоугольник')
                     .bindLabel('Нажми на многоугольник')
                     .addTo(map);
+
+                    map.addControl(DG.Control.loading());
             });
         </script>
     </body>

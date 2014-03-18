@@ -56,6 +56,8 @@
                         layer.bindPopup(feature.properties.info);
                     }
                 }).addTo(map);
+
+                map.addControl(DG.Control.loading());
             });
         </script>
     </body>

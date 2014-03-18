@@ -42,6 +42,8 @@
                     .on('click', function() {
                         clickedElement.innerHTML = 'многоугольник';
                     }).addTo(map);
+
+            map.addControl(DG.Control.loading());
             });
         </script>
     </body>

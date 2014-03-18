@@ -35,6 +35,8 @@
 
                 wktMuliPoint.read(coord3);
                 wktMuliPoint.toObject().addTo(map);
+
+                map.addControl(DG.Control.loading());
             });
         </script>
     </body>

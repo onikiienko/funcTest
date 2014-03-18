@@ -15,27 +15,13 @@
                 // загрузка кода модуля
                 return DG.plugin('@@functest/loadingComp.js');
             }).then(function() {
-                var popups = DG.featureGroup(),
-                    coordinates = [];
-
                  map = DG.map('map', {
                     center: [54.98, 82.89],
                     zoom: 13
                 });
-
-                 // создаем 10 баулнов в случайных местах и добавляем их в группу
-                for (i = 0; i < 10; i++) {
-                    coordinates[0] = 54.98 - Math.random();
-                    coordinates[1] = 82.89 + Math.random();
-                    DG.popup()
-                        .setLatLng(coordinates)
-                        .setContent('Я балун №' + i)
-                        .addTo(popups);
-                }
-
-                popups.addTo(map);
-                //фокусируем область видимости на балунах
-                map.fitBounds(popups.getBounds());
+                DG.control.location({position: 'bottomright'}).addTo(map);
+                DG.control.scale().addTo(map);
+                DG.control.ruler({position: 'bottomleft'}).addTo(map);
                 map.addControl(DG.Control.loading());
             });
         </script>

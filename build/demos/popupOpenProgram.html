@@ -29,6 +29,8 @@
                     .setLatLng([54.98, 82.89])
                     .setContent('Я открылся по требованию и закрыл прошлый балун!');
                 showButton.onclick = function() {myPopUp.openOn(map)};
+
+                map.addControl(DG.Control.loading());
             });
         </script>
     </body>
