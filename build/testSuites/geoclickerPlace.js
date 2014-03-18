@@ -2,29 +2,29 @@ var wd = require('selenium-webdriver'),
 	helper = require('../../helper');
 
 var testSuite = [
-	function clickIn(driver) {
-		//http://testrail.2gis.local/index.php?/cases/view/112577
+	function clickInPlace(driver) {
+		//http://testrail.2gis.local/index.php?/cases/view/117548
 		return helper.waitForDownload(driver)			
 			.then(function() {
-				return helper.clickPoint(driver, "59.92474296688904, 30.3277587890625");
+				return helper.clickPoint(driver, "55.79076270406372, 37.52663612365723");
 			});
 		
 		return wd.promise.Promise;
 	},
-	function geoclickerIt(driver) {
-		//http://testrail.2gis.local/index.php?/cases/view/112578
+	function geoclickerPlaceIt(driver) {
+		//http://testrail.2gis.local/index.php?/cases/view/117560
 		return driver.executeScript("map.setLang('it')");
 	},
-	function geoclickerEn(driver) {
-		//http://testrail.2gis.local/index.php?/cases/view/112579
+	function geoclickerPlaceEn(driver) {
+		//http://testrail.2gis.local/index.php?/cases/view/117561
 		return driver.executeScript("map.setLang('en')");
 	},
-	function geoclickerCs(driver) {
-		//http://testrail.2gis.local/index.php?/cases/view/112580
+	function geoclickerPlaceCs(driver) {
+		//http://testrail.2gis.local/index.php?/cases/view/117562
 		return driver.executeScript("map.setLang('cs')");
 	},
-	function geoclickerEs(driver) {
-		//http://testrail.2gis.local/index.php?/cases/view/112581
+	function geoclickerPlaceEs(driver) {
+		//http://testrail.2gis.local/index.php?/cases/view/117563
 		return driver.executeScript("map.setLang('es')");
 	}
 ];
