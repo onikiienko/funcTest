@@ -20,7 +20,6 @@ function runner(browser, skincolor){
 		run(browser, loadedFile, arguments[2]);
 	}else{
 		require("fs").readdirSync("./public/testSuites/" + skincolor).forEach(function(file) {
-			console.log(file);
 			var loadedFile = require("./public/testSuites/" + skincolor + "/" + file);
 			run(browser, loadedFile, file);
 		});

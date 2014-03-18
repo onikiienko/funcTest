@@ -17,7 +17,8 @@ var testSuite = [
 	},
 	function geoclickerCityEn(driver) {
 		//http://testrail.2gis.local/index.php?/cases/view/112579
-		return driver.executeScript("map.setLang('en')");
+		return driver.findElement({css:".hhh"});
+		// return driver.executeScript("map.setLang('en')");
 	},
 	function geoclickerCityCs(driver) {
 		//http://testrail.2gis.local/index.php?/cases/view/112580
