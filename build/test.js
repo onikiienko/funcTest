@@ -4,28 +4,30 @@ var wd = require('selenium-webdriver'),
 	imageDiff = require('image-diff'),
 	async = require('async'),
 	os=require('os'),
-	clc = require('cli-color');
+	clc = require('cli-color'),
+	helper = require('./public/helper');
 
 	var SELENIUM_HOST = 'http://localhost:4455/wd/hub';
 	var currentTestSuite = {};
 
 	var args = process.argv.slice(2);
-	runner(args[0], args[1], args[2]);
+	
+runner(args[0], args[1], args[2]);
 
 function runner(browser, skincolor){
 	if (arguments[2]){
-		file = require("./public/testSuites/" + skincolor + "/" + arguments[2] + ".js");
-		run(browser, file);
+		var loadedFile = require("./public/testSuites/" + skincolor + "/" + arguments[2] + ".js");
+		run(browser, loadedFile, arguments[2]);
 	}else{
 		require("fs").readdirSync("./public/testSuites/" + skincolor).forEach(function(file) {
 			console.log(file);
-			file = require("./public/testSuites/" + skincolor + "/" + file);
-			run(browser, file);
+			var loadedFile = require("./public/testSuites/" + skincolor + "/" + file);
+			run(browser, loadedFile, file);
 		});
 	};
 }
 
-function run(browser, file){
+function run(browser, file, fileName){
 	var driver1 = makeDriver(browser);
 	var driver2 = makeDriver(browser);
 	driver1.manage().window().maximize();
@@ -50,7 +52,7 @@ function run(browser, file){
 					.all(testSuite)
 					.then(
 						function(data) {
-							printResult(data);
+							printResult(data, fileName);
 							driver1.quit();
 							driver2.quit();
 						},
@@ -65,16 +67,20 @@ function run(browser, file){
 		);
 };
 
-function printResult(data){
+function printResult(data, file){
+	console.log('++++++++++++++++++');
+	console.log('Results of ' + file + ':');
+	console.log('++++++++++++++++++');
 	for (var i = 0; i <= data.length - 1; i++) {
 		if (data[i].result){
 			console.log(clc.blueBright(data[i].testName) + '  :  ' + clc.greenBright('pass'));
-			removeScreenshots(data[i].screenshots);
+			//removeScreenshots(data[i].screenshots);
 		}else{
 			console.log(clc.blueBright(data[i].testName) + '  :  ' + clc.redBright('fail'));
 			giveUrl(data[i].screenshots);
 		}
 	};
+	console.log('==================');
 }
 
 function giveUrl(screenshots){
@@ -126,8 +132,13 @@ function saveScreenshot(data) {
 };
 
 function makeMoves(driver, test) {
-	var promise = wd.promise.when(test(driver));
-	return promise
+	return test(driver)
+	.then(function(){
+		console.log(clc.blueBright(test.name));
+	}, function(err){
+		console.log(clc.redBright(err.message));
+	})
+	.then(helper.waitForDownload.bind(null, driver))
 	.then(function() {
 		return driver.takeScreenshot();
 	})
@@ -137,9 +148,9 @@ function makeMoves(driver, test) {
 function compareImages(test, screenshots){
 	var diffUrl = './public/screens/' +'diff' + Date.now() + '.png',
 		screenPromise = wd.promise.checkedNodeCall(imageDiff.bind(null, {
-		actualImage: screenshots[0],
-	  	expectedImage: screenshots[1],
-	  	diffImage: diffUrl,
+			actualImage: screenshots[0],
+		  	expectedImage: screenshots[1],
+		  	diffImage: diffUrl,
 		})
 	);
 	screenshots.push(diffUrl)
