@@ -11,13 +11,13 @@
         <input id="changeSize" type="button" value="Изменить размер" />
         <div id="map"></div>
         <script>
-            var changeSizeButton = document.getElementById('changeSize');
+            var changeSizeButton = document.getElementById('changeSize'),
+                map;
 
             DG.then(function() {
                 // загрузка кода модуля
                 return DG.plugin('@@functest/loadingComp.js');
             }).then(function() {
-                var map;
 
                 map = DG.map('map', {
                     center: [54.98, 82.89],

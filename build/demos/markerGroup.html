@@ -12,12 +12,13 @@
         <input id="show" type="button" value="show markers" />
         <div id="map"></div>
         <script>
+        var map;
+
 	    DG.then(function() {
                 // загрузка кода модуля
                 return DG.plugin('@@functest/loadingComp.js');
             }).then(function() {
-	    	var map,
-		        markers = DG.featureGroup(),
+	    	var markers = DG.featureGroup(),
 		        coordinates = [];
 
 	        map = DG.map('map', {

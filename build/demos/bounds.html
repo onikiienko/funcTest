@@ -28,11 +28,11 @@
             <div id="map" style="width: 100%; height: 400px;"></div>
         </div>
         <script>
+        var map;
             DG.then(function() {
                 // загрузка кода модуля
                 return DG.plugin('@@functest/loadingComp.js');
             }).then(function() {
-                var map;
                 map = DG.map('map', {
                     center: [54.98, 82.89],
                     zoom: 10,

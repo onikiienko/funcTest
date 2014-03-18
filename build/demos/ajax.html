@@ -10,11 +10,12 @@
     <body>
         <div id="map"></div>
         <script>
+        var map;
             DG.then(function() {
                 // загрузка кода модуля
                 return DG.plugin('@@functest/loadingComp.js');
             }).then(function () {
-                var map, wkt,
+                var wkt,
                     latLng = [55.751288, 37.607741];
 
                 map = DG.map('map', {
@@ -37,7 +38,7 @@
                     type: 'jsonp',
                     success: function(data) {
                         data.result.forEach(function(metro) {
-                            // считываем строку в WKT-формате 
+                            // считываем строку в WKT-формате
                             wkt.read(metro.centroid);
                             // извлекаем координаты для маркера
                             var lng = wkt.components[0].x;

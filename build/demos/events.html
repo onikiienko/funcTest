@@ -8,16 +8,16 @@
         <link rel="stylesheet" href="@@functest/style.css" />
     </head>
     <body>
-        Вы кликнули в: 
+        Вы кликнули в:
         <div id = "clicked_element">никуда</div>
         <div id="map"></div>
         <script>
+        var map;
             DG.then(function() {
                 // загрузка кода модуля
                 return DG.plugin('@@functest/loadingComp.js');
             }).then(function() {
-                var map,
-                    clickedElement = document.getElementById('clicked_element'),
+                var clickedElement = document.getElementById('clicked_element'),
                     coords = [
                         [54.99, 82.88],
                         [54.985, 82.94],

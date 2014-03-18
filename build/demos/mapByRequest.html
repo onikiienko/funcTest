@@ -11,6 +11,7 @@
         <input id="create" type="button" value="Показать карту" />
         <div id="map"></div>
         <script>
+        var map;
             var createButton = document.getElementById("create");
 
             createButton.onclick = function() {
@@ -26,11 +27,11 @@
                 // загрузка кода модуля
                 return DG.plugin('@@functest/loadingComp.js');
             }).then(function(){
-                    DG.map('map', {
+                    map = DG.map('map', {
                         center: [54.98, 82.89],
                         zoom: 13
                     });
-                });                    
+                });
             }
         </script>
     </body>

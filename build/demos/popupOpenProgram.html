@@ -11,12 +11,12 @@
         <input id="showPopup" type="button" value="Открыть балун" />
         <div id="map"></div>
         <script>
-            var showButton = document.getElementById('showPopup');
+            var showButton = document.getElementById('showPopup'),
+                map;
             DG.then(function() {
                 // загрузка кода модуля
                 return DG.plugin('@@functest/loadingComp.js');
             }).then(function() {
-                var map;
                  map = DG.map('map', {
                     center: [54.98, 82.89],
                     zoom: 13
