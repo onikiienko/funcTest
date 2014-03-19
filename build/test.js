@@ -7,7 +7,7 @@ var wd = require('selenium-webdriver'),
 	clc = require('cli-color'),
 	helper = require('./public/helper');
 
-	var SELENIUM_HOST = 'http://localhost:4455/wd/hub';
+	var SELENIUM_HOST = '@@webDriverIp';
 	var currentTestSuite = {};
 
 	var args = process.argv.slice(2);

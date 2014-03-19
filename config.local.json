@@ -1,0 +1,7 @@
+{
+    "functest": "http://10.110.40.37:3001",
+    "demoUrl": "http://10.110.40.37:3001/demos",
+    "publicApplication": "http://maps.api.2gis.ru/2.0",
+    "testApplication": "http://127.0.0.1:3000",
+    "webDriverIp": "http://10.110.40.61:4455/wd/hub"
+}
