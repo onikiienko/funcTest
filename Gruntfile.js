@@ -124,7 +124,8 @@ module.exports = function(grunt) {
 			      	{expand: true, flatten: true, src: ['public/demos/light/public/*'], dest: 'public/demos/light/public'},
 			      	{expand: true, flatten: true, src: ['public/demos/light/test/*'], dest: 'public/demos/light/test'},
 			      	{expand: true, flatten: true, src: ['public/testSuites/dark/*'], dest: 'public/testSuites/dark'},
-			      	{expand: true, flatten: true, src: ['public/testSuites/light/*'], dest: 'public/testSuites/light'}
+			      	{expand: true, flatten: true, src: ['public/testSuites/light/*'], dest: 'public/testSuites/light'},
+			      	{expand: true, flatten: true, src: ['test.js'], dest: './'}
 			    ]
 			},
 		},
