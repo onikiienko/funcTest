@@ -26,41 +26,38 @@ function runner(browser, skincolor){
 	};
 }
 
-function run(browser, file, fileName){
+function runTests(file, driver) {
+	return wd.promise.all(
+		file.testSuite.map(makeMoves.bind(null, driver))
+	);
+};
+
+function run(browser, file){
 	var driver1 = makeDriver(browser);
 	var driver2 = makeDriver(browser);
 	driver1.manage().window().maximize();
 	driver2.manage().window().maximize();
 	var promise1 = driver1.get(file.publicUrl);
 	var promise2 = driver2.get(file.testUrl);
-
+	var screenshots = [];
 		wd.promise
 		.all([promise1, promise2])
 		.then(
-			function(data) {
-				var testSuite = file.testSuite.map(function (test) {
-					return wd.promise
-						.all([
-							makeMoves(driver1, test),
-							makeMoves(driver2, test)
-						])
-						.then(compareImages.bind(null, test))
-				});
-
-				wd.promise
-					.all(testSuite)
-					.then(
-						function(data) {
-							printResult(data, fileName);
-							driver1.quit();
-							driver2.quit();
-						},
-						function(err) {
-							console.log(err);
-						}
-					);
+			function() {
+				return wd.promise
+					.all([
+						runTests(file, driver1),
+						runTests(file, driver2)
+					])
+					.then(function (data) {
+						driver1.quit();
+						driver2.quit();
+						compareImages(data);
+					});
 			},
 			function(err) {
+				driver1.quit();
+				driver2.quit();
 				console.log(err);
 			}
 		);
@@ -118,16 +115,19 @@ function makeDriver(browser){
 	   .build();
 };
 
-function writeFile(name, data, cb) {
+function writeFile(name, data, test, cb) {
     fs.writeFile(name, data, 'base64', function(err) {
-    	cb(err, name);
+    	cb(err, {
+    		'test': test,
+    		'name': name
+    	});
     });
 };
 
-function saveScreenshot(data) {
-	var screenName = './public/screens/' + Date.now() + ".png";
+function saveScreenshot(data, testName) {
+	var screenName = './public/screens/' + testName + Date.now() + ".png";
     var base64Data = data.replace(/^data:image\/png;base64,/,"");
-    return wd.promise.checkedNodeCall(writeFile.bind(null, screenName, base64Data));
+    return wd.promise.checkedNodeCall(writeFile.bind(null, screenName, base64Data, testName));
 };
 
 function makeMoves(driver, test) {
@@ -141,25 +141,26 @@ function makeMoves(driver, test) {
 	.then(function() {
 		return driver.takeScreenshot();
 	})
-	.then(saveScreenshot);
+	.then(function (data){return saveScreenshot(data, test.name)});
 };
 
-function compareImages(test, screenshots){
-	var diffUrl = './public/screens/' +'diff' + Date.now() + '.png',
-		screenPromise = wd.promise.checkedNodeCall(imageDiff.bind(null, {
-			actualImage: screenshots[0],
-		  	expectedImage: screenshots[1],
-		  	diffImage: diffUrl,
+function compareImages(screenshots){
+	for (var i = screenshots[0].length - 1; i >= 0; i--) {
+		var diffUrl = './public/screens/' + 'diff' + screenshots[0][i].test + '.png';
+		imageDiff({
+		 		actualImage: screenshots[0][i].name,
+		 	  	expectedImage: screenshots[1][i].name,
+		 	  	diffImage: diffUrl
+	 		}, function (err, imagesAreSame) {
+	 				console.log('+++++++++++++++++++++++');
+	 				console.log(imagesAreSame);
+	 				// console.log(screenshots[0][i].name);
+	 				// console.log(screenshots[1][i].name);
+	 				// console.log(screenshots[0][i].test);
+	 				console.log('+++++++++++++++++++++++');
 		})
-	);
-	screenshots.push(diffUrl)
-	return wd.promise.when(screenPromise, function(data) {
-		return {
-			screenshots: screenshots,
-			testName: test.name,
-			result: data
-		};
-	});
+	};
+
 };
 
 module.exports = runner;

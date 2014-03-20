@@ -205,24 +205,24 @@ var testSuite = [
 			.click()
 			.perform();
 	},
-	function geoclickerHouseAndFirmlistScrolldown(driver) {
-		//http://testrail.2gis.local/index.php?/cases/view/117562
-		return new wd.ActionSequence(driver)
-			.dragAndDrop(driver.findElement({css: ".scroller__bar"}), {x: 0, y: 100})
-			.perform();
-	},
-	function geoclickerHouseAndFirmlistOverBackButton(driver) {
-		//http://testrail.2gis.local/index.php?/cases/view/117563
-		return new wd.ActionSequence(driver)
-			.mouseMove(driver.findElement({css: ".popup_footer_btn-wrapper"}))
-			.perform();
-	},
-	function geoclickerHouseAndFirmlistClickBackButton(driver) {
-		//http://testrail.2gis.local/index.php?/cases/view/117561
-		return new wd.ActionSequence(driver)
-			.click()
-			.perform();
-	}
+	// function geoclickerHouseAndFirmlistScrolldown(driver) {
+	// 	//http://testrail.2gis.local/index.php?/cases/view/117562
+	// 	return new wd.ActionSequence(driver)
+	// 		.dragAndDrop(driver.findElement({css: ".scroller__bar"}), {x: 0, y: 100})
+	// 		.perform();
+	// },
+	// function geoclickerHouseAndFirmlistOverBackButton(driver) {
+	// 	//http://testrail.2gis.local/index.php?/cases/view/117563
+	// 	return new wd.ActionSequence(driver)
+	// 		.mouseMove(driver.findElement({css: ".popup_footer_btn-wrapper"}))
+	// 		.perform();
+	// },
+	// function geoclickerHouseAndFirmlistClickBackButton(driver) {
+	// 	//http://testrail.2gis.local/index.php?/cases/view/117561
+	// 	return new wd.ActionSequence(driver)
+	// 		.click()
+	// 		.perform();
+	// }
 
 ];
 
