@@ -22,15 +22,18 @@ function run(browser, file){
 		.all([promise1, promise2])
 		.then(
 			function() {
-				return wd.promise
-					.all([
-						runTests(file, driver1),
-						runTests(file, driver2)
-					])
+				return runTests(file, driver1)
+					.then(function (name) {
+						return runTests(file, driver2)
+							.then(function(name2) {
+								return wd.promise.fulfilled([name, name2]);
+							});
+					})
 					.then(function (data) {
 						driver1.quit();
 						driver2.quit();
-						compareImages(data);
+						console.log(data);
+						//compareImages(data);
 					});
 			},
 			function(err) {

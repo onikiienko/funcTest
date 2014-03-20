@@ -7,7 +7,7 @@ var wd = require('selenium-webdriver'),
 	clc = require('cli-color'),
 	helper = require('./public/helper');
 
-	var SELENIUM_HOST = 'http://10.110.40.37:4455/wd/hub';
+	var SELENIUM_HOST = 'http://10.110.40.61:4455/wd/hub';
 	var currentTestSuite = {};
 
 function run(browser, file){
@@ -22,15 +22,18 @@ function run(browser, file){
 		.all([promise1, promise2])
 		.then(
 			function() {
-				return wd.promise
-					.all([
-						runTests(file, driver1),
-						runTests(file, driver2)
-					])
+				return runTests(file, driver1)
+					.then(function (name) {
+						return runTests(file, driver2)
+							.then(function(name2) {
+								return wd.promise.fulfilled([name, name2]);
+							});
+					})
 					.then(function (data) {
 						driver1.quit();
 						driver2.quit();
-						compareImages(data);
+						console.log(data);
+						//compareImages(data);
 					});
 			},
 			function(err) {
