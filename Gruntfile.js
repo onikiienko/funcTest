@@ -29,7 +29,7 @@ module.exports = function(grunt) {
 					},
 					{
 						match: 'application',
-						replacement: '@@testApplication'
+						replacement: 'http://10.110.40.37:3000'
 					}
 					]
 				},
@@ -46,7 +46,7 @@ module.exports = function(grunt) {
 					},
 					{
 						match: 'application',
-						replacement: '@@publicApplication'
+						replacement: 'http://maps.api.2gis.ru/2.0'
 					}
 					]
 				},
@@ -63,7 +63,7 @@ module.exports = function(grunt) {
 					},
 					{
 						match: 'application',
-						replacement: '@@testApplication'
+						replacement: 'http://10.110.40.37:3000'
 					}
 					]
 				},
@@ -80,7 +80,7 @@ module.exports = function(grunt) {
 					},
 					{
 						match: 'application',
-						replacement: '@@publicApplication'
+						replacement: 'http://maps.api.2gis.ru/2.0'
 					}
 					]
 				},
@@ -124,7 +124,8 @@ module.exports = function(grunt) {
 			      	{expand: true, flatten: true, src: ['public/demos/light/public/*'], dest: 'public/demos/light/public'},
 			      	{expand: true, flatten: true, src: ['public/demos/light/test/*'], dest: 'public/demos/light/test'},
 			      	{expand: true, flatten: true, src: ['public/testSuites/dark/*'], dest: 'public/testSuites/dark'},
-			      	{expand: true, flatten: true, src: ['public/testSuites/light/*'], dest: 'public/testSuites/light'}
+			      	{expand: true, flatten: true, src: ['public/testSuites/light/*'], dest: 'public/testSuites/light'},
+			      	{expand: true, flatten: true, src: ['*.js'], dest: './'}
 			    ]
 			},
 		},
