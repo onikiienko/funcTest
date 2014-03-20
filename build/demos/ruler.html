@@ -17,8 +17,10 @@
             }).then(function() {
                  map = DG.map('map', {
                     center: [54.98, 82.89],
-                    zoom: 13
+                    zoom: 13,
+                    geoclicker: true
                 });
+
                 DG.control.ruler().addTo(map);
                 map.addControl(DG.Control.loading());
             });

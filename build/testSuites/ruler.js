@@ -15,9 +15,13 @@ var testSuite = [
 			});
 	},
 	function dragPoint(driver) {
-		var dropElement = driver.findElement({css: ".dg-ruler-label__point"});
+		var dropElement = driver.findElement({css: ".dg-ruler-label__container"});
 		return new wd.ActionSequence(driver).dragAndDrop(dropElement, {x: 30, y: 30}).perform();
+	},
+	function dragPoint(driver) {
+		return driver.executeScript("map.setZoom(0)");
 	}
+
 ];
 
 module.exports.testSuite = testSuite;
