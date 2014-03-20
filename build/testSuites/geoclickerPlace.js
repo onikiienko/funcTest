@@ -2,13 +2,14 @@ var wd = require('selenium-webdriver'),
 	helper = require('../../helper');
 
 var testSuite = [	
-	//clickInPlace		
-
-	function clickInPlace(driver) {
+	function geoclickerPlace(driver) {
 		//http://testrail.2gis.local/index.php?/cases/view/117548
 		return driver.executeScript("map.setLang('ru')")			
 			.then(function() {
 				return helper.clickPoint(driver, "55.79076270406372, 37.52663612365723", 15);
+			})
+			.then(function() {
+				return helper.waitForPopup(driver);
 			});
 	},
 	function geoclickerPlaceIt(driver) {

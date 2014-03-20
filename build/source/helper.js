@@ -1,7 +1,13 @@
 
 function waitForDownload(driver){
 	return driver.isElementPresent({ css: '.loaded' }).then(function() {
-		return driver.sleep(2000);
+		return driver.sleep(3000);
+	});
+}
+
+function waitForPopup(driver){
+	return driver.isElementPresent({ css: '.dg-popup-header-title' }).then(function() {
+		return driver.sleep(3000);
 	});
 }
 
@@ -23,6 +29,7 @@ function clickPoint(driver, point){
 	});
 }
 
+module.exports.waitForPopup = waitForPopup;
 module.exports.waitForDownload = waitForDownload;
 module.exports.clickCenter = clickCenter;
 module.exports.clickPoint = clickPoint;

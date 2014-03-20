@@ -18,30 +18,31 @@ function run(browser, file){
 	var promise1 = driver1.get(file.publicUrl);
 	var promise2 = driver2.get(file.testUrl);
 	var screenshots = [];
-		wd.promise
-		.all([promise1, promise2])
-		.then(
-			function() {
-				return runTests(file, driver1)
-					.then(function (name) {
-						return runTests(file, driver2)
-							.then(function(name2) {
-								return wd.promise.fulfilled([name, name2]);
-							});
-					})
-					.then(function (data) {
-						driver1.quit();
-						driver2.quit();
-						console.log(data);
-						//compareImages(data);
-					});
-			},
-			function(err) {
-				driver1.quit();
-				driver2.quit();
-				console.log(err);
-			}
-		);
+	wd.promise
+	.all([promise1, promise2])
+	.then(
+		function() {
+			console.log('Public app');
+			return runTests(file, driver1)
+				.then(function (name) {
+					console.log('Test app');
+					return runTests(file, driver2)
+						.then(function(name2) {
+							return wd.promise.fulfilled([name, name2]);
+						});
+				})
+				.then(function (data) {
+					driver1.quit();
+					driver2.quit();
+					compareImages(data);
+				});
+		},
+		function(err) {
+			driver1.quit();
+			driver2.quit();
+			console.log(err);
+		}
+	);
 };
 
 function runTests(file, driver) {
@@ -109,9 +110,9 @@ function compareImages(screenshots){
 		 	  	diffImage: diffUrl
 	 		}, function (err, imagesAreSame) {
 	 				console.log(imagesAreSame);
-		})
+				}
+		);
 	};
-
 };
 
 module.exports.run = run;

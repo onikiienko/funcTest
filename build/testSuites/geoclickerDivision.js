@@ -2,13 +2,14 @@ var wd = require('selenium-webdriver'),
 	helper = require('../../helper');
 
 var testSuite = [		
-	//clickInDivision
-
-	function clickInDivision(driver) {
+	function geoclickerDivision(driver) {
 		//http://testrail.2gis.local/index.php?/cases/view/117548
 		return driver.executeScript("map.setLang('ru')")			
 			.then(function() {
 				return helper.clickPoint(driver, "55.80475427021683, 37.54508972167968", 11);
+			})
+			.then(function() {
+				return helper.waitForPopup(driver);
 			});
 	},
 	function geoclickerDivisionIt(driver) {

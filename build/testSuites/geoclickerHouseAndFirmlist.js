@@ -2,13 +2,14 @@ var wd = require('selenium-webdriver'),
 	helper = require('../../helper');
 
 var testSuite = [	
-	//HouseAndFirmlist 
-
-	function clickInHouseAndFirmlist(driver) {
+	function geoclickerHouseAndFirmlist(driver) {
 		//http://testrail.2gis.local/index.php?/cases/view/117579
 		return driver.executeScript("map.setLang('ru')")			
 			.then(function() {
 				return helper.clickPoint(driver, "55.74768297992507, 37.538909912109375", 17);
+			})
+			.then(function() {
+				return helper.waitForPopup(driver);
 			});
 	},
 	function geoclickerHouseAndFirmlistOverAllButton(driver) {

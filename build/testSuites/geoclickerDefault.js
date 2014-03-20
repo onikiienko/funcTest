@@ -2,13 +2,14 @@ var wd = require('selenium-webdriver'),
 	helper = require('../../helper');
 
 var testSuite = [	
-	//geoclickerDefaultIt
-
-	function clickInDefault(driver) {
+	function geoclickerDefault(driver) {
 		//http://testrail.2gis.local/index.php?/cases/view/112577
 		return helper.waitForDownload(driver)			
 			.then(function() {
 				return helper.clickPoint(driver, "59.95019685841227, 30.53237915039062", 10);
+			})
+			.then(function() {
+				return helper.waitForPopup(driver);
 			});
 	},
 	function geoclickerDefaultIt(driver) {
