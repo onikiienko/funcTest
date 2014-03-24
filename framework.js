@@ -10,7 +10,7 @@ var wd = require('selenium-webdriver'),
 	var SELENIUM_HOST = 'http://10.110.40.61:4455/wd/hub';
 	var currentTestSuite = {};
 
-function run(browser, file){
+function run(browser, file, fileName){
 	var driver1 = makeDriver(browser);
 	var driver2 = makeDriver(browser);
 	driver1.manage().window().maximize();
@@ -22,19 +22,41 @@ function run(browser, file){
 	.all([promise1, promise2])
 	.then(
 		function() {
-			console.log('Public app');
+			console.log('PUBLIC APP ' + fileName);
 			return runTests(file, driver1)
 				.then(function (name) {
-					console.log('Test app');
+					console.log('TEST APP ' + fileName);
 					return runTests(file, driver2)
 						.then(function(name2) {
 							return wd.promise.fulfilled([name, name2]);
+						}, function (err) { 
+							console.log(err);
 						});
+				}, function (err) { 
+					console.log(err);
 				})
 				.then(function (data) {
 					driver1.quit();
 					driver2.quit();
-					compareImages(data);
+					return compareImages(data);
+				}, function (err) { 
+					console.log(err);
+				})
+				.then(function (data){
+					console.log('================');
+					console.log('Results ' + fileName);
+					console.log('================');
+					data.forEach(function(obj){ 
+						if (obj.result){
+							console.log(clc.greenBright(obj.test + ": Pass"));
+							generateResultPage(obj);
+						}else{
+							console.log(clc.redBright(obj.test + ": Fail"));
+							generateResultPage(obj);
+						}
+					});
+					console.log('================');
+
 				});
 		},
 		function(err) {
@@ -44,6 +66,18 @@ function run(browser, file){
 		}
 	);
 };
+
+function generateResultPage(obj){
+	var file = obj.test + Date.now()
+	var stream = fs.createWriteStream("public/results/" + file + ".html");
+	stream.once('open', function(fd) {
+		stream.write('<img src="http://' + takeIp() + ':3001/' + obj.first.substring(9, obj.first.length) + '" border="2">');
+	  	stream.write('<img src="http://' + takeIp() + ':3001/' + obj.second.substring(9, obj.first.length) + '" border="2">');
+	  	stream.write('<img src="http://' + takeIp() + ':3001/' + obj.diffScreenName.substring(9, obj.first.length) + '" border="2">');
+	  	stream.end();
+	});
+	console.log('http://' + takeIp() + ':3001/results/' + file + '.html');
+}
 
 function runTests(file, driver) {
 	return wd.promise.all(
@@ -102,17 +136,30 @@ function makeMoves(driver, test) {
 };
 
 function compareImages(screenshots){
-	for (var i = 0; i < screenshots[0].length; i++) {
-		var diffUrl = './public/screens/' + screenshots[0][i].test + 'diff' + '.png';
-		imageDiff({
-		 		actualImage: screenshots[0][i].name,
-		 	  	expectedImage: screenshots[1][i].name,
-		 	  	diffImage: diffUrl
-	 		}, function (err, imagesAreSame) {
-	 				console.log(imagesAreSame);
-				}
-		);
-	};
+	var first = screenshots[0];
+	var second = screenshots[1];
+	var promises = first.map(function(screen, key) {
+		var diffUrl = './public/screens/' + screen.test + 'diff' + '.png';
+		return wd.promise.checkedNodeCall(
+			imageDiff.bind(null, {
+				actualImage: screen.name,
+				expectedImage: second[key].name,
+				diffImage: diffUrl
+			})
+		)
+		.then(function(imagesAreSame) {
+			return wd.promise.fulfilled({
+				'test': screen.test,
+				'first': screen.name,
+				'second': second[key].name,
+				'result': imagesAreSame,
+				'diffScreenName': diffUrl
+			});
+		});
+	});
+
+	return wd.promise.all(promises);
 };
+
 
 module.exports.run = run;

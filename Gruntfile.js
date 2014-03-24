@@ -133,7 +133,8 @@ module.exports = function(grunt) {
 	        makeDirs: {
 	            command: [
 	                'mkdir ./public',
-	                'mkdir ./public/screens'
+	                'mkdir ./public/screens',
+	                'mkdir ./public/results',
 	            ].join('&&'),
 	            options: {
 	                stdout: true

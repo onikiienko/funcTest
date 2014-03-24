@@ -1,9 +1,11 @@
 var wd = require('selenium-webdriver'),
 	helper = require('../../helper');
 
+//http://testrail.2gis.local/index.php?/suites/view/2539/23591
+
+
 var testSuite = [		
 	function geoclickerDivision(driver) {
-		//http://testrail.2gis.local/index.php?/cases/view/117548
 		return driver.executeScript("map.setLang('ru')")			
 			.then(function() {
 				return helper.clickPoint(driver, "55.80475427021683, 37.54508972167968", 11);
@@ -13,19 +15,15 @@ var testSuite = [
 			});
 	},
 	function geoclickerDivisionIt(driver) {
-		//http://testrail.2gis.local/index.php?/cases/view/117549
 		return driver.executeScript("map.setLang('it')");
 	},
 	function geoclickerDivisionEn(driver) {
-		//http://testrail.2gis.local/index.php?/cases/view/117550
 		return driver.executeScript("map.setLang('en')");
 	},
 	function geoclickerDivisionCs(driver) {
-		//http://testrail.2gis.local/index.php?/cases/view/117551
 		return driver.executeScript("map.setLang('cs')");
 	},
 	function geoclickerDivisionEs(driver) {
-		//http://testrail.2gis.local/index.php?/cases/view/117552
 		return driver.executeScript("map.setLang('es')");
 	}
 ];
