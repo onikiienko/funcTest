@@ -1,9 +1,10 @@
 var wd = require('selenium-webdriver'),
 	helper = require('../../helper');
 
+//http://testrail.2gis.local/index.php?/suites/view/2539/23595
+
 var testSuite = [	
 	function geoclickerHouseAndFirmlist(driver) {
-		//http://testrail.2gis.local/index.php?/cases/view/117579
 		return driver.executeScript("map.setLang('ru')")			
 			.then(function() {
 				return helper.clickPoint(driver, "55.74768297992507, 37.538909912109375", 17);
@@ -13,31 +14,26 @@ var testSuite = [
 			});
 	},
 	function geoclickerHouseAndFirmlistOverAllButton(driver) {
-		//http://testrail.2gis.local/index.php?/cases/view/117580
 		return new wd.ActionSequence(driver)
 			.mouseMove(driver.findElement({css: ".popup_footer_btn-wrapper"}))
 			.perform();
 	},
 	function geoclickerHouseAndFirmlistClickAllButton(driver) {
-		//http://testrail.2gis.local/index.php?/cases/view/117561
 		return new wd.ActionSequence(driver)
 			.click()
 			.perform();
 	},
 	function geoclickerHouseAndFirmlistScrolldown(driver) {
-		//http://testrail.2gis.local/index.php?/cases/view/117562
 		return new wd.ActionSequence(driver)
 			.dragAndDrop(driver.findElement({css: ".scroller__bar"}), {x: 0, y: 100})
 			.perform();
 	},
 	function geoclickerHouseAndFirmlistOverBackButton(driver) {
-		//http://testrail.2gis.local/index.php?/cases/view/117563
 		return new wd.ActionSequence(driver)
 			.mouseMove(driver.findElement({css: ".popup_footer_btn-wrapper"}))
 			.perform();
 	},
 	function geoclickerHouseAndFirmlistClickBackButton(driver) {
-		//http://testrail.2gis.local/index.php?/cases/view/117561
 		return new wd.ActionSequence(driver)
 			.click()
 			.perform();

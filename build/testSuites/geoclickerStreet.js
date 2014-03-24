@@ -1,9 +1,10 @@
 var wd = require('selenium-webdriver'),
 	helper = require('../../helper');
 
+//http://testrail.2gis.local/index.php?/suites/view/2539/23594
+
 var testSuite = [
 	function geoclickerStreet(driver) {
-		//http://testrail.2gis.local/index.php?/cases/view/117548
 		return driver.executeScript("map.setLang('ru')")			
 			.then(function() {
 				return helper.clickPoint(driver, "55.797855608972036, 37.53779411315918", 14);
@@ -13,19 +14,15 @@ var testSuite = [
 			});
 	},
 	function geoclickerStreetIt(driver) {
-		//http://testrail.2gis.local/index.php?/cases/view/117560
 		return driver.executeScript("map.setLang('it')");
 	},
 	function geoclickerStreetEn(driver) {
-		//http://testrail.2gis.local/index.php?/cases/view/117561
 		return driver.executeScript("map.setLang('en')");
 	},
 	function geoclickerStreetCs(driver) {
-		//http://testrail.2gis.local/index.php?/cases/view/117562
 		return driver.executeScript("map.setLang('cs')");
 	},
 	function geoclickerStreetEs(driver) {
-		//http://testrail.2gis.local/index.php?/cases/view/117563
 		return driver.executeScript("map.setLang('es')");
 	}
 ];
