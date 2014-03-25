@@ -26,7 +26,8 @@
                     ];
                  map = DG.map('map', {
                     center: [54.98, 82.89],
-                    zoom: 13
+                    zoom: 13,
+                    "geoclicker": true
                 })
 
                 map.on('click', function(e) {
@@ -36,7 +37,7 @@
                 DG.marker([54.98, 82.89])
                     .on('click', function() {
                         clickedElement.innerHTML = 'маркер';
-                    }).addTo(map);
+                    }).bindPopup('Я балун!').addTo(map);
 
                 DG.polygon(coords)
                     .on('click', function() {

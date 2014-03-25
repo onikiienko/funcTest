@@ -27,8 +27,8 @@
 	        });
 
 	        for (i = 0; i < 100; i++) {
-	            coordinates[0] = 54.98 + Math.random();
-	            coordinates[1] = 82.89 + Math.random();
+	            coordinates[0] = 54.98 + i * 0.01;
+	            coordinates[1] = 82.89 - i * 0.01;
 	            DG.marker(coordinates).addTo(markers);
 	        }
 
