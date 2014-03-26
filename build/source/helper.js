@@ -2,13 +2,13 @@ var wd = require('selenium-webdriver');
 
 function waitForDownload(driver){
 	return driver.isElementPresent({ css: '.loaded' }).then(function() {
-		return driver.sleep(3000);
+		return driver.sleep(1000);
 	});
 }
 
 function waitForPopup(driver){
 	return driver.isElementPresent({ css: '.dg-popup-header-title' }).then(function() {
-		return driver.sleep(3000);
+		return driver.sleep(1000);
 	});
 }
 
