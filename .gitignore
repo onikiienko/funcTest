@@ -1,4 +1,7 @@
 public
 node_modules
 /test.js
+/app.js
+/framework.js
 .DS_Store
+config.local.json

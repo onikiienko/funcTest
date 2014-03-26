@@ -1,31 +1,31 @@
-var wd = require('selenium-webdriver'),
-	fs = require('fs'),
-	assert = require('assert'),
-	imageDiff = require('image-diff'),
-	async = require('async'),
-	os=require('os'),
-	clc = require('cli-color'),
-	helper = require('./public/helper');
+var fs = require('fs'),
+framework = require('./framework');
 
+<<<<<<< HEAD
 	var SELENIUM_HOST = '@@webDriverIp';
 	var currentTestSuite = {};
 
 	var args = process.argv.slice(2);
 
+=======
+var args = process.argv.slice(2);
+	
+>>>>>>> origin
 runner(args[0], args[1], args[2]);
 
 function runner(browser, skincolor){
 	if (arguments[2]){
 		var loadedFile = require("./public/testSuites/" + skincolor + "/" + arguments[2] + ".js");
-		run(browser, loadedFile, arguments[2]);
+		framework.run(browser, loadedFile, arguments[2]);
 	}else{
 		require("fs").readdirSync("./public/testSuites/" + skincolor).forEach(function(file) {
 			var loadedFile = require("./public/testSuites/" + skincolor + "/" + file);
-			run(browser, loadedFile, file);
+			framework.run(browser, loadedFile, file);
 		});
 	};
 }
 
+<<<<<<< HEAD
 function run(browser, file, fileName){
 	var driver1 = makeDriver(browser);
 	var driver2 = makeDriver(browser);
@@ -163,3 +163,6 @@ function compareImages(test, screenshots){
 };
 
 module.exports = runner;
+=======
+module.exports = runner;
+>>>>>>> origin

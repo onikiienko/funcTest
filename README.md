@@ -67,7 +67,7 @@ $ sh start-linux.sh
 ```bash
 node test.js firefox light geoclicker
 node test.js chrome dark
-gurnt && node test.js android light controls
+grunt && node test.js android light controls
 ```
 
 ## Результаты тестов
