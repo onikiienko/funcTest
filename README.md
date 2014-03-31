@@ -1,6 +1,8 @@
 Screentest
 =====
 
+[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+
 ##Установка
 
 Для работы необходимо устаноивть [nodejs](http://nodejs.org/) так же нам нужен [npm](https://www.npmjs.org/)
